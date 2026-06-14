@@ -18,7 +18,7 @@ Graue Theorie war gestern. Erleben Sie unsere adaptive Architektur in Echtzeit. 
 
 Neuer Beitrag (14. Juni 2026): **Hybride Resilienz – Regenerative Erde und der Grüne Mars**
 
-👉 **[Blog lesen](https://rosary-mom.github.io/blog/hybride-resilienz-bio-mehrwert-gruener-mars/)** • [Blog-Übersicht](https://rosary-mom.github.io/blog/)
+👉 **[Blog lesen](https://rosary-mom.github.io/blog/hybride-resilienz-bio-mehrwert-gruener-mars/)** • [Investoren-Kampagne X](https://rosary-mom.github.io/blog/gruener-mars-investor-kampagne/) • [Blog-Übersicht](https://rosary-mom.github.io/blog/)
 
 ---
 *Strategic Advisory & Funding Inquiries: Please refer to the terminal inside the Lab.*
