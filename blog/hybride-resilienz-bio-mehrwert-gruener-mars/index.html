@@ -103,6 +103,9 @@
             border-color: #C9A227;
             color: #E8D5A3;
         }
+        .lang-btn { transition: all 0.2s ease; }
+        .lang-btn.active { background: #5C1A2E; color: #E8D5A3; border-color: #C9A227; }
+        .lang-hidden { display: none; }
     </style>
 </head>
 <body class="antialiased">
@@ -120,11 +123,15 @@
             <span class="text-[#2A2F3D]">|</span>
             <span>3S • GOLDENES ZEITALTER</span>
         </div>
-        <div class="text-[#A89B7F] hidden sm:block">
-            14. Juni 2026 • Erzbischof Dr. Uwe AE Rosenkranz
+        <div class="flex items-center gap-2">
+            <button type="button" onclick="setLang('de')" id="btn-de" class="lang-btn active px-3 py-1 text-xs border border-[#2A2F3D] rounded text-[#A89B7F]">DE</button>
+            <button type="button" onclick="setLang('en')" id="btn-en" class="lang-btn px-3 py-1 text-xs border border-[#2A2F3D] rounded text-[#A89B7F]">EN</button>
+            <span class="text-[#A89B7F] hidden lg:inline ml-2">14. Juni 2026 • Erzbischof Dr. Uwe AE Rosenkranz</span>
         </div>
     </div>
 </div>
+
+<div id="content-de">
 
 <!-- HERO -->
 <header class="max-w-[1280px] mx-auto px-8 pt-10 pb-8">
@@ -621,12 +628,525 @@
     </div>
 </div>
 
+</div><!-- /content-de -->
+
+<div id="content-en" class="lang-hidden">
+
+<!-- HERO EN -->
+<header class="max-w-[1280px] mx-auto px-8 pt-10 pb-8">
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-2 mb-4">
+        <div class="px-4 py-1 text-xs tracking-[2.5px] border border-[#C9A227]/40 text-[#C9A227] rounded">MAGNIFICA HUMANITAS • 2026</div>
+        <div class="px-4 py-1 text-xs tracking-[2.5px] bg-[#5C1A2E] text-[#E8D5A3] rounded">ECONOMICS &amp; SUSTAINABILITY</div>
+        <div class="px-4 py-1 text-xs tracking-[2.5px] border border-[#2A2F3D] text-[#A89B7F] rounded">AI DISCOURSE • GROK EXPERT</div>
+        <div class="px-4 py-1 text-xs tracking-[2.5px] border border-[#5FA8D3]/40 text-[#5FA8D3] rounded">TEXAS • SPACEX INVESTORS</div>
+    </div>
+
+    <h1 class="paladin-heading text-[3.2rem] md:text-[4.8rem] leading-[0.92] tracking-[-3px] text-[#F5EDE0] mb-3">
+        HYBRID RESILIENCE<br>REGENERATIVE EARTH<br>AND THE GREEN MARS
+    </h1>
+    <p class="text-2xl md:text-3xl text-[#C9A227] tracking-[-0.5px] mb-5">
+        From organic market value to Musk/SpaceX — a data ride for long-horizon investors, framed by the 3S formula
+    </p>
+    <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[#A89B7F]">
+        <span><i class="fa-solid fa-seedling text-[#52B788]"></i> Organic labeling since 1991/92</span>
+        <span><i class="fa-solid fa-rocket text-[#5FA8D3]"></i> SpaceX IPO June 2026</span>
+        <span><i class="fa-solid fa-chart-line text-[#C9A227]"></i> FiBL • OTA • AMI/Statista</span>
+    </div>
+</header>
+
+<div class="max-w-[1280px] mx-auto px-8">
+    <div class="relative rounded-xl overflow-hidden border border-[#2A2F3D]">
+        <img src="/blog-assets/hybride-resilienz/hybride-resilienz-hero.jpg"
+             class="w-full h-auto object-cover" style="max-height: 580px;"
+             alt="Regenerative agriculture and technological expansion — symbolic link between Earth and space">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/75"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+            <p class="text-xl text-[#E8D5A3] italic max-w-3xl">
+                “The most durable strategy for humanity isn’t either-or —
+                it’s the smart pairing of regenerative Earth and technological expansion into the frontier.”
+            </p>
+            <p class="text-sm text-[#A89B7F] mt-2">Hypothesis from the Grok Expert discourse • June 2026</p>
+        </div>
+    </div>
+    <div class="text-center text-xs tracking-widest text-[#A89B7F] mt-3">GOLDEN AGE • ROSARY.HEALTH/BLOG</div>
+</div>
+
+<article class="max-w-[1100px] mx-auto px-8 pt-12">
+    <div class="excerpt-magnifica rounded-2xl p-7 md:p-9 mb-10">
+        <div class="text-[#C9A227] text-xs tracking-[3px] mb-3 uppercase">Magnifica Humanitas – Styled Excerpt</div>
+        <h2 class="paladin-heading text-2xl md:text-3xl text-[#F5EDE0] mb-4 tracking-[-1px]">
+            No Split Between Soil and Tech
+        </h2>
+        <p class="text-[17px] leading-relaxed text-[#EDE4D3]">
+            In his encyclical <em>Magnifica Humanitas</em> (May 15, 2026), Pope Leo XIV reminds us that human dignity
+            can’t be reduced to data, algorithms, or market cap alone.<sup><a href="#fn5-en">5</a></sup>
+            Subsidiarity honors the small and local — the farmer on 99 million hectares just as much as the engineer at the Gigafactory.
+            Solidarity shares both burden and glory: when one sector grows, the whole body benefits (cf. 1 Cor 12:26).
+            The “better way” isn’t turbo alone, and it isn’t nostalgia alone — it’s love in concrete works:
+            healthy soil, trusted standards, tech resilience, and intergenerational transfer to the next generation.
+        </p>
+        <p class="text-sm text-[#A89B7F] mt-4">
+            Pope Leo XIV, May 15, 2026 • Continuity with <em>Rerum novarum</em> (1891) • 3S Formula: Social, Economic, Ecological • rosary.health
+        </p>
+    </div>
+
+    <div class="disclaimer-box rounded-xl p-5 mb-10 text-sm">
+        <div class="text-[#C9A227] text-xs tracking-widest mb-2"><i class="fa-solid fa-triangle-exclamation"></i> IMPORTANT DISCLAIMER</div>
+        <p>This post summarizes an <strong>AI-generated discussion</strong> (Grok Expert). Charts, projections,
+        return scenarios (Bull/Base/Bear), and the “Green Mars” investment universe are <strong>purely hypothetical and speculative</strong>.
+        This is not financial advice and not an official position of xAI or rosary.health. Investments — especially
+        in space themes — carry significant risk. <strong>Do your own homework.</strong></p>
+    </div>
+
+    <div class="prose prose-invert max-w-none text-[17px] leading-relaxed text-[#EDE4D3]">
+        <p class="text-2xl leading-tight text-[#F5EDE0]">
+            What happens when you put three decades of organic regulation, consumer trust, and brand power into numbers —
+            and stack them against the tech disruption of the world’s first trillionaire?
+        </p>
+        <p class="mt-6">
+            It started with a straight question: how much economic value did labeling, branding, and standards create in the
+            organic sector since the EU Organic Regulation (1991/92)? That grew into a full socioeconomic model — market size,
+            cumulative curves, compound-growth effects, land and employment comparisons, intergenerational impact, and finally
+            the <span class="text-[#C9A227]">Hybrid Resilience Strategy</span> hypothesis — extended by a speculative scenario
+            for Space Agriculture and the “Green Mars” investment universe.
+        </p>
+        <p class="mt-4 text-[#5FA8D3]">
+            <strong>For SpaceX IPO spillover investors:</strong> if you’re riding the June 2026 wave, this framework helps you
+            allocate downstream — boots on the ground <em>and</em> upside in the long game, without betting the whole ranch on one ticker.
+        </p>
+
+        <div class="my-10 pull-quote pl-7">
+            Standards, trust, and branding roll like a snowball: earlier sales keep compounding over decades —
+            and collective organic impact lands in the same ballpark as a world-class trillionaire fortune.
+            <div class="text-sm not-italic mt-2 text-[#C9A227]/80">— Core insight of the data model</div>
+        </div>
+    </div>
+</article>
+
+<div class="max-w-[1280px] mx-auto px-8"><div class="section-divider my-6"></div></div>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part I</div>
+    <h2 class="paladin-heading text-4xl md:text-5xl tracking-[-2px] text-[#F5EDE0] mb-6">
+        Economic Value of the Organic Sector (1992–2026)
+    </h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        Exact GDP contributions from organic agriculture are rarely reported directly. The standard, meaningful proxy is
+        <strong>market size (retail sales)</strong> — revenue driven by regulation, certification, and rising consumer trust.<sup><a href="#fn1-en">1</a></sup>
+        The EU Organic Regulation (1991/92), Germany’s organic seal (from 2000/2001), and global standardization around 2010
+        (“cult food” / premium label) took the sector from niche to mainstream.
+    </p>
+
+    <div class="media-frame p-3 rounded-xl mb-4">
+        <img src="/blog-assets/hybride-resilienz/01-bio-marktgroesse-1992-2026.png"
+             class="blog-image w-full rounded" alt="Organic market size global, USA and Germany 1992–2026">
+    </div>
+    <p class="text-xs text-[#A89B7F] italic mb-8 text-center">
+        Fig. 1: Retail sales as proxy for economic value. Milestones: EU regulation, organic seal, mainstream wave from 2010.
+    </p>
+
+    <div class="station-card rounded-2xl p-6 mb-8 overflow-x-auto">
+        <table class="data-table w-full text-left">
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>2000</th>
+                    <th>2024</th>
+                    <th>2026 (Proj.)</th>
+                    <th>CAGR (approx.)</th>
+                </tr>
+            </thead>
+            <tbody class="text-[#EDE4D3]">
+                <tr><td>Global</td><td>~$18B USD</td><td>~€145B ≈ $158B USD</td><td>~$185B USD</td><td>8–13%</td></tr>
+                <tr><td>USA</td><td>~$8B USD</td><td>~$68B USD</td><td>~$76B USD</td><td>~10%</td></tr>
+                <tr><td>Germany</td><td>€2.1B</td><td>€17B</td><td>~€19.5B</td><td>~9%</td></tr>
+            </tbody>
+        </table>
+        <p class="footnote mt-3 text-xs">Currencies not converted in chart; trends remain comparable. Values interpolated between anchor points.<sup><a href="#fn1-en">1</a></sup><sup><a href="#fn2-en">2</a></sup></p>
+    </div>
+
+    <h3 class="paladin-heading text-2xl text-[#F5EDE0] mb-4 mt-10">Milestones</h3>
+    <ul class="space-y-3 text-[#EDE4D3]">
+        <li><span class="text-[#C9A227] font-semibold">1991/92:</span> EU Organic Regulation — unified standards, foundation for trust and trade.</li>
+        <li><span class="text-[#C9A227] font-semibold">2000/2001:</span> German organic seal and EU-wide rollout — broad availability in conventional retail.</li>
+        <li><span class="text-[#C9A227] font-semibold">2010:</span> Organic as global “cult food” / premium label — mainstream wave (incl. USA, Portland as symbol).</li>
+    </ul>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part II</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Cumulative Curves &amp; Compound Growth</h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        The <strong>simple cumulative curve</strong> adds all annual retail sales since 2000 — total revenue flow produced.
+        The <strong>compound variant</strong> reinvests each year’s sum at an illustrative 5% p.a. through the observation year —
+        a model for reinvestment, jobs, innovation, and trust-building.<sup><a href="#fn3-en">3</a></sup>
+        Germany values are in EUR; euro introduction (1999/2002, 1 EUR = 1.95583 DM) is accounted for.
+    </p>
+
+    <div class="media-frame p-3 rounded-xl mb-4">
+        <img src="/blog-assets/hybride-resilienz/02-kumulierte-summen-zinseszins.png"
+             class="blog-image w-full rounded" alt="Cumulative sum curve simple and with 5 percent compound interest">
+    </div>
+    <p class="text-xs text-[#A89B7F] italic mb-6 text-center">Fig. 2: Cumulative value — simple vs. 5% compound (illustrative).</p>
+
+    <div class="grid md:grid-cols-3 gap-4 mb-4">
+        <div class="station-card rounded-xl p-5 text-center">
+            <div class="text-3xl text-[#52B788] font-bold">~2,170</div>
+            <div class="text-sm text-[#A89B7F]">B USD global<br>simple cumulative (2026)</div>
+        </div>
+        <div class="station-card rounded-xl p-5 text-center">
+            <div class="text-3xl text-[#C9A227] font-bold">~3,464</div>
+            <div class="text-sm text-[#A89B7F]">B USD global<br>with 5% compound (2026)</div>
+        </div>
+        <div class="station-card rounded-xl p-5 text-center">
+            <div class="text-3xl text-[#5FA8D3] font-bold">2.5+ T</div>
+            <div class="text-sm text-[#A89B7F]">B USD estimated<br>cumulative since 1990</div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part III</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Scale: Organic Impact vs. Musk Net Worth</h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        In June 2026, after the SpaceX IPO (June 12, 2026, valuation ~$1.75–1.77T USD),
+        Elon Musk was widely reported as the world’s first confirmed trillionaire — net worth ~$1.1T USD per Forbes and Bloomberg.<sup><a href="#fn4-en">4</a></sup>
+        The <em>total cumulative</em> economic effect of the global organic sector (retail sales as proxy) sits in the same
+        order of magnitude or above — and runs materially higher with a compound-growth model.
+    </p>
+
+    <div class="media-frame p-3 rounded-xl mb-4">
+        <img src="/blog-assets/hybride-resilienz/07-groessenordnung-musk-vs-bio.png"
+             class="blog-image w-full rounded" alt="Scale comparison Musk net worth vs cumulative organic impact">
+    </div>
+
+    <p class="text-[17px] text-[#EDE4D3] mt-6">
+        You can’t quantify a personal “share” of collective organic value — labeling and branding are decentralized
+        (regulators, farmers, retailers, brands, consumers). But the scale shows: <strong>both phenomena</strong>
+        (organic mainstream and tech disruption) have moved massive economic waves.
+    </p>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part IV</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Down-to-Earth Triple Comparison</h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        No abstract categories — three direct comparison dimensions between the
+        <span class="text-[#52B788]">Organic Agenda (Green)</span> and the
+        <span class="text-[#5FA8D3]">Musk Agenda (Black-Blue)</span>.
+    </p>
+
+    <div class="media-frame p-3 rounded-xl mb-4">
+        <img src="/blog-assets/hybride-resilienz/03-vergleich-flaeche-menschen-generationen.png"
+             class="blog-image w-full rounded" alt="Comparison land, employment and intergenerational effect organic vs Musk">
+    </div>
+    <p class="text-xs text-[#A89B7F] italic mb-6 text-center">Fig. 3: Land, livelihood, intergenerational cumulative effect.</p>
+
+    <div class="grid md:grid-cols-3 gap-5">
+        <div class="station-card rounded-xl p-5">
+            <div class="text-[#C9A227] text-xs tracking-widest mb-2">LAND</div>
+            <p class="text-[#EDE4D3] text-sm">Organic: ~99M ha worldwide (FiBL). Musk (Tesla+SpaceX): &lt;50,000 ha sites — orders of magnitude smaller.</p>
+        </div>
+        <div class="station-card rounded-xl p-5">
+            <div class="text-[#C9A227] text-xs tracking-widest mb-2">PEOPLE</div>
+            <p class="text-[#EDE4D3] text-sm">Organic: ~4.8M producers (+ families). Musk: ~160,000 direct employees (Tesla ~135k, SpaceX ~22k).</p>
+        </div>
+        <div class="station-card rounded-xl p-5">
+            <div class="text-[#C9A227] text-xs tracking-widest mb-2">GENERATIONS</div>
+            <p class="text-[#EDE4D3] text-sm">Organic Gen 1: ~$900B, Gen 2: ~$1.5T+. Musk Gen 1: ~$400B, Gen 2: ~$600B+.</p>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part V</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Action Map: Two Agendas, One Synthesis</h2>
+
+    <div class="media-frame p-3 rounded-xl mb-6">
+        <img src="/blog-assets/hybride-resilienz/04-handlungsdiagramm-hybride-resilienz.png"
+             class="blog-image w-full rounded" alt="Action diagram socioeconomic impact organic vs Musk with hybrid synthesis">
+    </div>
+
+    <div class="pull-quote pl-7 my-8">
+        “Hybrid Resilience Strategy” — combining both agendas is the most durable option for humanity
+        under current load (climate, population, resource scarcity 2026).
+    </div>
+
+    <div class="text-[17px] text-[#EDE4D3] space-y-4">
+        <p><strong class="text-[#52B788]">Organic Agenda</strong> delivers the foundational base: ~99M ha, ~4.8M producers,
+        high cumulative effect, transfer of natural capital (soil, biodiversity, food security).</p>
+        <p><strong class="text-[#5FA8D3]">Musk Agenda</strong> delivers tech leverage: concentrated innovation, decarbonization,
+        energy transition, long-horizon backup strategies (spaceflight).</p>
+        <p><strong class="text-[#C9A227]">Synthesis:</strong> deploy tech for efficient regenerative agriculture; embed regenerative practice
+        in tech supply chains. Maximize intergenerational transfer — natural and technological capital for the next generation.</p>
+    </div>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part VI • Speculative</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Space Agriculture &amp; the “Green Mars” Investment Universe</h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        Extending the Musk agenda, we built a <strong>≥20-year scenario</strong> for Space Agriculture
+        (Moon, stations, Mars) — including illustrative bonds (12–25%), “astro-produce” futures, and
+        equity in space-farming startups. Timeline: R&amp;D from 2030, prototypes 2035, first harvests 2040, commercial Mars farms 2050+.
+    </p>
+    <p class="text-[17px] text-[#5FA8D3] mb-6">
+        <strong>Texas investor frame:</strong> think long-cycle allocation — Starbase energy meets soil-backed assets.
+        Bull case is moonshot upside; bear case is you still own productive Earth-side regenerative exposure.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="media-frame p-3 rounded-xl">
+            <img src="/blog-assets/hybride-resilienz/05-space-agriculture-spekulativ.png"
+                 class="blog-image w-full rounded" alt="Speculative Space Agriculture scenario 2026-2050">
+            <p class="text-xs text-[#A89B7F] italic mt-2 text-center">Fig. 4: Space Agriculture — risk vs. expected IRR (speculative)</p>
+        </div>
+        <div class="media-frame p-3 rounded-xl">
+            <img src="/blog-assets/hybride-resilienz/06-anlageuniversum-gruener-mars-3d.png"
+                 class="blog-image w-full rounded" alt="3D Green Mars investment universe with 3S formula">
+            <p class="text-xs text-[#A89B7F] italic mt-2 text-center">Fig. 5: “Green Mars” investment universe — 3S + value/risk</p>
+        </div>
+    </div>
+
+    <div class="station-card rounded-2xl p-6 mb-6 overflow-x-auto">
+        <table class="data-table w-full text-left">
+            <thead>
+                <tr>
+                    <th>Investment</th>
+                    <th>IRR (long-term)</th>
+                    <th>Social (0–10)</th>
+                    <th>Ecological (0–10)</th>
+                    <th>Risk</th>
+                </tr>
+            </thead>
+            <tbody class="text-[#EDE4D3]">
+                <tr><td>Classic Organic (Earth)</td><td>8–15%</td><td>9</td><td>9</td><td>Low</td></tr>
+                <tr><td>SpaceX (2026)</td><td>~18% (volatile)</td><td>6</td><td>7</td><td>Medium-High</td></tr>
+                <tr><td>Space Ag – Bull</td><td>25–40%</td><td>7</td><td>8</td><td>Very High</td></tr>
+                <tr><td>Space Ag – Base</td><td>12–20%</td><td>6</td><td>7</td><td>High</td></tr>
+                <tr><td>Space Ag – Bear</td><td>0–8% / loss</td><td>4</td><td>5</td><td>Extreme</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p class="text-[17px] text-[#EDE4D3]">
+        <strong class="text-[#C9A227]">Hybrid allocation (hypothesis):</strong> 60–70% classic organic and regenerative Earth projects
+        + 30–40% SpaceX/Space-Ag exposure — to maximize 3S balance and optimize value-to-risk.
+        The future isn’t either-or; it’s regenerative Earth paired with technological expansion into the frontier.
+    </p>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="uppercase tracking-[3px] text-xs text-[#C9A227] mb-2">Part VII • Live Apps</div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">From the SpaceX IPO to Green Mars: Two Investor Apps</h2>
+
+    <p class="text-[17px] text-[#EDE4D3] mb-6">
+        After the SpaceX public offering (June 2026), there’s a <strong>downstream spillover effect</strong> for long-horizon investors:
+        if you want IPO momentum without a single-stock bet, here are two concrete entry tools —
+        tokenized ESG-Spiral assets and the Regenerative General Contract 2.0 with Dynamic Regenerative Index (DRI).
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+            <div class="media-frame p-2 rounded-xl">
+                <div class="iframe-container">
+                    <iframe src="https://rosary-mom.github.io/token-launch.html/"
+                            title="ESG-Spiral-Tokens Launch"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="flex justify-between items-start mt-3 px-1">
+                <div>
+                    <div class="font-semibold text-sm text-[#F5EDE0]">ESG-Spiral Tokens</div>
+                    <div class="text-xs text-[#A89B7F]">Dehydrogenase • asset-backed • Ethereum Sepolia Testnet</div>
+                </div>
+                <span class="text-[10px] px-2 py-0.5 bg-[#5C1A2E] text-[#E8D5A3] rounded">APP</span>
+            </div>
+            <a href="https://rosary-mom.github.io/token-launch.html/" target="_blank" rel="noopener"
+               class="inline-block mt-3 text-sm text-[#C9A227] hover:text-[#E8D5A3]">Open fullscreen →</a>
+        </div>
+        <div>
+            <div class="media-frame p-2 rounded-xl">
+                <div class="iframe-container tall">
+                    <iframe src="https://rosary-mom.github.io/Rosenkranz-Rat/rosenkranz-generalvertrag.html"
+                            title="Regenerative General Contract 2.0"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="flex justify-between items-start mt-3 px-1">
+                <div>
+                    <div class="font-semibold text-sm text-[#F5EDE0]">Regenerative General Contract 2.0</div>
+                    <div class="text-xs text-[#A89B7F]">NAI → DRI • $TSLA in index • portfolio slider • First-Fruits</div>
+                </div>
+                <span class="text-[10px] px-2 py-0.5 bg-[#5C1A2E] text-[#E8D5A3] rounded">APP</span>
+            </div>
+            <a href="https://rosary-mom.github.io/Rosenkranz-Rat/rosenkranz-generalvertrag.html" target="_blank" rel="noopener"
+               class="inline-block mt-3 text-sm text-[#C9A227] hover:text-[#E8D5A3]">Open fullscreen →</a>
+        </div>
+    </div>
+
+    <div class="station-card rounded-2xl p-7 mb-6">
+        <div class="text-[#C9A227] text-xs tracking-widest mb-3">INVESTOR PATH — “GREEN MARS”</div>
+        <ol class="text-[#EDE4D3] text-sm space-y-3 list-decimal list-inside">
+            <li><strong>SpaceX IPO momentum</strong> recognized → focus on long-cycle Space-Ag and bio spin-offs (≥20 years).</li>
+            <li><strong>ESG-Spiral Tokens</strong> as asset-backed bridge (dehydrogenase, Bio 3.0 hill beds, zero-emission spirals).</li>
+            <li><strong>DRI / General Contract</strong> for diversified regenerative allocation — incl. <strong>$TSLA</strong> from the classic NAI; switch into portfolio anytime via slider (Slot 30: aquaponics / Bio2.0 / Green Mars).</li>
+            <li><strong>Hybrid 60/40 hypothesis:</strong> Earth (organic/regenerative) + space exposure — 3S balance instead of single-ticker bets.</li>
+        </ol>
+        <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/blog/gruener-mars-investor-kampagne/"
+               class="app-cta px-6 py-3 rounded-xl text-sm inline-flex items-center gap-2">
+                <i class="fa-solid fa-bullhorn"></i> Investor Campaign &amp; X Thread
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066068389890490808" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 1
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066069114154569732" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 2
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066069848761803207" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 3
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066070496920113566" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 4
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066070992993075281" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 5
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066071566304137455" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 6
+            </a>
+            <a href="https://x.com/RosaryParish/status/2066071880642052268" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#1DA1F2]/40 text-[#1DA1F2] hover:border-[#1DA1F2] inline-flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter"></i> Thread 7
+            </a>
+            <a href="https://rosary-mom.github.io/" target="_blank" rel="noopener"
+               class="px-6 py-3 rounded-xl text-sm border border-[#2A2F3D] hover:border-[#C9A227]/40">
+                R&amp;D Lab (Gravity Engine)
+            </a>
+        </div>
+    </div>
+
+    <p class="text-xs text-[#A89B7F] italic">
+        Apps are live on rosary-mom.github.io. Testnet and simulation values — not financial advice.<sup><a href="#fn7-en">7</a></sup>
+    </p>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-12">
+    <div class="section-divider mb-10"></div>
+    <h2 class="paladin-heading text-4xl tracking-[-2px] text-[#F5EDE0] mb-6">Conclusion: Hypothesis Under Load</h2>
+
+    <div class="excerpt-magnifica rounded-2xl p-7 mb-8">
+        <p class="text-xl text-[#F5EDE0] leading-relaxed">
+            As of June 2026, the dataset supports a durable hypothesis:
+        </p>
+        <p class="mt-4 text-[#C9A227] text-lg italic">
+            Humanity wins most when regenerative scale and tech acceleration run in parallel and in synergy —
+            a Hybrid Resilience Strategy that holds up under climate, population, and resource pressure.
+        </p>
+    </div>
+
+    <p class="text-[17px] text-[#EDE4D3]">
+        Organic delivers breadth, soil, and bread. Tech delivers speed, leverage, and horizon. Space Agriculture —
+        speculative as it remains — extends the Musk path with an explicit intergenerational sustainability dimension;
+        spin-offs (closed loops, hydroponics) can strengthen the organic agenda back on Earth.
+        In the spirit of <em>Magnifica Humanitas</em>: neither dehumanizing towers of Babel nor retreat into the niche —
+        but builders of a civilization that passes natural and technological capital to the next generation.
+    </p>
+    <p class="text-[17px] text-[#5FA8D3] mt-4">
+        <strong>Ready, steady, go.</strong> Soil and stars. Allocate smart. Build — don’t just watch the launch.
+    </p>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-14">
+    <div class="grid md:grid-cols-2 gap-x-12">
+        <div>
+            <h4 class="paladin-heading text-2xl mb-4 text-[#F5EDE0]">Sources</h4>
+            <ul class="text-sm text-[#EDE4D3] list-none space-y-3">
+                <li>• Research Institute of Organic Agriculture (FiBL): <em>The World of Organic Agriculture</em> 2023–2025</li>
+                <li>• Organic Trade Association (OTA): U.S. Organic Industry Survey</li>
+                <li>• AMI / Statista: German organic market data</li>
+                <li>• Forbes / Bloomberg: Musk net worth and SpaceX IPO (June 2026)</li>
+                <li>• Tesla, Inc. &amp; Space Exploration Technologies Corp.: company reports (employment)</li>
+                <li>• Vatican.va: encyclical <em>Magnifica Humanitas</em> (Leo XIV, May 15, 2026)</li>
+                <li>• EU Organic Regulation (Regulation (EEC) No. 2092/91, later 834/2007)</li>
+            </ul>
+        </div>
+        <div class="mt-8 md:mt-0">
+            <div class="bg-[#0A0F1C] border border-[#2A2F3D] rounded-2xl p-6 text-sm">
+                <div class="text-[#C9A227] text-xs tracking-widest mb-3">FOOTNOTES</div>
+                <div class="footnote space-y-3">
+                    <p id="fn1-en"><strong>1.</strong> Retail sales as proxy: FiBL <em>World of Organic Agriculture</em> 2023 (~€136B global), 2024 (~€145B); Germany 2024: €17B; USA 2025: ~$76.6B (OTA).</p>
+                    <p id="fn2-en"><strong>2.</strong> 2025/2026 projections based on historical CAGR of ~8–13% by source/region. Exact annual values not always uniformly public — values linearly interpolated.</p>
+                    <p id="fn3-en"><strong>3.</strong> 5% p.a. compound model is illustrative and conservative. Real multiplier from reinvestment, employment, and innovation may be higher or lower. Germany: euro introduction 1999/2002, rate 1 EUR = 1.95583 DM.</p>
+                    <p id="fn4-en"><strong>4.</strong> Elon Musk: Forbes/Bloomberg ~$1.1T USD (June 2026). SpaceX IPO 06/12/2026, valuation ~$1.75–1.77T USD. First confirmed trillionaire per media reports.</p>
+                    <p id="fn5-en"><strong>5.</strong> <a href="https://www.vatican.va/content/leo-xiv/de/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" class="ref-link">Magnifica Humanitas</a> (Pope Leo XIV, May 15, 2026). Continuity with <em>Rerum novarum</em> (1891) and Catholic social teaching: dignity, subsidiarity, solidarity, common good.</p>
+                    <p id="fn6-en"><strong>6.</strong> FiBL 2024/26: ~99M ha organic agriculture worldwide; ~4.8M producers. Tesla ~135,000, SpaceX ~22,000 employees (company figures).</p>
+                    <p id="fn7-en"><strong>7.</strong> This post is based on an AI discussion (Grok Expert). Space agriculture scenarios, IRR curves, and portfolio allocations are hypothetical — not financial advice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-[1100px] mx-auto px-8 pb-10">
+    <div class="disclaimer-box rounded-2xl p-6 text-sm">
+        <div class="text-[#C9A227] text-xs tracking-widest mb-2">SHARE SUMMARY (X / SOCIAL)</div>
+        <p>We compared the socioeconomic impact of two long-horizon agendas: <strong>Organic</strong> (labeling &amp; standards since the 1990s:
+        ~99M ha, ~4.8M producers) and <strong>Musk/SpaceX</strong> (tech leverage, IPO 2026). Core hypothesis: hybrid combination
+        (regenerative Earth + tech/space agriculture) maximizes 3S benefit (Social, Economic, Ecological).
+        Speculative “Green Mars” universe with Bull/Base/Bear scenarios. <em>Not financial advice. AI discussion. Illustrative numbers.</em></p>
+    </div>
+</section>
+
+<div class="max-w-[1100px] mx-auto px-8 pb-16 text-center">
+    <div class="inline-block px-6 py-1 text-xs tracking-[2px] border border-[#C9A227]/40 text-[#C9A227] mb-4">3S • HYBRID RESILIENCE</div>
+    <p class="text-2xl text-[#F5EDE0]">Regenerative Earth. Technological horizon. A tested heart.</p>
+    <p class="mt-3 text-[#A89B7F]">Not either-or.<br>But the investment universe of a responsible Golden Age.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="https://rosary.health/blog" class="px-6 py-3 rounded-xl border border-[#2A2F3D] hover:border-[#C9A227]/40 text-sm">← To Blog</a>
+        <a href="magnifica-herz-meditation-paladin-blog.html" class="px-6 py-3 rounded-xl border border-[#2A2F3D] hover:border-[#C9A227]/40 text-sm">Magnifica Heart Meditation</a>
+    </div>
+</div>
+
+</div><!-- /content-en -->
+
 <footer class="border-t border-[#2A2F3D] py-8 text-center text-xs text-[#A89B7F]">
     <div class="max-w-[1100px] mx-auto px-8">
         © 2026 • Erzbischof Dr. Uwe AE Rosenkranz • Soli Deo Gloria<br>
         <span class="text-[10px]">Basierend auf Grok-Expert-Diskurs • Grafiken: bio_hybrid_resilience_charts.py • Paladin-Ästhetik rosary.health</span>
     </div>
 </footer>
+
+<script>
+function setLang(lang) {
+    document.getElementById('content-de').classList.toggle('lang-hidden', lang !== 'de');
+    document.getElementById('content-en').classList.toggle('lang-hidden', lang !== 'en');
+    document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    const titles = {
+        de: 'Hybride Resilienz • Bio-Mehrwert, Musk & das Anlageuniversum „Grüner Mars“',
+        en: 'Hybrid Resilience • Organic Value, Musk & the Green Mars Investment Universe'
+    };
+    document.title = titles[lang];
+}
+</script>
 
 </body>
 </html>
