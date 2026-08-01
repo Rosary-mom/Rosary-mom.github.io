@@ -27,6 +27,60 @@
         a { color: var(--gold); }
         .muted { font-size: 12px; color: #6B5E4F; }
         .center { text-align: center; }
+        .imaginator {
+            margin: 0 1rem 1.25rem;
+            padding: 1.35rem 1.4rem 1.5rem;
+            background: linear-gradient(165deg, #F4EDE0 0%, #E8F0D8 55%, #F0E6D6 100%);
+            border: 2px solid #6B8E23;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(107,142,35,.12);
+        }
+        .imaginator h2 { color: #4A6B12; margin: 0 0 .35rem; font-size: 1.45rem; }
+        .imaginator .badge {
+            display: inline-block; font-size: 11px; letter-spacing: 1.5px;
+            padding: 3px 10px; border-radius: 999px; background: rgba(107,142,35,.18);
+            color: #4A6B12; margin-bottom: .75rem;
+        }
+        .img-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1rem 0 1.25rem;
+        }
+        @media (max-width: 700px) { .img-grid { grid-template-columns: 1fr; } }
+        .img-card {
+            background: #fff; border: 1px solid #D4C5A9; border-radius: 10px; overflow: hidden;
+            cursor: pointer; transition: transform .15s ease, box-shadow .15s ease;
+        }
+        .img-card:hover, .img-card.active { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.1); border-color: #6B8E23; }
+        .img-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+        .img-card .cap { padding: .55rem .7rem; font-size: 13px; }
+        .img-card .cap strong { display: block; color: #4A6B12; margin-bottom: 2px; }
+        .video-wrap {
+            position: relative; width: 100%; max-width: 720px; margin: 0 auto 1.25rem;
+            aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; border: 2px solid #A67C3D;
+            background: #1a1a1a;
+        }
+        .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .dream-box textarea {
+            width: 100%; box-sizing: border-box; min-height: 72px; padding: .75rem;
+            border: 1px solid #D4C5A9; border-radius: 8px; font-family: Georgia, serif; font-size: 15px;
+            background: #fff;
+        }
+        .dream-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: .6rem; }
+        .dream-btns button {
+            border: 1px solid #6B8E23; background: #6B8E23; color: #fff; padding: .45rem .9rem;
+            border-radius: 6px; font-family: Georgia, serif; font-size: 14px; cursor: pointer;
+        }
+        .dream-btns button.secondary { background: #fff; color: #4A6B12; }
+        .dream-out {
+            margin-top: .9rem; padding: 1rem 1.1rem; background: #fff; border-left: 6px solid #C9A227;
+            border-radius: 0 8px 8px 0; font-size: 15px; min-height: 3em;
+        }
+        .harvest-score {
+            display: flex; gap: 10px; flex-wrap: wrap; margin-top: .85rem;
+        }
+        .harvest-score span {
+            background: #fff; border: 1px solid #D4C5A9; border-radius: 8px; padding: .4rem .7rem; font-size: 13px;
+        }
+        .harvest-score strong { color: #6B8E23; }
     </style>
 </head>
 <body>
@@ -117,6 +171,64 @@
     </table>
 </div>
 
+<!-- IMAGINATOR /dream – mannigfache Ernte-Erfolge -->
+<section class="imaginator" id="imaginator" aria-label="IMAGINATOR Ernte-Erfolge">
+    <div class="badge">IMAGINATOR · /dream · MANNIGFACHE ERNTE-ERFOLGE</div>
+    <h2>IMAGINATOR: Ernte sichtbar machen</h2>
+    <p style="margin:0 0 1rem;font-size:15px;">
+        Mit <strong>/dream</strong> werden die mannigfachen Ernte-Erfolge der Schrift vorstellbar:
+        Gemeinschaftsfülle, Frucht des Landes, Tränen die zu Jubel werden, und die vielgestaltige Geist-Ernte (Gal 5–6).
+        Klicke ein Bild oder starte eine /dream-Vision.
+    </p>
+
+    <div class="img-grid" id="harvest-gallery">
+        <div class="img-card active" data-key="gemeinschaft" onclick="selectHarvest(this,'gemeinschaft')">
+            <img src="https://rosary-mom.github.io/blog/ernteprinzipien-der-bibel-galater-6/imaginator-01-gemeinschaft.jpg" alt="Ernte-Erfolg: Gemeinschaft und Garben" width="640" height="360" loading="lazy">
+            <div class="cap"><strong>01 · Gemeinschaftsernte</strong>Geteilte Garben, geteiltes Brot – doppelte Freude (Zimmermann)</div>
+        </div>
+        <div class="img-card" data-key="fuelle" onclick="selectHarvest(this,'fuelle')">
+            <img src="https://rosary-mom.github.io/blog/ernteprinzipien-der-bibel-galater-6/imaginator-02-fuelle.jpg" alt="Ernte-Erfolg: Fülle von Trauben und Getreide" width="640" height="360" loading="lazy">
+            <div class="cap"><strong>02 · Fülle des Landes</strong>Wein, Öl, Getreide – Zeichen treuer Versorgung, nicht Selbstrechtfertigung</div>
+        </div>
+        <div class="img-card" data-key="traenen" onclick="selectHarvest(this,'traenen')">
+            <img src="https://rosary-mom.github.io/blog/ernteprinzipien-der-bibel-galater-6/imaginator-03-traenen-jubel.jpg" alt="Ernte-Erfolg: Tränen werden zu Jubel" width="640" height="360" loading="lazy">
+            <div class="cap"><strong>03 · Tränen → Jubel</strong>Ps 126: Die mit Tränen säen, werden mit Jubel ernten</div>
+        </div>
+        <div class="img-card" data-key="mannigfaltig" onclick="selectHarvest(this,'mannigfaltig')">
+            <img src="https://rosary-mom.github.io/blog/ernteprinzipien-der-bibel-galater-6/imaginator-04-mannigfaltig.jpg" alt="Ernte-Erfolg: mannigfaltige Geist-Frucht" width="640" height="360" loading="lazy">
+            <div class="cap"><strong>04 · Mannigfaltige Geist-Ernte</strong>Liebe, Güte, Geduld, Gemeinschaft – Frucht des Geistes, nicht Ruhm des Fleisches</div>
+        </div>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:0 0 .6rem;color:#4A6B12;">Video: Ernte &amp; Hoffnung</h3>
+    <div class="video-wrap">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ukSPtJ4wjwk?si=pbJDWGtn5Z2YaF0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <h3 style="font-size:1.1rem;margin:0 0 .5rem;color:#4A6B12;">/dream – Vision der Ernte-Erfolge</h3>
+    <p class="muted" style="margin:0 0 .5rem;font-size:13px;">Beschreibe, was du säst – oder wähle ein Szenario. Der IMAGINATOR zeigt die mannigfache Ernte zur bestimmten Zeit.</p>
+    <div class="dream-box">
+        <textarea id="dream-input" placeholder="/dream: Was wäre, wenn wir im Gutestun nicht ermatten?">/dream: Ich säe Gutestun und Geist – zeige mir die mannigfachen Ernte-Erfolge zur bestimmten Zeit (Gal 6,9).</textarea>
+        <div class="dream-btns">
+            <button type="button" onclick="runDream()">/dream · Vision starten</button>
+            <button type="button" class="secondary" onclick="presetDream('gemeinde')">Gemeinde</button>
+            <button type="button" class="secondary" onclick="presetDream('familie')">Familie</button>
+            <button type="button" class="secondary" onclick="presetDream('campus')">Präsenz Campus</button>
+            <button type="button" class="secondary" onclick="presetDream('land')">Land &amp; Versorgung</button>
+            <button type="button" class="secondary" onclick="presetDream('kreuz')">Kreuz statt Fleisch-Ruhm</button>
+        </div>
+        <div class="dream-out" id="dream-output" aria-live="polite">
+            <em>Wähle ein Bild oben oder starte /dream – die Ernte-Erfolge erscheinen hier.</em>
+        </div>
+        <div class="harvest-score" id="harvest-score" hidden>
+            <span>Geduld-Index: <strong id="sc-geduld">—</strong></span>
+            <span>Geist-Frucht: <strong id="sc-geist">—</strong></span>
+            <span>Gemeinschaft: <strong id="sc-gemein">—</strong></span>
+            <span>Jubel-Faktor: <strong id="sc-jubel">—</strong></span>
+        </div>
+    </div>
+</section>
+
 <div class="card">
     <h2 style="font-size:1.3rem;margin:0 0 1rem;">Baumeister-Aufruf</h2>
     <ul style="margin:0;padding-left:1.3rem;">
@@ -125,6 +237,7 @@
         <li>Gelegenheit nutzen (V. 10) – besonders an den Hausgenossen des Glaubens.</li>
         <li>Sich nicht an fremdem Fleisch rühmen (V. 13).</li>
         <li>Tränen und Jubel zusammenhalten (Ps 126).</li>
+        <li>IMAGINATOR nutzen: mannigfache Ernte-Erfolge mit /dream sichtbar machen.</li>
     </ul>
     <p class="center" style="margin:1.1rem 0 0;"><span class="paladine">Baumeister, nicht Zuschauer.</span> Säen – ausharren – ernten zur bestimmten Zeit.</p>
 </div>
@@ -148,5 +261,88 @@
 </div>
 
 </div>
+
+<script>
+var visions = {
+  gemeinschaft: {
+    title: 'Gemeinschaftsernte',
+    text: '/dream-Vision: Du siehst Felder, die nicht einem Einzelnen gehören. Garben werden getragen, Brot gebrochen, Hausgenossen des Glaubens gestärkt (Gal 6,10). Geteilte Arbeit – doppelte Freude. Die Ernte ist Gemeinschaft: niemand rühmt sich fremden Fleisches, alle freuen sich an der Frucht des Geistes.',
+    scores: [88, 90, 96, 92]
+  },
+  fuelle: {
+    title: 'Fülle des Landes',
+    text: '/dream-Vision: Körbe voll Trauben, Öl und Getreide – nicht als Automat der Selbstrechtfertigung, sondern als Zeichen: Gott hält denen, die in Treue säen, die Versorgung nicht vor. Die Fülle ruft zur Demut und zum Teilen, nicht zum Ruhm im Fleisch (Gal 6,12–13).',
+    scores: [85, 82, 80, 86]
+  },
+  traenen: {
+    title: 'Tränen → Jubel',
+    text: '/dream-Vision: Du gehst weinend und trägst den Samen (Ps 126). Die bestimmte Zeit kommt – und der Jubel ist lauter als die Tränen. Die Ernte tilgt die Saat nicht aus dem Gedächtnis; sie verwandelt sie. Nicht ermatten: der kairos Gottes trägt, was menschliche Kraft nicht erzwingen kann (Gal 6,9).',
+    scores: [94, 88, 84, 97]
+  },
+  mannigfaltig: {
+    title: 'Mannigfaltige Geist-Ernte',
+    text: '/dream-Vision: Nicht eine Frucht allein – Liebe, Freude, Friede, Langmut, Freundlichkeit, Güte, Treue, Sanftmut, Enthaltsamkeit. Mannigfache Erfolge: versöhnte Beziehungen, geheilte Worte, mutiges Gutestun, Campus und Gemeinde im Licht. Das Kreuz bleibt Zentrum; der Menschenruhm verblasst.',
+    scores: [90, 97, 93, 91]
+  }
+};
+
+var presets = {
+  gemeinde: '/dream: In unserer Gemeinde säen wir Gutestun und Geist – welche mannigfachen Ernte-Erfolge reifen zur bestimmten Zeit?',
+  familie: '/dream: In der Familie säen wir Geduld und Liebe – zeige die Ernte von Frieden, Vergebung und Freude.',
+  campus: '/dream: Am Präsenz Campus säen wir Bildung, Gebet und regenerative Arbeit – welche Ernten für Menschen und Land?',
+  land: '/dream: Wir säen in Land und Versorgung (Manna-Logik) – wann und wie reift die Ernte der Treue?',
+  kreuz: '/dream: Wir weigern uns, uns des Fleisches zu rühmen – welche Ernte bringt das Kreuz Christi statt Menschenruhm?'
+};
+
+function selectHarvest(el, key) {
+  document.querySelectorAll('.img-card').forEach(function(c){ c.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  var v = visions[key];
+  if (!v) return;
+  document.getElementById('dream-output').innerHTML =
+    '<strong style="color:#4A6B12;">/dream · ' + v.title + '</strong><br>' + v.text;
+  showScores(v.scores);
+}
+
+function showScores(s) {
+  var box = document.getElementById('harvest-score');
+  box.hidden = false;
+  document.getElementById('sc-geduld').textContent = s[0];
+  document.getElementById('sc-geist').textContent = s[1];
+  document.getElementById('sc-gemein').textContent = s[2];
+  document.getElementById('sc-jubel').textContent = s[3];
+}
+
+function presetDream(key) {
+  document.getElementById('dream-input').value = presets[key] || presets.gemeinde;
+  runDream();
+}
+
+function runDream() {
+  var input = (document.getElementById('dream-input').value || '').toLowerCase();
+  var key = 'mannigfaltig';
+  if (input.indexOf('träne') >= 0 || input.indexOf('traene') >= 0 || input.indexOf('jubel') >= 0 || input.indexOf('ps 126') >= 0) key = 'traenen';
+  else if (input.indexOf('land') >= 0 || input.indexOf('versorgung') >= 0 || input.indexOf('manna') >= 0 || input.indexOf('fülle') >= 0 || input.indexOf('fuelle') >= 0) key = 'fuelle';
+  else if (input.indexOf('gemeinde') >= 0 || input.indexOf('hausgenoss') >= 0 || input.indexOf('geteilt') >= 0 || input.indexOf('familie') >= 0) key = 'gemeinschaft';
+  else if (input.indexOf('kreuz') >= 0 || input.indexOf('fleisch') >= 0 || input.indexOf('geist') >= 0 || input.indexOf('campus') >= 0) key = 'mannigfaltig';
+
+  var card = document.querySelector('.img-card[data-key="' + key + '"]');
+  selectHarvest(card, key);
+
+  var extra = '';
+  if (input.indexOf('nicht ermatten') >= 0 || input.indexOf('müde') >= 0 || input.indexOf('muede') >= 0) {
+    extra = ' <em>Zusatz:</em> Dein /dream hält am Nicht-Ermatten fest – die bestimmte Zeit ist Gottes, die Ausdauer deine Antwort.';
+  }
+  if (input.indexOf('kreuz') >= 0) {
+    extra += ' <em>Kreuz-Linie:</em> Die wahre Ernte meidet den Ruhm im Fleisch (Gal 6,12–13) und bleibt beim Kreuz.';
+  }
+  var out = document.getElementById('dream-output');
+  out.innerHTML = out.innerHTML + (extra ? '<br><br>' + extra : '') +
+    '<br><br><span style="font-size:13px;color:#6B5E4F;">Eingabe verarbeitet · Gal 6,9 · Ps 126 · LOGOS-max /dream</span>';
+}
+
+// Start with first vision visible
+selectHarvest(document.querySelector('.img-card.active'), 'gemeinschaft');
+</script>
 </body>
 </html>

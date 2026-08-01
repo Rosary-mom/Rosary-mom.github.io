@@ -50,7 +50,16 @@ In der Bibel ist Ernte nie nur Agrarwirtschaft. Sie verbindet Gott, Volk und Lan
 2. Saat prüfen: Geist oder Fleisch? Kreuz oder Menschenruhm?  
 3. Gelegenheit nutzen (V. 10) – besonders an den Hausgenossen des Glaubens.  
 4. Tränen und Jubel zusammenhalten (Ps 126).  
-5. Baumeister, nicht Zuschauer: säen, warten, ernten – und Gott die Reife überlassen.
+5. Baumeister, nicht Zuschauer: säen, warten, ernten – und Gott die Reife überlassen.  
+6. **IMAGINATOR /dream:** mannigfache Ernte-Erfolge sichtbar machen (Gemeinschaft, Fülle, Tränen→Jubel, Geist-Frucht) + Video-Einbettung.
+
+---
+
+## IMAGINATOR · /dream
+
+Interaktives Modul im HTML-Beitrag: vier Visionen der Ernte-Erfolge, YouTube-Einbettung, /dream-Eingabe mit Szenarien (Gemeinde, Familie, Campus, Land, Kreuz).
+
+Live: https://rosary-mom.github.io/blog/ernteprinzipien-der-bibel-galater-6/#imaginator
 
 ---
 
