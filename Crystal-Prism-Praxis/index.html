@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Crystal Prism Praxis — Hyperspace Ship</title>
+<style>body{margin:0;background:#05060c;color:#7ef9ff;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh}#s{opacity:.7;text-align:center;line-height:1.5}</style>
+</head>
+<body>
+<div id="s">Loading Hyperspace Ship…</div>
+<script>
+(async function () {
+  function b64ToBytes(b64) {
+    const bin = atob(b64);
+    const out = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+  const base = location.pathname.replace(/\/?index\.html?$/i, "/").replace(/\/?$/, "/");
+  const names = ["c00.txt","c01.txt","c02.txt","c03.txt","c04.txt","c05.txt","c06.txt","c07.txt","c08.txt","c09.txt"];
+  try {
+    const slices = await Promise.all(names.map(n => fetch(base + "chunks/" + n).then(r => {
+      if (!r.ok) throw new Error(n + " " + r.status);
+      return r.text();
+    })));
+    const bytes = b64ToBytes(slices.map(s => s.trim()).join(""));
+    const html = new TextDecoder("utf-8").decode(bytes);
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.getElementById("s").innerHTML = "Load failed: " + e;
+  }
+})();
+</script>
+</body>
+</html>
