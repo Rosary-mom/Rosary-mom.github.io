@@ -17,7 +17,8 @@
     return out;
   }
   const base = location.pathname.replace(/\/?index\.html?$/i, "/").replace(/\/?$/, "/");
-  const names = ["c00.txt","c01.txt","c02.txt","c03.txt","c04.txt","c05.txt","c06.txt","c07.txt","c08.txt","c09.txt"];
+  const names = [];
+  for (let i = 0; i < 12; i++) names.push("f" + String(i).padStart(2,"0") + ".txt");
   try {
     const slices = await Promise.all(names.map(n => fetch(base + "chunks/" + n).then(r => {
       if (!r.ok) throw new Error(n + " " + r.status);
@@ -29,7 +30,7 @@
     document.write(html);
     document.close();
   } catch (e) {
-    document.getElementById("s").innerHTML = "Load failed: " + e;
+    document.getElementById("s").innerHTML = "Load failed: " + e + "<br>Open local hyperspace_ship_catclock.html";
   }
 })();
 </script>
