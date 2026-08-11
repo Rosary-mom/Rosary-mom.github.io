@@ -24,13 +24,13 @@
       if (!r.ok) throw new Error(n + " " + r.status);
       return r.text();
     })));
-    const bytes = b64ToBytes(slices.map(s => s.trim()).join(""));
-    const html = new TextDecoder("utf-8").decode(bytes);
+    const b64 = slices.map(s => s.replace(/\s+/g, "")).join("");
+    const html = new TextDecoder("utf-8").decode(b64ToBytes(b64));
     document.open();
     document.write(html);
     document.close();
   } catch (e) {
-    document.getElementById("s").innerHTML = "Load failed: " + e + "<br>Open local hyperspace_ship_catclock.html";
+    document.getElementById("s").innerHTML = "Load failed: " + e;
   }
 })();
 </script>
