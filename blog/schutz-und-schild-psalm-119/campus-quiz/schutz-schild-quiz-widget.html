@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus-Quiz · Schutz und Schild · Ps 119</title>
+<style>
+:root { --bg:#FFFDF8; --ink:#0D0A08; --h:#4A0D12; --gold:#6B4A12; --card:#FFF8EA; --bd:#3D2A12; --ok:#14532d; --bad:#7f1d1d; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Georgia, 'Times New Roman', serif; background:var(--bg); color:var(--ink); line-height:1.55; font-size:17px; }
+.wrap { max-width:640px; margin:0 auto; padding:1rem; }
+h1 { font-family: Palatino, Georgia, serif; font-weight:900; color:var(--h); font-size:1.45rem; margin:0 0 .4rem; }
+.kicker { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+.card { background:var(--card); border:3px solid var(--bd); border-radius:10px; padding:1rem; margin:.7rem 0; }
+.btn { display:inline-block; margin:4px 6px 4px 0; padding:.55rem .9rem; background:#1A0A08; color:#FFE9A8; border:3px solid #000; border-radius:8px; font-weight:700; cursor:pointer; font-size:1rem; }
+.btn:hover, .btn:focus { background:var(--h); color:#FFF; outline:3px solid #000; outline-offset:2px; }
+.opt { display:block; margin:.35rem 0; padding:.45rem .6rem; border:2px solid var(--bd); border-radius:6px; cursor:pointer; background:#FFF; }
+.opt:hover { background:#F4E4C4; }
+.opt input { margin-right:.45rem; }
+.ok { background:#dcfce7 !important; border-color:var(--ok) !important; }
+.bad { background:#fee2e2 !important; border-color:var(--bad) !important; }
+#score { font-size:1.6rem; font-weight:900; color:var(--h); }
+a { color:#0A3D62; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Uni-Campus · Moodle-Aiken · Paladine</div>
+  <h1>Schutz und Schild – Quiz</h1>
+  <p>Psalm 119,114–117 · 10 Fragen · je 5 Antworten (A–E) · Kardaschow, KI, Unsterblichkeit, westliche Zivilisation</p>
+  <div class="card">
+    <label for="name">Name für die Rangliste</label><br>
+    <input id="name" value="Campus Student" style="width:100%;padding:.5rem;border:2px solid #000;font-size:1rem;margin-top:.3rem;">
+    <p><button type="button" class="btn" id="start">Quiz starten</button></p>
+  </div>
+  <div id="quiz" hidden></div>
+  <div id="out" hidden class="card"></div>
+  <p style="font-size:.85rem;"><a href="https://rosary-mom.github.io/blog/schutz-und-schild-psalm-119/schutz-und-schild-psalm-119-paladine.html">Zum Blogbeitrag</a> · <a href="https://rosary-mom.github.io/blog/schutz-und-schild-psalm-119/campus-quiz/schutz-schild-aiken-moodle.txt">Aiken .txt (Moodle)</a></p>
+</div>
+<script>
+const Q = [
+  {q:"Was ist laut Psalm 119,114 Schutz und Schild?", o:["Der Staat und das Militär","Versicherung, Markt und Technologie","Der HERR selbst; die Hoffnung sitzt auf seinem Wort","Die westliche Zivilisation als solche","Die Kardaschow-Skala der Energie"], a:2},
+  {q:"Worin unterscheidet sich der biblische Schild von typischen Schilden der spätmodernen westlichen Zivilisation?", o:["Die Bibel lehnt jedes Recht und jede Medizin ab","Der Psalm bietet Gewissheit trotz Unsicherheit; moderne Äquivalente versprechen, Unsicherheit selbst zu eliminieren","Nur der Westen kennt wirklichen Schutz","Institutionen sind immer Götzen und daher verboten","Technik ist der wahre Schild, das Wort nur Trost"], a:1},
+  {q:"Was können Christen tun, um die westliche Zivilisation in Richtung Kardaschow II oder III zu führen, ohne Psalm 119 zu verraten?", o:["Den Staat zum Gott machen und alle Energie dem Imperium weihen","Unsterblichkeit per Bewusstseins-Upload zur Staatsreligion erklären","Schöpfung als lesbar erforschen, Energie und Raumfahrt als Stewardship nutzen, KI als Werkzeug – Schild bleibt das Wort, nicht die Megastruktur","Wissenschaft abschaffen und nur Liturgie betreiben","Kardaschow III mit dem Reich Gottes gleichsetzen"], a:2},
+  {q:"Wie können christliche Uni-Campi mittels KI das menschliche Problem der Unsterblichkeit beschleunigen – psalm-gemäß?", o:["Seelen in Rechenzentren laden und die Auferstehung für überholt erklären","KI als Erlöser anbeten und das Wort beiseitelegen","Forschung, Lehre, Medizin und Hoffnungskommunikation mit KI beschleunigen; das Ziel bleibt die Auferstehung (1Kor 15), nicht der Upload","Campus schließen, weil KI alles ersetzt","Nur militärische KI fördern"], a:2},
+  {q:"Was misst die Kardaschow-Skala primär?", o:["Den Grad der Heiligkeit einer Kultur","Den Energieumsatz einer Zivilisation (planetar / stellar / galaktisch)","Die Zahl der Kirchengebäude","Das Bruttoinlandsprodukt allein","Die Nähe zum Reich Gottes"], a:1},
+  {q:"Nach Heinz Schilling bot Luther existenzielle Sicherheit vor allem wodurch – analog zu dem, was viele heute in Märkten oder Friedensordnungen suchen?", o:["Durch Ablasshandel als Finanzprodukt","Durch das Evangelium und die Kirche als Halt im Umbruch","Durch die Kardaschow-II-Dyson-Sphäre","Durch Verzicht auf jedes Wort Gottes","Durch den modernen Versicherungsstaat"], a:1},
+  {q:"Welche Haltung zu Recht, Staat, Medizin und Technik ist psalm-gemäß (vgl. Röm 13)?", o:["Alle Institutionen abschaffen","Institutionen als letzte Zuflucht anbeten","Sie als sekundäre Schilde dienen lassen, ohne sie zum Gott zu machen","Nur Militär zählt als Schild","Nur Finanzmärkte zählen als Schild"], a:2},
+  {q:"Was meint „Lass mich nicht beschämt werden in meiner Hoffnung“ (Ps 119,116) im Kern?", o:["Die Hoffnung darf sich als leer erweisen, Hauptsache wir haben Institutionen","Die Zusage Gottes soll sich als wahr erweisen; der Beter wettet auf Gottes Treue, nicht auf die Lage","Scham ist immer Sünde und muss therapeutisch gelöscht werden","Hoffnung ist nur ein Gefühl ohne Zusage","Hoffnung bedeutet, Unsicherheit technisch auf null zu setzen"], a:1},
+  {q:"Warum ist es ein Fehlschluss, das Unsterblichkeitsproblem nur technisch lösen zu wollen?", o:["Weil Medizin grundsätzlich sündig ist","Weil damit menschliche Fragilität geleugnet und das Wort durch Kontrolle ersetzt wird","Weil Kardaschow I bereits das Eschaton ist","Weil KI keine Mathematik kann","Weil Universitäten keine Labore haben dürfen"], a:1},
+  {q:"Was heißt praktisch „beständig auf deine Ordnungen schauen“ (Ps 119,117) auf einem christlichen Uni-Campus mit KI?", o:["Nur Code schreiben, keine Schrift","Schrift, Gebot, Forschung und KI-Werkzeuge in einer Haltung der Hoffnung verbinden","KI verbieten und Labore schließen","Ordnungen durch Marktindizes ersetzen","Unsterblichkeit per App verkaufen"], a:1}
+];
+const L = ["A","B","C","D","E"];
+const quiz = document.getElementById("quiz");
+const out = document.getElementById("out");
+document.getElementById("start").onclick = function () {
+  let h = "";
+  Q.forEach(function (item, i) {
+    h += '<div class="card" id="q'+i+'"><strong>'+(i+1)+'. '+item.q+'</strong>';
+    item.o.forEach(function (t, j) {
+      h += '<label class="opt"><input type="radio" name="q'+i+'" value="'+j+'"> '+L[j]+'. '+t+'</label>';
+    });
+    h += "</div>";
+  });
+  h += '<p><button type="button" class="btn" id="go">Auswerten</button></p>';
+  quiz.innerHTML = h;
+  quiz.hidden = false;
+  out.hidden = true;
+  document.getElementById("go").onclick = grade;
+};
+function grade() {
+  let sc = 0;
+  Q.forEach(function (item, i) {
+    const sel = document.querySelector('input[name="q'+i+'"]:checked');
+    const box = document.getElementById("q"+i);
+    const labs = box.querySelectorAll(".opt");
+    labs.forEach(function (lab, j) {
+      lab.classList.remove("ok","bad");
+      if (j === item.a) lab.classList.add("ok");
+    });
+    if (sel && +sel.value === item.a) sc++;
+    else if (sel) labs[+sel.value].classList.add("bad");
+  });
+  const name = document.getElementById("name").value || "Campus Student";
+  const key = "schild-quiz-rank";
+  let rank = [];
+  try { rank = JSON.parse(localStorage.getItem(key) || "[]"); } catch (e) { rank = []; }
+  rank.push({ n: name, s: sc, t: new Date().toISOString() });
+  rank.sort(function (a, b) { return b.s - a.s; });
+  rank = rank.slice(0, 12);
+  localStorage.setItem(key, JSON.stringify(rank));
+  let rl = "<ol>";
+  rank.forEach(function (r) { rl += "<li>"+r.n+" — "+r.s+"/10</li>"; });
+  rl += "</ol>";
+  out.innerHTML = '<div id="score">'+sc+'/10</div><p>'+(sc>=8?"Schild im Wort: starke Unterscheidung.":sc>=5?"Unterwegs – Zeitraffer und Psalm noch einmal.":"Zurück zu Ps 119,114: Mein Schutz und mein Schild bist du.")+'</p><h2>Rangliste (dieses Gerät)</h2>'+rl+'<p><a class="btn" href="schutz-schild-aiken-moodle.txt" download>Aiken .txt laden</a></p>';
+  out.hidden = false;
+  out.scrollIntoView({behavior:"smooth"});
+}
+</script>
+</body>
+</html>
