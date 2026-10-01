@@ -94,3 +94,28 @@ Religion und Politik: Feeds belohnen schnelles Reden und schnellen Zorn. Jak 1,2
 
 ¹ Erwin Möde, *Heuschrecken und wilder Honig: Johannes der Täufer – eine tragische Heilsgeschichte* (Regensburg: Verlag Friedrich Pustet, 2024), 81.  
 ² Andrew J. Byers, *TheoMedia: The Media of God and the Digital Age* (Eugene, OR: Cascade Books, 2013).
+
+---
+
+## EXKURS · Flydubai FZ1073 (30. September 2026) und HALLUZINATOR
+
+**Leitmotiv (Elberfelder Hebr 11,1):** Der Glaube aber ist eine Verwirklichung dessen, was man hofft, ein Überführtsein von Dingen, die man nicht sieht. Vgl. 2Kor 5,7.
+
+**Halten:** FZ1073 Dubai–Tel Aviv, 174 Passagiere + 6 Crew = 180 Seelen; Squawk 7700→7500→7700; steiler Abstieg aus ~34 000 ft; Notlandung Tabuk; Passagiere und reisendes Personal überwältigten den Copiloten nach Stich des Kapitäns (Berichte; Untersuchung offen).³ ⁴ ⁵
+
+**Medien-Halluzinationen / Korrekturen:**
+- Reuters/TOI-Erstfassung „keine Entführung“ / „Pilotenstreit“ → spätere Zeile: Copilot, Absturzabsicht, Überwältigung.⁴
+- Passagierzahlen 130 (Le Monde) / 150 (Al-Araby, Mehr) → 174+6=180.⁵ ⁶
+- „Vom Radar verschwunden“ → Al Jazeera OSINT: Bodenabdeckungs-Lücke, Satelliten-Reentry.⁶
+- Fars-False-Flag Israel/Iran: keine Belege, die FZ1073 Israel als Täter zuordnen.⁶
+- Flydubai: „altercation“, Motive unbekannt; israelische Regierung: versuchter Terror. Frames, nicht dasselbe Urteil.
+
+**Theologische Brücke:** Jak 1,19 kehrt der Feed um. Hören = Daten, zwei Zeugen, 24h, Wort und Geist – dann erst der Mund. Entschlossenes Handeln an Bord rettet Leiber; entschlossenes Hören rettet das Urteil. Keine Parteitaufe, keine Gewaltlizenz (Jak 1,20). Abraham-Akkord ≠ Bund.
+
+**HALLUZINATOR-Index 91,2:** Triangulation 0,24 · 24h-Mund 0,22 · Wort vor Bild 0,20 · Daten vor Frame 0,18 · keine Parteitaufe 0,16.
+
+³ Wikipedia, „Flydubai Flight 1073“, Stand 1. Oktober 2026; CBS News 30.9.2026.  
+⁴ Flightradar24 Blog, Ian Petchenik, 30.9.2026; Reuters-Erst- und Zweitfassung.  
+⁵ *Le Monde* (engl.), 30.9.2026.  
+⁶ Valente/Ganot, *The Media Line*, 30.9.2026.
+
