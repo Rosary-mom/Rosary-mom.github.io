@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbeit und Beruf im Matthäusevangelium – Mt 6,24–34 · Paladine Edition</title>
+<meta name="description" content="Mt 6,24–34: Zwei Herren. Arbeit und Beruf zwischen A Nicht-Besitz und B KI-Fülle. LOGOS-max, Berufungs-Index, /DREAM.">
+<link rel="canonical" href="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:wght@700;900&amp;display=swap" rel="stylesheet">
+<style>
+:root { --bg:#FFFDF8; --ink:#0D0A08; --heading:#4A0D12; --gold:#6B4A12; --card:#FFF8EA; --quote:#F4E4C4; --border:#3D2A12; --link:#0A3D62; --white:#FFF; }
+* { box-sizing: border-box; }
+html { font-size: 112.5%; }
+body { margin:0; font-family:'Rosario',Georgia,serif; background:var(--bg); color:var(--ink); line-height:1.85; font-size:1.05rem; }
+.skip { position:absolute; left:-999px; top:0; background:#000; color:#FFF; padding:.6rem 1rem; }
+.skip:focus { left:8px; top:8px; }
+h1,h2,h3 { font-family:'Rockwell Extra Bold','Rockwell','Playfair Display',Palatino,Georgia,serif; font-weight:900; color:var(--heading); line-height:1.25; }
+h1 { font-size:clamp(1.7rem,4vw,2.6rem); }
+h2 { font-size:clamp(1.3rem,3vw,1.75rem); margin:0 0 .75rem; }
+a { color:var(--link); font-weight:700; text-underline-offset:3px; }
+a:focus,button:focus,input:focus { outline:3px solid #000; outline-offset:3px; }
+.paladine { font-family:'Playfair Display',serif; font-weight:900; color:var(--heading); }
+header.mh { background:linear-gradient(90deg,#1A0A08,#4A0D12,#6B4A12); color:#FFF; padding:1rem 1.25rem; border-bottom:6px solid #C9A227; position:sticky; top:0; z-index:50; }
+header.mh a { color:#FFE9A8; }
+.mh-inner { max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:.75rem 1.5rem; justify-content:space-between; }
+.mh-kicker { font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; }
+.wrap { max-width:1100px; margin:0 auto; padding:1.25rem 1rem 4rem; }
+.card { background:var(--card); border:3px solid var(--border); border-radius:10px; padding:1.25rem 1.4rem; margin:0 0 1.25rem; }
+.quote { margin:0; padding:1rem 1.15rem; border-left:10px solid var(--heading); background:var(--quote); font-style:italic; font-size:1.12rem; }
+.hero { width:100%; height:auto; max-height:440px; object-fit:cover; border:3px solid var(--border); border-radius:10px; display:block; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.85rem; }
+@media (max-width:800px){ .grid2,.grid3 { grid-template-columns:1fr; } }
+table.data { width:100%; border-collapse:collapse; background:var(--white); }
+table.data th, table.data td { border:2px solid var(--border); padding:.65rem .7rem; text-align:left; vertical-align:top; }
+table.data th { background:#1A0A08; color:#FFE9A8; font-family:'Playfair Display',serif; }
+.btn { display:inline-block; margin:4px 6px 4px 0; padding:.65rem 1rem; background:#1A0A08; color:#FFE9A8; border:3px solid #000; border-radius:8px; font-weight:900; cursor:pointer; text-decoration:none; font-size:1rem; font-family:'Playfair Display',Rosario,serif; }
+.btn-gold { background:#6B4A12; color:#FFF; }
+.btn-teal { background:#0F3D3D; color:#FFF; }
+img.shot { width:100%; height:180px; object-fit:cover; border-radius:8px 8px 0 0; border-bottom:3px solid var(--border); display:block; }
+.media { position:relative; width:100%; padding-bottom:56.25%; height:0; border:3px solid var(--border); border-radius:8px; overflow:hidden; background:#000; }
+.media iframe, .media video { position:absolute; inset:0; width:100%; height:100%; border:0; }
+.mapframe { width:100%; height:260px; border:3px solid var(--border); border-radius:8px; }
+input[type=range] { width:100%; accent-color:#4A0D12; height:1.4rem; }
+.bar-wrap { background:#E8D9C2; border:2px solid #000; height:28px; border-radius:6px; overflow:hidden; }
+.bar { height:100%; background:linear-gradient(90deg,#4A0D12,#8A6218); width:70%; }
+.rank-item { display:flex; gap:.75rem; padding:.7rem; border:2px solid var(--border); background:#FFF; margin-bottom:.5rem; }
+.rank-num { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--heading); min-width:2rem; }
+.agenda label { display:flex; gap:.6rem; padding:.45rem 0; cursor:pointer; }
+.exec-step { padding:.5rem .7rem; border:2px solid var(--border); margin-bottom:.4rem; background:#FFF; }
+.exec-step.on { border-color:#4A0D12; background:#F4E4C4; font-weight:700; }
+.hc-note { font-size:.9rem; background:#000; color:#FFE9A8; padding:.5rem .8rem; border-radius:6px; }
+footer { border-top:4px solid var(--border); padding-top:1rem; font-size:.92rem; }
+.vidcap { font-size:.9rem; margin:.45rem 0 0; }
+.sug { text-align:left; white-space:normal; width:100%; }
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="mh" role="banner">
+  <div class="mh-inner">
+    <div>
+      <div class="mh-kicker">rosary.health / Blog · Paladine Edition</div>
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:1.25rem;">Magnifica Humanitas · Gloriam Humanitas</div>
+    </div>
+    <div>
+      <div>12. OKTOBER 2026</div>
+      <strong>Arbeit und Beruf</strong><br>
+      <span style="font-size:.85rem;">Mt 6,24–34 · LOGOS-max</span>
+    </div>
+  </div>
+</header>
+<div class="wrap" id="inhalt">
+  <p class="hc-note">Hoher Kontrast · Rosario · Rockwell Extra Bold. <button type="button" class="btn" id="btn-contrast">Kontrast verstärken</button></p>
+  <div style="text-align:center;padding:1.2rem 0;">
+    <div class="mh-kicker" style="color:var(--gold);">Zwei Herren · A/B · Reich zuerst · /DREAM</div>
+    <h1>Arbeit und Beruf im Matthäusevangelium</h1>
+    <p style="font-size:1.2rem;max-width:40em;margin:.4rem auto 0;"><strong>Leitfrage:</strong> Wem gehört das Leben – Gott, dem Mammon, dem Nicht-Besitz oder der KI-Fülle?</p>
+  </div>
+  <p>
+    <a class="btn btn-gold" href="#score">Score &amp; Ranking</a>
+    <a class="btn btn-teal" href="#agenda">Agenda</a>
+    <a class="btn btn-gold" href="#ab">A / B</a>
+    <a class="btn" href="#sim">Berufungs-Index</a>
+    <a class="btn" href="https://rosary-mom.github.io/blog/frauenbild-sprueche-31/">Spr 31 Chajil</a>
+    <a class="btn" href="https://rosary-mom.github.io/blog/handel-goettlicher-wille-jak-4/">Jak 4 Handel</a>
+  </p>
+  <figure class="card" style="padding:.6rem;">
+    <img class="hero" src="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/hero-voegel-lilien.jpg" width="1400" height="788" alt="Galiläischer Hang: Lilien, Schwalben, zwei Steinwege zu zwei Toren">
+    <figcaption style="font-size:.9rem;padding:.45rem;">Paladine-Hero: Zwei Wege am See. Die Vögel säen nicht; der Vater ernährt (Mt 6,26).</figcaption>
+  </figure>
+  <article class="card">
+    <h2>Matthäus 6,24–34 <span style="font-size:.95rem;color:var(--gold);">(Elberfelder)</span></h2>
+    <blockquote class="quote">Niemand kann zwei Herren dienen … Ihr könnt nicht Gott dienen und dem Mammon. Deshalb sage ich euch: Seid nicht besorgt für euer Leben … Trachtet aber zuerst nach dem Reich Gottes und nach seiner Gerechtigkeit! Und dies alles wird euch hinzugefügt werden. So seid nun nicht besorgt um den morgigen Tag! Denn der morgige Tag wird für sich selbst sorgen. Jeder Tag hat an seinem Übel genug.</blockquote>
+    <p style="font-size:.9rem;">Elberfelder Bibel, SCM R. Brockhaus; Christliche Verlagsgesellschaft, Witten; Dillenburg 2016. Volltext der Perikope im Beitragskörper und im <a href="https://www.bibleserver.com/ELB/Matth%C3%A4us6">Bibleserver</a>.</p>
+  </article>
+  <section class="card">
+    <h2>Resümee des letzten Paladine-Beitrags</h2>
+    <p>Auf <a href="https://rosary.health/frauenbild-in-spruechen/">rosary.health/frauenbild-in-spruechen</a> (8. Oktober) las Spr 31,25–27 die <em>eschet chajil</em>: Kraft und Hoheit als Gewand, Feldkauf, Weisheit auf der Zunge. Chajil-Index 91,2. Die Tugend-Überschrift verengt; Haushaltskodizes bleiben andere Gattung. Der heutige Text nimmt denselben Haushalt und fragt, welchem <em>Herrn</em> Arbeit und Beruf dienen. (WP zeigte am 11. Oktober zusätzlich den Entwurf <a href="https://rosary.health/rosenkranz-altar-zeugen/">Rosenkranz-Altar-Zeugen</a>.)</p>
+  </section>
+  <section class="card">
+    <h2 style="color:var(--gold);">LOGOS-max Pre-Insight</h2>
+    <p>Volltext: <a href="https://github.com/Rosary-mom/Rosary-mom.github.io/blob/main/blog/arbeit-und-beruf-mt-6/mt-6-24-34-logos-max-pre-insight.md">mt-6-24-34-logos-max-pre-insight.md</a></p>
+    <div class="grid2">
+      <div class="card" style="margin:0;"><h3>1 · Recherche</h3><p>Mammon als Herr. Arbeit als Ebenbild. A = WEF-Szenario (nicht WWF). B = Fülle-Prognose.</p></div>
+      <div class="card" style="margin:0;"><h3>2 · Exegese</h3><p>Zwei Herren. Sorge setzt keine Elle zu. Der Vater weiß. Reich zuerst.</p></div>
+      <div class="card" style="margin:0;"><h3>3 · Synthese</h3><p>Hermeneutik: Berufung, nicht Götze. Epistemologie: Wissen des Vaters vor jeder 2030-Prognose.</p></div>
+      <div class="card" style="margin:0;"><h3>4 · Output</h3><p>Laut lesen, A/B dem Herrn zuordnen, Kol 3,23 tun. Keine Parteitaufe.</p></div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Zwei Herren – nicht zwei Jobs</h2>
+    <p>Jesus zielt nicht auf Arbeit selbst. Er zielt auf die innere Ausrichtung: Wird der Beruf zum Götzen, der Essen, Trinken, Kleidung und den morgigen Tag beherrscht? Das Sprichwort bleibt: wir arbeiten, um zu leben.¹ Die westliche Wertung misst Menschen oft an Karriere und Leistung.² Die Schrift nennt Christen Gottes Mitarbeiter; was immer getan wird, dem Herrn, nicht den Menschen.³ Kol 3,23–24. Anschluss: <a href="https://rosary-mom.github.io/blog/handel-goettlicher-wille-jak-4/">Jak 4,13–17</a> – Handel ja, Gewissheit ohne Gott nein. <a href="https://rosary-mom.github.io/blog/frauenbild-sprueche-31/">Spr 31</a> – der Acker wird gekauft, der Herr bleibt der HERR.</p>
+  </section>
+  <section class="card" id="ab">
+    <h2>A und B · zwei Glücksversprechen</h2>
+    <p><strong>Quelle A:</strong> Der Satz „You’ll own nothing, and you’ll be happy“ steht in Ida Aukens Essay <em>Welcome to 2030</em> (2016) beim <em>World Economic Forum</em>. Er wird oft dem <em>WWF</em> (World Wide Fund for Nature) zugeschrieben. Der WWF ist Naturschutz; der Slogan ist WEF-Szenario. Wir verhandeln den <em>Inhalt</em>: Glück durch Nicht-Besitz.</p>
+    <p><strong>Quelle B:</strong> Elon Musks öffentliche Linie (KI, Robotik, „universal high income“) sagt Fülle, in der klassische Löhne verblassen. Die Formulierung „in drei Jahren zählen Lohn und Rente nicht mehr“ ist die hier simulierte Zuspitzung, keine notarielle Einzelzitation.</p>
+    <table class="data">
+      <caption>Zwei Prognosen, ein Herr in Mt 6,24</caption>
+      <thead><tr><th></th><th>Glücksversprechen</th><th>Was Mt 6 hört</th></tr></thead>
+      <tbody>
+        <tr><td><strong>A · Nicht-Besitz</strong></td><td>Nichts haben, glücklich sein. Zugang statt Eigentum. Plattform statt Haus.</td><td>Klingt wie „seid nicht besorgt“. Setzt die Instanz an die Stelle des Vaters. Nicht-Besitz kann Askese sein; er wird Mammon, wo Glück verbürgt wird, indem das Haus genommen wird.</td></tr>
+        <tr><td><strong>B · KI-Fülle</strong></td><td>Lohn und Rente verlieren Bedeutung. Alle reich, alle glücklich.</td><td>Klingt wie „dies alles wird hinzugefügt“. Setzt die Prognose an die Stelle des Reiches. Fülle kann Gabe sein; sie wird Mammon, wo drei Jahre die Elle der Lebenslänge ersetzen.</td></tr>
+        <tr><td><strong>Bergpredigt</strong></td><td>Der Vater weiß, dass ihr dies benötigt. Trachtet zuerst nach dem Reich.</td><td>Wissen liegt beim Vater (V. 32), nicht bei Davos und nicht bei der Roadmap. Kardashev und AI sind Stewardship, nicht Königreich.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card">
+    <h2>Hermeneutik und Epistemologie</h2>
+    <p><span class="paladine">Hermeneutik.</span> Mammon ist ein Herr. Arbeit bleibt Ebenbildlichkeit (Gen 2,15) und Dienst (Kol 3,23). Vögel modellieren Vertrauen, nicht Arbeitslosigkeit. Lilien modellieren Gabe, nicht Spinnverbot. A und B sind säkulare Evangelien der Sorgenfreiheit.</p>
+    <p><span class="paladine">Epistemologie.</span> A weiß die Zukunft als Policy-Szenario. B weiß sie als Extrapolation der Technik. Jesus setzt das Wissen des Vaters dagegen. Sorge ist eine Erkenntnishaltung: leben, als sei V. 32 falsch. Hebr 11,1: Glaube ist Verwirklichung des Gehofften – das Wort vor dem ersten 2030-Frame.</p>
+  </section>
+  <section class="card">
+    <h2>Hermeneutische Grenze</h2>
+    <p>Mt 6 tauft keine Wirtschaftsordnung. WEF ≠ WWF. Musks Fülle-Linie ist Prognose, nicht Schrift. Keine Parteitaufe von Degrowth oder Acceleration. Kein Raketen-Heil. Eigentum kann Haushalterschaft sein. Armut ist nicht automatisch Seligkeit. Endgültige Fülle: Offb 21, nicht 2029.</p>
+  </section>
+  <section class="card">
+    <h2>IMAGINATOR</h2>
+    <div class="grid2">
+      <figure class="card" style="margin:0;padding:0;overflow:hidden;">
+        <img class="shot" src="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-zwei-herren.jpg" width="1280" height="720" alt="Zwei Türen: Münz-Idol und Öllampe">
+        <figcaption style="padding:.7rem;"><strong>01 · Zwei Herren</strong> – Mammon oder der Vater (V. 24)</figcaption>
+      </figure>
+      <figure class="card" style="margin:0;padding:0;overflow:hidden;">
+        <img class="shot" src="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-nichts-besitzen.jpg" width="1280" height="720" alt="Gemeinsamer Hof ohne persönliche Schlüssel">
+        <figcaption style="padding:.7rem;"><strong>02 · A</strong> – Zugang ohne Eigentum</figcaption>
+      </figure>
+      <figure class="card" style="margin:0;padding:0;overflow:hidden;">
+        <img class="shot" src="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-fuelle-werk.jpg" width="1280" height="720" alt="Werkstatt und Ernte in Fülle">
+        <figcaption style="padding:.7rem;"><strong>03 · B</strong> – Fülle der Arbeit, ohne den Herrn</figcaption>
+      </figure>
+      <figure class="card" style="margin:0;padding:0;overflow:hidden;">
+        <img class="shot" src="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-reich-zuerst.jpg" width="1280" height="720" alt="Lilien, Nest, Geldbeutel auf dem Stein, Blick zur Stadt">
+        <figcaption style="padding:.7rem;"><strong>04 · Reich zuerst</strong> – V. 33</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="card" id="videos">
+    <h2>Videos · neu recherchiert</h2>
+    <p>Matthäus 1–13 enthält die Bergpredigt. Gospel of the Kingdom trifft V. 33. Generosity trifft den Geber. Das vierte Medium bleibt der Text laut.</p>
+    <div class="grid2">
+      <div>
+        <div class="media"><video controls preload="metadata" poster="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/hero-voegel-lilien.jpg" title="Matthew 1-13 | BibleProject"><source src="https://stream.mux.com/801erPO5siagtLvyNYBB01nIS8GRD4ZQFUgLPEPb2Vc2Y/high.mp4" type="video/mp4"></video></div>
+        <p class="vidcap"><strong>Matthew 1–13</strong> (BibleProject, 8:15). Bergpredigt im ersten Buchteil. <a href="https://bibleproject.com/explore/video/matthew-1-13/">bibleproject.com</a></p>
+      </div>
+      <div>
+        <div class="media"><video controls preload="metadata" poster="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-reich-zuerst.jpg" title="Gospel of the Kingdom | BibleProject"><source src="https://stream.mux.com/mp3tjs02X5scbwi8LqbWiAsST3I02ZgUo028PjMWSF1xRY/high.mp4" type="video/mp4"></video></div>
+        <p class="vidcap"><strong>Gospel of the Kingdom</strong> (BibleProject, 4:50). Trachtet zuerst. <a href="https://bibleproject.com/explore/video/gospel-kingdom/">bibleproject.com</a> · <a href="https://bibleproject.com/articles/what-matthew-6-33-seek-first-the-kingdom-of-god-means/">Artikel zu Mt 6,33</a></p>
+      </div>
+      <div>
+        <div class="media"><video controls preload="metadata" poster="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/shot-fuelle-werk.jpg" title="Generosity | BibleProject"><source src="https://stream.mux.com/SxFWP5bIJgAcZnRdGO0201rWzUhFsLduC5FDKA023ICwNc/high.mp4" type="video/mp4"></video></div>
+        <p class="vidcap"><strong>Generosity</strong> (BibleProject, 5:12). Gott als großzügiger Gastgeber. <a href="https://bibleproject.com/explore/video/generosity/">bibleproject.com</a></p>
+      </div>
+      <div>
+        <div class="media"><iframe src="https://www.youtube.com/embed/KUil1m3P2iI" title="How Can You Know What's Right? Here's What Jesus Thought. | BibleProject" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <p class="vidcap"><strong>How Can You Know What’s Right?</strong> (BibleProject). Episteme der Bergpredigt. <a href="https://www.youtube.com/watch?v=KUil1m3P2iI">YouTube</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Karten · Berg der Seligpreisungen, Jerusalem, Davos</h2>
+    <div class="grid3">
+      <div>
+        <h3>Galiläa</h3>
+        <iframe class="mapframe" title="Berg der Seligpreisungen" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=35.54,32.87,35.57,32.90&amp;layer=mapnik&amp;marker=32.882,35.555"></iframe>
+        <p style="font-size:.9rem;"><a href="https://www.openstreetmap.org/?mlat=32.882&amp;mlon=35.555#map=14/32.882/35.555">Bergpredigt · Vögel und Lilien</a></p>
+      </div>
+      <div>
+        <h3>Jerusalem</h3>
+        <iframe class="mapframe" title="Jerusalem" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=35.22,31.77,35.25,31.79&amp;layer=mapnik&amp;marker=31.778,35.235"></iframe>
+        <p style="font-size:.9rem;"><a href="https://www.openstreetmap.org/?mlat=31.778&amp;mlon=35.235#map=15/31.778/35.235">Reich Gottes · Gerechtigkeit</a></p>
+      </div>
+      <div>
+        <h3>Davos</h3>
+        <iframe class="mapframe" title="Davos WEF" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=9.81,46.79,9.86,46.81&amp;layer=mapnik&amp;marker=46.802,9.836"></iframe>
+        <p style="font-size:.9rem;"><a href="https://www.openstreetmap.org/?mlat=46.802&amp;mlon=9.836#map=14/46.802/9.836">WEF-Szenario A · nicht WWF</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="card" id="sim">
+    <h2>/DREAM · SUGGESTOR · ESTIMATOR · EXECUTOR</h2>
+    <p>
+      <button type="button" class="btn" data-scene="herren">Zwei Herren</button>
+      <button type="button" class="btn" data-scene="a">Simuliere A</button>
+      <button type="button" class="btn" data-scene="b">Simuliere B</button>
+      <button type="button" class="btn btn-gold" data-scene="reich">Reich zuerst</button>
+      <button type="button" class="btn" data-scene="grenze">Grenze</button>
+    </p>
+    <p id="scene-status" class="quote">Bereit. A und B sind Prognosen. Der Vater weiß.</p>
+    <div class="grid2">
+      <button type="button" class="btn sug" data-dream="1"><strong>/dream 1</strong><br>A: leere Regale, geliehenes Glück. Wer ist der Herr?</button>
+      <button type="button" class="btn sug" data-dream="2"><strong>/dream 2</strong><br>B: Fülle ohne Lohnangst. Wer setzt die Elle der Lebenslänge?</button>
+      <button type="button" class="btn sug" data-dream="3"><strong>/dream 3</strong><br>Die Vögel arbeiten ihr Vogelleben. Der Mensch bleibt Mitarbeiter.</button>
+      <button type="button" class="btn sug" data-dream="4"><strong>/dream 4</strong><br>Der morgige Tag hat sein Übel. 2029 tauft kein Evangelium.</button>
+    </div>
+    <p id="dream-out" class="quote">/dream bereit.</p>
+    <h3>SUGGESTOR</h3>
+    <div class="grid2">
+      <button type="button" class="btn sug" data-sug="vater">Nenne dem Vater eine Sorge – Essen, Kleidung, Rente.</button>
+      <button type="button" class="btn sug" data-sug="kol">Kol 3,23: eine Arbeit heute dem Herrn tun.</button>
+      <button type="button" class="btn sug" data-sug="jak">Jak 4: Planen mit Deo volente, ohne Prognose-Taufe.</button>
+      <button type="button" class="btn sug" data-sug="ab">Schreibe A und B je einen Herrn auf den Rand.</button>
+    </div>
+    <p id="sug-out" class="quote">Suggestor bereit.</p>
+    <h3>ESTIMATOR</h3>
+    <label>Ein Herr – nicht zwei <span id="v1">80</span><input type="range" id="s1" min="0" max="100" value="80"></label>
+    <label>Trachtet zuerst nach dem Reich <span id="v2">75</span><input type="range" id="s2" min="0" max="100" value="75"></label>
+    <label>Arbeit als Berufung, nicht Götze <span id="v3">72</span><input type="range" id="s3" min="0" max="100" value="72"></label>
+    <label>Weder A- noch B-Taufe <span id="v4">70</span><input type="range" id="s4" min="0" max="100" value="70"></label>
+    <label>Der Vater weiß (Episteme) <span id="v5">68</span><input type="range" id="s5" min="0" max="100" value="68"></label>
+    <p><strong>Berufungs-Index: <span id="di">80.0</span></strong></p>
+    <div class="bar-wrap"><div class="bar" id="di-bar"></div></div>
+    <p id="di-msg" class="quote"></p>
+    <p>
+      <button type="button" class="btn btn-gold" data-boost="herren">V. 24</button>
+      <button type="button" class="btn btn-gold" data-boost="reich">V. 33</button>
+      <button type="button" class="btn btn-gold" data-boost="arbeit">Kol 3,23</button>
+      <button type="button" class="btn btn-gold" data-boost="ab">A/B</button>
+      <button type="button" class="btn btn-gold" data-boost="wissen">V. 32</button>
+    </p>
+    <div id="exec-list"></div>
+    <p><button type="button" class="btn btn-gold" id="btn-exec">EXECUTOR START</button>
+       <button type="button" class="btn" id="btn-reset">Reset</button>
+       <button type="button" class="btn" id="btn-manifest">Manifest</button></p>
+    <p id="exec-out" class="quote">Bereit.</p>
+  </section>
+  <section class="card" id="score">
+    <h2>Score-Tabelle</h2>
+    <table class="data">
+      <thead><tr><th>Faktor</th><th>Score</th><th>Gewicht</th><th>Schrift</th></tr></thead>
+      <tbody>
+        <tr><td>Ein Herr</td><td>94</td><td>0,24</td><td>Mt 6,24</td></tr>
+        <tr><td>Trachtet zuerst</td><td>92</td><td>0,22</td><td>Mt 6,33</td></tr>
+        <tr><td>Arbeit als Berufung</td><td>91</td><td>0,20</td><td>Kol 3,23–24; Gen 2,15</td></tr>
+        <tr><td>Weder A- noch B-Taufe</td><td>90</td><td>0,18</td><td>Grenze</td></tr>
+        <tr><td>Der Vater weiß</td><td>88</td><td>0,16</td><td>Mt 6,32; Hebr 11,1</td></tr>
+        <tr><th>Berufungs-Index</th><th>91,2</th><th>1,00</th><th>≥ 85</th></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card" id="ranking">
+    <h2>Ranking · Früchte der Berufung</h2>
+    <ol id="rank-list" style="list-style:none;padding:0;margin:0;"></ol>
+  </section>
+  <section class="card" id="agenda">
+    <h2>Agenda · 7 Tage ein Herr</h2>
+    <div class="agenda">
+      <label><input type="checkbox"> <span><strong>Mo:</strong> Mt 6,24–34 laut. Dann V. 33 allein.</span></label>
+      <label><input type="checkbox"> <span><strong>Di:</strong> A und B je einen Herrn auf den Rand schreiben.</span></label>
+      <label><input type="checkbox"> <span><strong>Mi:</strong> Kol 3,23: eine Arbeit dem Herrn tun.</span></label>
+      <label><input type="checkbox"> <span><strong>Do:</strong> Jak 4,15: Deo volente unter einen Plan.</span></label>
+      <label><input type="checkbox"> <span><strong>Fr:</strong> Eine Sorge (Rente, Portfolio, Miete) dem Vater nennen.</span></label>
+      <label><input type="checkbox"> <span><strong>Sa:</strong> WEF ≠ WWF notieren. Prognose ≠ Evangelium.</span></label>
+      <label><input type="checkbox"> <span><strong>So:</strong> Rosenkranz: „Trachtet zuerst nach dem Reich.“</span></label>
+    </div>
+    <p id="ag-status"><strong>Agenda-Stand:</strong> 0 / 7</p>
+  </section>
+  <section class="card">
+    <h2>Fußnoten</h2>
+    <p><sup>1</sup> Ronja Aselmann und Friedmund Aselmann, <em>Perspektive Ewigkeit</em> (Gerth Medien, 2025).</p>
+    <p><sup>2</sup> Peter K. W. McGhee, „Toward a Trinitarian Theology of Work“, in <em>Thomas F. Torrance and Evangelical Theology</em>, hg. von Myk Habets und R. Lucas Stamps (Bellingham, WA: Lexham Academic, 2023), 289.</p>
+    <p><sup>3</sup> Friedrich Thiele u. a., „Arbeit/Last“, in <em>Theologisches Begriffslexikon zum Neuen Testament</em>, hg. von Lothar Coenen und Klaus Haacker (Witten: SCM R. Brockhaus, 2010), 70.</p>
+  </section>
+  <section class="card">
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://www.bibleserver.com/ELB/Matth%C3%A4us6">Matthäus 6 (Bibleserver Elberfelder)</a></li>
+      <li><a href="https://www.bibleserver.com/ELB/Kolosser3">Kolosser 3 (Bibleserver)</a></li>
+      <li><a href="https://rosary-mom.github.io/blog/frauenbild-sprueche-31/">Frauenbild in Sprüche 31</a></li>
+      <li><a href="https://rosary-mom.github.io/blog/handel-goettlicher-wille-jak-4/">Handel und göttlicher Wille</a></li>
+      <li><a href="https://rosary-mom.github.io/blog/schutz-und-schild-psalm-119/">Schutz und Schild</a></li>
+      <li><a href="https://rosary.health/">rosary.health</a></li>
+    </ul>
+  </section>
+  <footer>
+    <p>Paladine Edition · LOGOS-max · 12. Oktober 2026 · Elberfelder 2016</p>
+    <p><em>Trachtet zuerst nach dem Reich. Der morgige Tag hat sein Übel.</em></p>
+  </footer>
+</div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const scenes={
+    herren:'Mt 6,24: zwei Herren. Hassen oder anhängen – nicht zwei Halbzeiten.',
+    a:'A simuliert: nichts besitzen, geliehenes Glück. Der Herr ist die Plattform, wenn der Vater schweigt.',
+    b:'B simuliert: Lohn und Rente verblassen. Der Herr ist die Prognose, wenn das Reich wartet.',
+    reich:'Mt 6,33: zuerst das Reich. Speise und Kleidung werden hinzugefügt – nicht als 2029-Garantie.',
+    grenze:'WEF ≠ WWF. Fülle-Linie ≠ Schrift. Kein Raketen-Heil. Arbeit bleibt Berufung.'
+  };
+  const dreams={
+    1:'/dream 1: Leere Regale können Askese sein. Sie werden Mammon, wo Glück die Miete ist.',
+    2:'/dream 2: Fülle kann Gabe sein. Drei Jahre setzen der Lebenslänge keine Elle zu.',
+    3:'/dream 3: Vögel bleiben Vögel. Der Mensch bleibt Mitarbeiter Gottes (Kol 3,23).',
+    4:'/dream 4: Jeder Tag hat sein Übel. 2030 tauft kein Evangelium.'
+  };
+  const sugs={
+    vater:'Eine Sorge nennen. Der Vater weiß (V. 32). Boost: Episteme.',
+    kol:'Was du heute tust: dem Herrn, nicht dem Feed. Boost: Berufung.',
+    jak:'Deo volente unter den Plan. Boost: Reich zuerst.',
+    ab:'A = Instanz. B = Prognose. Beide am einen Herrn messen.'
+  };
+  document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>{$('scene-status').textContent=scenes[b.getAttribute('data-scene')];nudge('s1',2);}));
+  document.querySelectorAll('[data-dream]').forEach(b=>b.addEventListener('click',()=>{$('dream-out').textContent=dreams[b.getAttribute('data-dream')];nudge('s4',3);}));
+  document.querySelectorAll('[data-sug]').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.getAttribute('data-sug');
+    $('sug-out').textContent=sugs[k];
+    if(k==='vater')nudge('s5',6);
+    if(k==='kol')nudge('s3',6);
+    if(k==='jak')nudge('s2',6);
+    if(k==='ab')nudge('s4',6);
+  }));
+  function val(id){return +$(id).value;}
+  function setTxt(id,n){$(id).textContent=Math.round(n);}
+  function nudge(id,d){$(id).value=Math.min(100,+$(id).value+d);updateDI();}
+  function updateDI(){
+    const a=val('s1'),b=val('s2'),c=val('s3'),d=val('s4'),e=val('s5');
+    setTxt('v1',a);setTxt('v2',b);setTxt('v3',c);setTxt('v4',d);setTxt('v5',e);
+    const di=Math.min(97,42+a*0.24+b*0.22+c*0.20+d*0.18+e*0.16);
+    $('di').textContent=di.toFixed(1);$('di-bar').style.width=di+'%';
+    $('di-msg').textContent=di>=90?'Ein Herr. Der Vater weiß.':(di>=80?'Arbeit darf bleiben. Der Götze nicht.':'Zurück zu Mt 6,24.');
+  }
+  ['s1','s2','s3','s4','s5'].forEach(id=>$(id).addEventListener('input',updateDI));
+  const boostMap={herren:'s1',reich:'s2',arbeit:'s3',ab:'s4',wissen:'s5'};
+  document.querySelectorAll('[data-boost]').forEach(b=>b.addEventListener('click',()=>nudge(boostMap[b.getAttribute('data-boost')],6)));
+  $('btn-reset').addEventListener('click',()=>{['s1','s2','s3','s4','s5'].forEach((id,i)=>{$(id).value=[80,75,72,70,68][i];});updateDI();});
+  $('btn-manifest').addEventListener('click',()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({title:'Berufungs-Manifest Mt 6',index:+$('di').textContent,mt6:true,A:'WEF-Szenario',B:'Fuelle-Prognose'})],{type:'application/json'}));a.download='berufungs-manifest-mt6.json';a.click();});
+  const execSteps=['1. Mt 6,24–34 laut.','2. A und B je einen Herrn zuordnen.','3. Kol 3,23 tun.','4. Eine Sorge dem Vater nennen.','5. Rosenkranz: Trachtet zuerst.'];
+  function drawExec(n){$('exec-list').innerHTML=execSteps.map((s,i)=>'<div class="exec-step'+(i===n?' on':'')+'">'+s+'</div>').join('');}
+  drawExec(-1);
+  $('btn-exec').addEventListener('click',()=>{let i=0;drawExec(0);const t=setInterval(()=>{i++;if(i>=execSteps.length){clearInterval(t);$('exec-out').textContent='Ein Herr. Der morgige Tag hat sein Übel.';nudge('s1',8);return;}drawExec(i);},1400);});
+  const practices=[
+    {n:'Ein Herr – nicht Mammon (Mt 6,24)',s:94},
+    {n:'Trachtet zuerst nach dem Reich (V. 33)',s:93},
+    {n:'Der Vater weiß (V. 32) – Episteme',s:92},
+    {n:'Arbeit dem Herrn (Kol 3,23)',s:91},
+    {n:'Vögel: Vertrauen, nicht Faulheit',s:90},
+    {n:'A prüfen: Askese oder Plattform-Herr',s:89},
+    {n:'B prüfen: Gabe oder Prognose-Herr',s:88},
+    {n:'Deo volente (Jak 4,15)',s:87},
+    {n:'Jeder Tag hat sein Übel (V. 34)',s:86},
+    {n:'Keine Parteitaufe von Degrowth oder Fülle',s:85}
+  ];
+  function renderRank(){
+    practices.sort((x,y)=>y.s-x.s);
+    $('rank-list').innerHTML=practices.map((p,i)=>'<li class="rank-item"><span class="rank-num">'+(i+1)+'</span><div><strong>'+p.n+'</strong><br>Score '+p.s+' <button type="button" class="btn" data-ri="'+i+'" style="padding:.25rem .6rem;">+</button></div></li>').join('');
+    document.querySelectorAll('[data-ri]').forEach(btn=>btn.addEventListener('click',()=>{practices[+btn.getAttribute('data-ri')].s=Math.min(99,practices[+btn.getAttribute('data-ri')].s+1);renderRank();}));
+  }
+  renderRank();
+  document.querySelectorAll('#agenda .agenda input').forEach(x=>x.addEventListener('change',()=>{$('ag-status').innerHTML='<strong>Agenda-Stand:</strong> '+[...document.querySelectorAll('#agenda .agenda input')].filter(z=>z.checked).length+' / 7';}));
+  $('btn-contrast').addEventListener('click',()=>{document.body.style.background='#FFF';document.body.style.color='#000';});
+  updateDI();
+})();
+</script>
+</body>
+</html>
