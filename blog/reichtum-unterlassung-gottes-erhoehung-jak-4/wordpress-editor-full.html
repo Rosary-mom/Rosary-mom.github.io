@@ -58,6 +58,10 @@ footer { border-top:4px solid var(--border); padding-top:1rem; font-size:.92rem;
 .kpi { font-family:'Playfair Display',serif; font-size:1.45rem; color:var(--heading); }
 .note { font-size:.9rem; }
 label.sl { display:block; margin:.45rem 0; }
+.eur-form { display:grid; grid-template-columns:2fr 1fr 1fr auto; gap:.5rem; align-items:end; margin:.75rem 0; }
+@media (max-width:800px){ .eur-form { grid-template-columns:1fr; } }
+.eur-form input { width:100%; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
 </style>
 </head>
 <body>
@@ -84,8 +88,8 @@ label.sl { display:block; margin:.45rem 0; }
   </div>
   <p>
     <a class="btn btn-gold" href="#rechner">Rechner</a>
-    <a class="btn btn-teal" href="#szenario">Lichterfest-Szenario</a>
-    <a class="btn" href="#score">Score</a>
+    <a class="btn btn-teal" href="#eur">EÜR Neugründung</a>
+    <a class="btn" href="#score">Score &amp; Ranking</a>
     <a class="btn" href="#agenda">Agenda</a>
     <a class="btn" href="https://rosary-mom.github.io/blog/gastfreundschaft-gestern-heute-morgen/">Hebr 13 Tisch</a>
     <a class="btn" href="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/">Mt 6 Beruf</a>
@@ -269,7 +273,7 @@ label.sl { display:block; margin:.45rem 0; }
         <tr><td>Strom / Jahr</td><td id="s-gwh">—</td></tr>
         <tr><td>Wärme / Jahr</td><td id="s-heat">—</td></tr>
         <tr><td>Wärme ≈ Haushalte à 12 MWh</td><td id="s-homes">—</td></tr>
-        <tr><td>Stromkosten (Summe)</td><td id="s-strom€">—</td></tr>
+        <tr><td>Stromkosten (Summe)</td><td id="s-stromeur">—</td></tr>
         <tr><td>Lease-Summe</td><td id="s-lease">—</td></tr>
         <tr><td>Agentur-Umsatz Summe</td><td id="s-ag">—</td></tr>
         <tr><td>Netto Haushalte Summe</td><td id="s-net">—</td></tr>
@@ -300,6 +304,55 @@ label.sl { display:block; margin:.45rem 0; }
     </table>
   </section>
 
+  <section class="card" id="eur">
+    <h2>5 · Vereinfachte EÜR für die Neugründung</h2>
+    <p>Kleingewerbe / Einzelunternehmen: Einnahmen minus Ausgaben (<a href="https://www.gesetze-im-internet.de/estg/__4.html">§ 4 Abs. 3 EStG</a>). <strong>Keine Rechts- oder Steuerberatung.</strong> Rohmodell mit Rechnern und PDF:</p>
+    <p>
+      <a class="btn btn-gold" href="https://hmpsm-lander5787.vercel.app/blog/gruender-rohmodell.html">Blog · Gründer-Rohmodell + Rechner</a>
+      <a class="btn btn-teal" href="https://hmpsm-lander5787.vercel.app/downloads/Gruender-Rohmodell.pdf">PDF herunterladen</a>
+      <a class="btn" href="https://hmpsm-lander5787.vercel.app/">Lander hmpsm-lander5787</a>
+    </p>
+    <p class="note">Die Auto-Zeilen folgen den Reglern oben (Lease, Agentur, Wärme, Strom, WAN). Eigene Posten trägst du ein; sie erscheinen in der Ranking-Liste.</p>
+    <h3>Einnahmen · Jahr 1</h3>
+    <table class="data">
+      <thead><tr><th>Posten</th><th class="num">€ / Jahr</th></tr></thead>
+      <tbody id="eur-in"></tbody>
+      <tfoot><tr><th>Summe Einnahmen</th><th class="num" id="eur-in-sum">0</th></tr></tfoot>
+    </table>
+    <h3>Ausgaben · Jahr 1</h3>
+    <table class="data">
+      <thead><tr><th>Posten</th><th class="num">€ / Jahr</th></tr></thead>
+      <tbody id="eur-out"></tbody>
+      <tfoot><tr><th>Summe Ausgaben</th><th class="num" id="eur-out-sum">0</th></tr></tfoot>
+    </table>
+    <p><strong>Überschuss (EÜR): <span class="kpi" id="eur-ueber">0 €</span></strong></p>
+    <p id="eur-msg" class="quote"></p>
+    <h3>Posten eintragen (Kosten / Nutzen → Ranking)</h3>
+    <div class="eur-form">
+      <label>Bezeichnung<br><input type="text" id="eur-name" placeholder="z. B. Gewerbeanmeldung, Kursumsatz"></label>
+      <label>Kosten €<br><input type="number" id="eur-kosten" min="0" step="1" value="0"></label>
+      <label>Nutzen €<br><input type="number" id="eur-nutzen" min="0" step="1" value="0"></label>
+      <p><button type="button" class="btn btn-gold" id="btn-eur-add">In Ranking eintragen</button></p>
+    </div>
+    <p>
+      <label class="sl"><input type="radio" name="eur-seite" value="in" checked> als Einnahme (Nutzen)</label>
+      <label class="sl"><input type="radio" name="eur-seite" value="out"> als Ausgabe (Kosten)</label>
+    </p>
+    <h3>Kleinunternehmer § 19 UStG (Stand 2026, Simulator)</h3>
+    <label class="sl">Umsatz Vorjahr (€) <span id="v-u1">18000</span>
+      <input type="range" id="u1" min="0" max="120000" step="500" value="18000"></label>
+    <label class="sl">Umsatz laufendes Jahr (€) <span id="v-u2">60000</span>
+      <input type="range" id="u2" min="0" max="150000" step="500" value="60000"></label>
+    <label class="sl"><input type="checkbox" id="u-found"> Gründungsjahr (nur 25.000-€-Grenze)</label>
+    <p id="u-out" class="quote"></p>
+    <p>
+      <button type="button" class="btn btn-gold" id="btn-dl-json">Ergebnis als JSON</button>
+      <button type="button" class="btn btn-gold" id="btn-dl-csv">Ergebnis als CSV</button>
+      <button type="button" class="btn" id="btn-dl-html">Ergebnis als HTML-Bericht</button>
+    </p>
+    <p class="note" id="dl-status">Die Datei enthält alle eingetragenen Werte, Score, Ranking und EÜR.</p>
+  </section>
+
   <section class="card" id="sim">
     <h2>/DREAM · SUGGESTOR · ESTIMATOR · EXECUTOR</h2>
     <p>
@@ -326,11 +379,11 @@ label.sl { display:block; margin:.45rem 0; }
     </div>
     <p id="sug-out" class="quote">Suggestor bereit.</p>
     <h3>ESTIMATOR · Unterlassungs-Index</h3>
-    <label class="sl">Wissen und tun (Jak 4,17) <span id="v1">80</span><input type="range" id="s1" min="0" max="100" value="80"></label>
-    <label class="sl">Lohn nicht vorenthalten (Jak 5,4) <span id="v2">75</span><input type="range" id="s2" min="0" max="100" value="75"></label>
-    <label class="sl">Ulme-Weinstock (Gabe + Gebet) <span id="v3">72</span><input type="range" id="s3" min="0" max="100" value="72"></label>
-    <label class="sl">Arme erhöht Gott <span id="v4">70</span><input type="range" id="s4" min="0" max="100" value="70"></label>
-    <label class="sl">Keine Parteitaufe <span id="v5">68</span><input type="range" id="s5" min="0" max="100" value="68"></label>
+    <label class="sl">Wissen und tun (Jak 4,17) <span id="v1">80</span><input type="range" id="s1" min="0" max="100" value="80" oninput="window.rkCalc&&rkCalc()"></label>
+    <label class="sl">Lohn nicht vorenthalten (Jak 5,4) <span id="v2">75</span><input type="range" id="s2" min="0" max="100" value="75" oninput="window.rkCalc&&rkCalc()"></label>
+    <label class="sl">Ulme-Weinstock (Gabe + Gebet) <span id="v3">72</span><input type="range" id="s3" min="0" max="100" value="72" oninput="window.rkCalc&&rkCalc()"></label>
+    <label class="sl">Arme erhöht Gott <span id="v4">70</span><input type="range" id="s4" min="0" max="100" value="70" oninput="window.rkCalc&&rkCalc()"></label>
+    <label class="sl">Keine Parteitaufe <span id="v5">68</span><input type="range" id="s5" min="0" max="100" value="68" oninput="window.rkCalc&&rkCalc()"></label>
     <p><strong>Unterlassungs-Index: <span id="di">80.0</span></strong></p>
     <div class="bar-wrap"><div class="bar" id="di-bar"></div></div>
     <p id="di-msg" class="quote"></p>
@@ -348,21 +401,24 @@ label.sl { display:block; margin:.45rem 0; }
     <p id="exec-out" class="quote">Bereit.</p>
   </section>
   <section class="card" id="score">
-    <h2>Score-Tabelle</h2>
+    <h2>Score-Tabelle · live aus den Reglern</h2>
+    <p class="note">Die fünf Schieberegler im ESTIMATOR schreiben Score und Beitrag sofort hierher. Zielindex ≥ 85.</p>
     <table class="data">
-      <thead><tr><th>Faktor</th><th>Score</th><th>Gewicht</th><th>Schrift</th></tr></thead>
+      <thead><tr><th>Faktor</th><th class="num">Score</th><th class="num">Gewicht</th><th class="num">Beitrag</th><th>Schrift</th></tr></thead>
       <tbody>
-        <tr><td>Wissen und tun</td><td>94</td><td>0,24</td><td>Jak 4,17</td></tr>
-        <tr><td>Lohn nicht vorenthalten</td><td>92</td><td>0,22</td><td>Jak 5,4</td></tr>
-        <tr><td>Ulme-Weinstock</td><td>91</td><td>0,20</td><td>Hermas; Jak 2,15–16</td></tr>
-        <tr><td>Arme erhöht Gott</td><td>90</td><td>0,18</td><td>Jak 1,9; 2,5</td></tr>
-        <tr><td>Keine Parteitaufe</td><td>88</td><td>0,16</td><td>Grenze</td></tr>
-        <tr><th>Unterlassungs-Index</th><th>91,2</th><th>1,00</th><th>≥ 85</th></tr>
+        <tr><td>Wissen und tun</td><td class="num" id="sc-1">80</td><td class="num">0,24</td><td class="num" id="sc-1w">—</td><td>Jak 4,17</td></tr>
+        <tr><td>Lohn nicht vorenthalten</td><td class="num" id="sc-2">75</td><td class="num">0,22</td><td class="num" id="sc-2w">—</td><td>Jak 5,4</td></tr>
+        <tr><td>Ulme-Weinstock</td><td class="num" id="sc-3">72</td><td class="num">0,20</td><td class="num" id="sc-3w">—</td><td>Hermas; Jak 2,15–16</td></tr>
+        <tr><td>Arme erhöht Gott</td><td class="num" id="sc-4">70</td><td class="num">0,18</td><td class="num" id="sc-4w">—</td><td>Jak 1,9; 2,5</td></tr>
+        <tr><td>Keine Parteitaufe</td><td class="num" id="sc-5">68</td><td class="num">0,16</td><td class="num" id="sc-5w">—</td><td>Grenze</td></tr>
+        <tr><th>Unterlassungs-Index</th><th class="num" id="sc-di">—</th><th class="num">1,00</th><th class="num" id="sc-sum">—</th><th>≥ 85</th></tr>
       </tbody>
     </table>
+    <p>Live-Index: <strong class="kpi" id="sc-kpi">—</strong></p>
   </section>
   <section class="card" id="ranking">
-    <h2>Ranking · Früchte gegen die Unterlassung</h2>
+    <h2>Ranking · Kosten, Nutzen, Früchte</h2>
+    <p class="note">Auto-Zeilen aus dem Rechner und der EÜR. Eigene Posten über „In Ranking eintragen“. Score = 50 + 50 × (Nutzen − Kosten) / (Nutzen + Kosten).</p>
     <ol id="rank-list" style="list-style:none;padding:0;margin:0;"></ol>
   </section>
   <section class="card" id="agenda">
@@ -394,6 +450,9 @@ label.sl { display:block; margin:.45rem 0; }
       <li><a href="https://rosary-mom.github.io/blog/gastfreundschaft-gestern-heute-morgen/">Gastfreundschaft (Hebr 13)</a></li>
       <li><a href="https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/">Arbeit und Beruf (Mt 6)</a></li>
       <li><a href="https://rosary-mom.github.io/blog/handel-goettlicher-wille-jak-4/">Handel und göttlicher Wille (Jak 4,13–17)</a></li>
+      <li><a href="https://hmpsm-lander5787.vercel.app/blog/gruender-rohmodell.html">Gründer-Rohmodell (Blog + Rechner)</a></li>
+      <li><a href="https://hmpsm-lander5787.vercel.app/downloads/Gruender-Rohmodell.pdf">Gründer-Rohmodell (PDF)</a></li>
+      <li><a href="https://hmpsm-lander5787.vercel.app/">hmpsm-lander5787</a></li>
       <li><a href="https://rosary.health/">rosary.health</a></li>
     </ul>
   </section>
@@ -406,66 +465,170 @@ label.sl { display:block; margin:.45rem 0; }
 (function(){
   const $=id=>document.getElementById(id);
   const de=(n,d=0)=>n.toLocaleString('de-DE',{maximumFractionDigits:d,minimumFractionDigits:d});
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const wanMap={
-    starlink:{ok:true,€:70,txt:'Starlink: ländlich tragfähig. Latenz höher, Upload begrenzt. Für Inferenz-API oft genug, für schweres Training knapp.'},
-    telekom:{ok:true,€:55,txt:'Telekom Glasfaser: bevorzugter Dauerbetrieb. Fritzbox als CPE sinnvoll.'},
-    kabel:{ok:true,€:45,txt:'Kabel BW / Vodafone: gut, oft asymmetrischer Upload. Für Agentur-API meist tragfähig.'},
-    d2:{ok:false,€:40,txt:'D2 / Mobilfunk: Backup. Für 0,8 kW-Knoten 24/7 nur Notlösung (Datenkappe, Jitter).'},
-    none:{ok:false,€:0,txt:'Kein WAN: der Knoten bleibt Heizung ohne Agentur. Fritzbox allein ist kein Anschluss.'}
+    starlink:{ok:true,eur:70,txt:'Starlink: ländlich tragfähig. Latenz höher, Upload begrenzt. Für Inferenz-API oft genug, für schweres Training knapp.'},
+    telekom:{ok:true,eur:55,txt:'Telekom Glasfaser: bevorzugter Dauerbetrieb. Fritzbox als CPE sinnvoll.'},
+    kabel:{ok:true,eur:45,txt:'Kabel BW / Vodafone: gut, oft asymmetrischer Upload. Für Agentur-API meist tragfähig.'},
+    d2:{ok:false,eur:40,txt:'D2 / Mobilfunk: Backup. Für 0,8 kW-Knoten 24/7 nur Notlösung (Datenkappe, Jitter).'},
+    none:{ok:false,eur:0,txt:'Kein WAN: der Knoten bleibt Heizung ohne Agentur. Fritzbox allein ist kein Anschluss.'}
   };
-  function calc(){
-    const vis=+$('visitors').value, conv=+$('conv').value;
-    $('v-vis').textContent=de(vis); $('v-conv').textContent=conv;
+  const extra=[];
+  let last=null;
+  function lineScore(nutzen,kosten){
+    const u=+nutzen||0,k=+kosten||0;
+    if(u+k===0) return 50;
+    return Math.round(Math.max(1,Math.min(99,50+50*(u-k)/Math.max(u+k,1))));
+  }
+  function val(id){const el=$(id); return el?+el.value:0;}
+  function setTxt(id,n){const el=$(id); if(el) el.textContent=n;}
+  function snapshot(){
+    const vis=val('visitors'), conv=val('conv');
     const hosts=Math.round(vis*conv/100);
-    $('hosts-out').textContent=de(hosts);
-    const kW=+$('kw').value/100;
-    const strom=+$('strom').value/100, gas=+$('gas').value/100, oel=+$('oel').value/100;
-    const heatP=+$('heat').value/100, lease=+$('lease').value, agrev=+$('agrev').value;
-    $('v-kw').textContent=kW.toFixed(2);
-    $('v-strom').textContent=strom.toFixed(2);
-    $('v-gas').textContent=gas.toFixed(2);
-    $('v-oel').textContent=oel.toFixed(2);
-    $('v-heat').textContent=Math.round(heatP*100);
-    $('v-lease').textContent=de(lease);
-    $('v-agrev').textContent=de(agrev);
+    const kW=val('kw')/100;
+    const strom=val('strom')/100, gas=val('gas')/100, oel=val('oel')/100;
+    const heatP=val('heat')/100, lease=val('lease'), agrev=val('agrev');
     const kWh=kW*8760, heatKwh=kWh*heatP, cost=kWh*strom, saveG=heatKwh*gas, saveO=heatKwh*oel;
     const tops=kW*250, net=lease+agrev+saveG-cost;
-    $('o-kwh').textContent=de(kWh,0)+' kWh';
-    $('o-strom').textContent=de(cost,0)+' €';
-    $('o-heatkwh').textContent=de(heatKwh,0)+' kWh';
-    $('o-gas').textContent=de(saveG,0)+' €';
-    $('o-oel').textContent=de(saveO,0)+' € (Vergleich, nicht addieren)';
-    $('o-tops').textContent=de(tops,0)+' TOPS';
-    $('o-net').innerHTML='<strong>'+de(net,0)+' €</strong>';
-    $('o-netmsg').textContent=net>=0
-      ? 'Der Haushalt trägt: Lease und Wärme decken den Strom. Das bleibt Verwaltung, nicht Erhöhung durch Gott.'
-      : 'Unterdeckung: ohne höheres Lease oder günstigeren Strom bleibt der Knoten Unterlassung in Grün – teure Wärme.';
-    const n=+$('nagt').value;
-    $('v-n').textContent=de(n);
-    $('s-mw').textContent=de(n*kW/1000,2)+' MW';
-    $('s-gwh').textContent=de(n*kWh/1e6,2)+' GWh';
-    $('s-heat').textContent=de(n*heatKwh/1e6,2)+' GWh';
-    $('s-homes').textContent=de(Math.round(n*heatKwh/12000));
-    $('s-strom€').textContent=de(n*cost,0)+' €';
-    $('s-lease').textContent=de(n*lease,0)+' €';
-    $('s-ag').textContent=de(n*agrev,0)+' €';
-    $('s-net').textContent=de(n*net,0)+' €';
-    const w=wanMap[$('wan').value];
-    const fritz=$('fritz').checked;
-    let msg=w.txt+' Richtwert '+w.€+' €/Monat.';
-    if(fritz) msg+=' Fritzbox: CPE ja, WAN nein.';
-    else msg+=' Ohne Fritzbox/Router fehlt das LAN.';
-    if(!w.ok) msg+=' Agentur-Skala hier nicht tragen.';
-    $('wan-out').textContent=msg;
-    return {hosts,net};
+    const n=val('nagt');
+    const wanKey=$('wan')?$('wan').value:'telekom';
+    const w=wanMap[wanKey]||wanMap.telekom;
+    const fritz=$('fritz')?$('fritz').checked:true;
+    const wanYear=w.eur*12;
+    const fritzYear=fritz?40:0;
+    const s=[val('s1'),val('s2'),val('s3'),val('s4'),val('s5')];
+    const wgt=[0.24,0.22,0.20,0.18,0.16];
+    const beitrag=s.map((x,i)=>x*wgt[i]);
+    const di=Math.min(97,42+beitrag.reduce((a,b)=>a+b,0));
+    const inn=[
+      {n:'Lease (Knoten)',v:lease,auto:true},
+      {n:'KI-Agentur Restkapazität',v:agrev,auto:true},
+      {n:'Wärme-Äquivalent Gas',v:Math.round(saveG),auto:true}
+    ].concat(extra.filter(x=>x.seite==='in').map(x=>({n:x.n,v:x.nutzen,auto:false})));
+    const out=[
+      {n:'Strom Hausknoten',v:Math.round(cost),auto:true},
+      {n:'WAN '+wanKey,v:wanYear,auto:true},
+      {n:'Fritzbox (Pauschale Abschreibung)',v:fritzYear,auto:true}
+    ].concat(extra.filter(x=>x.seite==='out').map(x=>({n:x.n,v:x.kosten,auto:false})));
+    const inSum=inn.reduce((a,b)=>a+b.v,0);
+    const outSum=out.reduce((a,b)=>a+b.v,0);
+    const ueber=inSum-outSum;
+    const u1=val('u1'), u2=val('u2');
+    const found=$('u-found')?$('u-found').checked:false;
+    const klein=found?(u2<=25000):(u1<=25000 && u2<=100000);
+    return {vis,conv,hosts,kW,strom,gas,oel,heatP,lease,agrev,kWh,heatKwh,cost,saveG,saveO,tops,net,n,wanKey,w,fritz,wanYear,fritzYear,s,wgt,beitrag,di,inn,out,inSum,outSum,ueber,u1,u2,found,klein,extra:extra.map(x=>({...x}))};
   }
-  ['visitors','conv','kw','strom','gas','oel','heat','lease','agrev','nagt','wan','fritz'].forEach(id=>{
-    const el=$(id); const ev=el.type==='checkbox'||el.tagName==='SELECT'?'change':'input';
-    el.addEventListener(ev,calc);
-  });
-  $('btn-use-hosts').addEventListener('click',()=>{$('nagt').value=Math.max(1000,Math.round(+$('visitors').value*+$('conv').value/100));calc();});
-  $('btn-100k').addEventListener('click',()=>{$('nagt').value=100000;calc();});
-
+  function paintEur(rows,tbodyId){
+    const tb=$(tbodyId); if(!tb) return;
+    tb.innerHTML=rows.map(r=>'<tr><td>'+(r.auto?'<em>Auto · </em>':'')+esc(r.n)+'</td><td class="num">'+de(r.v,0)+' €</td></tr>').join('');
+  }
+  function calc(){
+    const x=snapshot(); last=x;
+    setTxt('v-vis',de(x.vis)); setTxt('v-conv',String(x.conv)); setTxt('hosts-out',de(x.hosts));
+    setTxt('v-kw',x.kW.toFixed(2)); setTxt('v-strom',x.strom.toFixed(2)); setTxt('v-gas',x.gas.toFixed(2));
+    setTxt('v-oel',x.oel.toFixed(2)); setTxt('v-heat',String(Math.round(x.heatP*100)));
+    setTxt('v-lease',de(x.lease)); setTxt('v-agrev',de(x.agrev));
+    setTxt('o-kwh',de(x.kWh,0)+' kWh'); setTxt('o-strom',de(x.cost,0)+' €');
+    setTxt('o-heatkwh',de(x.heatKwh,0)+' kWh'); setTxt('o-gas',de(x.saveG,0)+' €');
+    setTxt('o-oel',de(x.saveO,0)+' € (Vergleich, nicht addieren)'); setTxt('o-tops',de(x.tops,0)+' TOPS');
+    if($('o-net')) $('o-net').innerHTML='<strong>'+de(x.net,0)+' €</strong>';
+    setTxt('o-netmsg', x.net>=0
+      ? 'Der Haushalt trägt: Lease und Wärme decken den Strom. Das bleibt Verwaltung, nicht Erhöhung durch Gott.'
+      : 'Unterdeckung: ohne höheres Lease oder günstigeren Strom bleibt der Knoten Unterlassung in Grün – teure Wärme.');
+    setTxt('v-n',de(x.n));
+    setTxt('s-mw',de(x.n*x.kW/1000,2)+' MW');
+    setTxt('s-gwh',de(x.n*x.kWh/1e6,2)+' GWh');
+    setTxt('s-heat',de(x.n*x.heatKwh/1e6,2)+' GWh');
+    setTxt('s-homes',de(Math.round(x.n*x.heatKwh/12000)));
+    setTxt('s-stromeur',de(x.n*x.cost,0)+' €');
+    setTxt('s-lease',de(x.n*x.lease,0)+' €');
+    setTxt('s-ag',de(x.n*x.agrev,0)+' €');
+    setTxt('s-net',de(x.n*x.net,0)+' €');
+    let msg=x.w.txt+' Richtwert '+x.w.eur+' €/Monat.';
+    msg+=x.fritz?' Fritzbox: CPE ja, WAN nein.':' Ohne Fritzbox/Router fehlt das LAN.';
+    if(!x.w.ok) msg+=' Agentur-Skala hier nicht tragen.';
+    setTxt('wan-out',msg);
+    paintEur(x.inn,'eur-in'); paintEur(x.out,'eur-out');
+    setTxt('eur-in-sum',de(x.inSum,0)+' €'); setTxt('eur-out-sum',de(x.outSum,0)+' €');
+    setTxt('eur-ueber',de(x.ueber,0)+' €');
+    setTxt('eur-msg', x.ueber>=0
+      ? 'EÜR positiv. Deo volente (Jak 4,15). Der Überschuss ist Verwaltung, nicht die Erhöhung der Armen.'
+      : 'EÜR negativ: Wissen um das Gute reicht nicht – Kosten decken den Nutzen nicht (Jak 4,17).');
+    setTxt('v-u1',de(x.u1)); setTxt('v-u2',de(x.u2));
+    setTxt('u-out', x.klein
+      ? 'Rechnerisch Kleinunternehmer möglich (Vorjahr ≤ 25.000 und lfd. Jahr ≤ 100.000; Gründungsjahr nur ≤ 25.000). Simulator, keine Auskunft des Finanzamts.'
+      : 'Grenzen überschritten – Regelung rechnerisch nicht möglich. Steuerberatung fragen.');
+    updateDI(x);
+    renderRank(x);
+    return x;
+  }
+  function updateDI(x){
+    x=x||snapshot();
+    ['v1','v2','v3','v4','v5'].forEach((id,i)=>setTxt(id,Math.round(x.s[i])));
+    x.s.forEach((v,i)=>{setTxt('sc-'+(i+1),Math.round(v)); setTxt('sc-'+(i+1)+'w',de(x.beitrag[i],1));});
+    const diTxt=x.di.toFixed(1);
+    setTxt('di',diTxt); setTxt('sc-di',diTxt.replace('.',',')); setTxt('sc-kpi',diTxt.replace('.',','));
+    setTxt('sc-sum',de(x.beitrag.reduce((a,b)=>a+b,0),1));
+    if($('di-bar')) $('di-bar').style.width=x.di+'%';
+    setTxt('di-msg', x.di>=90?'Wissen wird Tat. Der Lohn schreit nicht mehr.':(x.di>=80?'Die Ulme darf tragen. Klugheit bleibt.':'Zurück zu Jak 4,17.'));
+  }
+  function renderRank(x){
+    x=x||snapshot();
+    const items=[
+      {n:'Wissen und tun (Jak 4,17)',s:Math.round(x.s[0]),kosten:0,nutzen:0,kind:'schrift'},
+      {n:'Lohn nicht vorenthalten (Jak 5,4)',s:Math.round(x.s[1]),kosten:0,nutzen:0,kind:'schrift'},
+      {n:'Ulme-Weinstock (Gabe + Gebet)',s:Math.round(x.s[2]),kosten:0,nutzen:0,kind:'schrift'},
+      {n:'Arme erhöht Gott (Jak 1,9; 2,5)',s:Math.round(x.s[3]),kosten:0,nutzen:0,kind:'schrift'},
+      {n:'Keine Parteitaufe',s:Math.round(x.s[4]),kosten:0,nutzen:0,kind:'schrift'},
+      {n:'Lease an den Haushalt',s:lineScore(x.lease,0),kosten:0,nutzen:x.lease,kind:'auto'},
+      {n:'KI-Agentur Restkapazität',s:lineScore(x.agrev,0),kosten:0,nutzen:x.agrev,kind:'auto'},
+      {n:'Wärme gegen Gas',s:lineScore(x.saveG,0),kosten:0,nutzen:Math.round(x.saveG),kind:'auto'},
+      {n:'Strom Hausknoten',s:lineScore(0,x.cost),kosten:Math.round(x.cost),nutzen:0,kind:'auto'},
+      {n:'WAN '+x.wanKey,s:lineScore(x.w.ok?800:0,x.wanYear),kosten:x.wanYear,nutzen:x.w.ok?800:0,kind:'auto'},
+      {n:'EÜR-Überschuss Jahr 1',s:lineScore(Math.max(x.ueber,0),Math.max(-x.ueber,0)),kosten:x.ueber<0?Math.abs(x.ueber):0,nutzen:x.ueber>0?x.ueber:0,kind:'auto'}
+    ];
+    extra.forEach(e=>items.push({n:e.n,s:lineScore(e.nutzen,e.kosten),kosten:e.kosten,nutzen:e.nutzen,kind:'eigen'}));
+    items.sort((a,b)=>b.s-a.s);
+    const box=$('rank-list'); if(!box) return;
+    box.innerHTML=items.map((p,i)=>{
+      const kn=(p.kosten||p.nutzen)?('Kosten '+de(p.kosten,0)+' € · Nutzen '+de(p.nutzen,0)+' € · '):'';
+      const del=p.kind==='eigen'?' <button type="button" class="btn" data-del="'+esc(p.n)+'" style="padding:.25rem .6rem;">Entfernen</button>':'';
+      return '<li class="rank-item"><span class="rank-num">'+(i+1)+'</span><div><strong>'+esc(p.n)+'</strong><br>'+kn+'Score <strong>'+p.s+'</strong>'+del+'</div></li>';
+    }).join('');
+    box.querySelectorAll('[data-del]').forEach(btn=>btn.addEventListener('click',()=>{
+      const name=btn.getAttribute('data-del');
+      const i=extra.findIndex(e=>e.n===name);
+      if(i>=0) extra.splice(i,1);
+      calc();
+    }));
+  }
+  function nudge(id,d){const el=$(id); if(!el) return; el.value=Math.min(100,Math.max(0,+el.value+d)); calc();}
+  function download(name,mime,text){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([text],{type:mime}));
+    a.download=name; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+    setTxt('dl-status','Gespeichert: '+name);
+  }
+  function stamp(){return new Date().toISOString().slice(0,10);}
+  function payload(){
+    const x=last||calc();
+    return {
+      titel:'EÜR + Score · KI-Agentur / Hausknoten · Jak 4,17–5,6',
+      datum:new Date().toISOString(),
+      hinweis:'Simulator, keine Rechts- oder Steuerberatung. Gründer-Rohmodell: https://hmpsm-lander5787.vercel.app/blog/gruender-rohmodell.html',
+      pdf:'https://hmpsm-lander5787.vercel.app/downloads/Gruender-Rohmodell.pdf',
+      lander:'https://hmpsm-lander5787.vercel.app/',
+      blog:'https://rosary-mom.github.io/blog/reichtum-unterlassung-gottes-erhoehung-jak-4/reichtum-unterlassung-gottes-erhoehung-jak-4-paladine.html',
+      unterlassungsIndex:+x.di.toFixed(1),
+      regler:{wissen:x.s[0],lohn:x.s[1],ulme:x.s[2],arme:x.s[3],grenze:x.s[4]},
+      lichterfest:{besucher:x.vis,conversion:x.conv,hosts:x.hosts,agenturen:x.n},
+      knoten:{kW:x.kW,kWh:Math.round(x.kWh),stromkosten:Math.round(x.cost),waermeKwh:Math.round(x.heatKwh),gasAequivalent:Math.round(x.saveG),lease:x.lease,agentur:x.agrev,netto:Math.round(x.net),wan:x.wanKey,wanJahr:x.wanYear,fritzbox:x.fritz},
+      eur:{einnahmen:x.inn,ausgaben:x.out,summeEinnahmen:x.inSum,summeAusgaben:x.outSum,ueberschuss:x.ueber},
+      kleinunternehmer:{umsatzVorjahr:x.u1,umsatzLfd:x.u2,gruendungsjahr:x.found,rechnerischMoeglich:x.klein},
+      eigenePosten:x.extra
+    };
+  }
   const scenes={
     wissen:'Jak 4,17: Die Sünde sitzt im gewussten Guten ohne Tat.',
     lohn:'Jak 5,4: Der vorenthaltene Lohn schreit. Herr Zebaoth hört.',
@@ -485,62 +648,77 @@ label.sl { display:block; margin:.45rem 0; }
     gebet:'Gebet für den Geber, ohne Schmeichelei. Boost: Arme erhöht Gott.',
     rechner:'Tarife einstellen. Wissen ohne Zahl ist noch Unterlassung am Rechner.'
   };
-  document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>{$('scene-status').textContent=scenes[b.getAttribute('data-scene')];nudge('s1',2);}));
-  document.querySelectorAll('[data-dream]').forEach(b=>b.addEventListener('click',()=>{$('dream-out').textContent=dreams[b.getAttribute('data-dream')];nudge('s4',3);}));
+  document.querySelectorAll('[data-scene]').forEach(b=>b.addEventListener('click',()=>{setTxt('scene-status',scenes[b.getAttribute('data-scene')]);nudge('s1',2);}));
+  document.querySelectorAll('[data-dream]').forEach(b=>b.addEventListener('click',()=>{setTxt('dream-out',dreams[b.getAttribute('data-dream')]);nudge('s4',3);}));
   document.querySelectorAll('[data-sug]').forEach(b=>b.addEventListener('click',()=>{
-    const k=b.getAttribute('data-sug');
-    $('sug-out').textContent=sugs[k];
+    const k=b.getAttribute('data-sug'); setTxt('sug-out',sugs[k]);
     if(k==='lohn')nudge('s2',6);
     if(k==='gabe')nudge('s3',6);
     if(k==='gebet')nudge('s4',6);
     if(k==='rechner')nudge('s1',4);
   }));
-  function val(id){return +$(id).value;}
-  function setTxt(id,n){$(id).textContent=Math.round(n);}
-  function nudge(id,d){$(id).value=Math.min(100,+$(id).value+d);updateDI();}
-  function updateDI(){
-    const a=val('s1'),b=val('s2'),c=val('s3'),d=val('s4'),e=val('s5');
-    setTxt('v1',a);setTxt('v2',b);setTxt('v3',c);setTxt('v4',d);setTxt('v5',e);
-    const di=Math.min(97,42+a*0.24+b*0.22+c*0.20+d*0.18+e*0.16);
-    $('di').textContent=di.toFixed(1);$('di-bar').style.width=di+'%';
-    $('di-msg').textContent=di>=90?'Wissen wird Tat. Der Lohn schreit nicht mehr.':(di>=80?'Die Ulme darf tragen. Klugheit bleibt.':'Zurück zu Jak 4,17.');
-  }
-  ['s1','s2','s3','s4','s5'].forEach(id=>$(id).addEventListener('input',updateDI));
-  const boostMap={wissen:'s1',lohn:'s2',ulme:'s3',arme:'s4',grenze:'s5'};
-  document.querySelectorAll('[data-boost]').forEach(b=>b.addEventListener('click',()=>nudge(boostMap[b.getAttribute('data-boost')],6)));
-  $('btn-reset').addEventListener('click',()=>{['s1','s2','s3','s4','s5'].forEach((id,i)=>{$(id).value=[80,75,72,70,68][i];});updateDI();});
-  $('btn-manifest').addEventListener('click',()=>{
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(new Blob([JSON.stringify({title:'Unterlassungs-Manifest Jak 4–5',index:+$('di').textContent,hosts:+$('hosts-out').textContent.replace(/\./g,''),szenario:'Lichterfest-Hausknoten',hebr:false,jak417:true})],{type:'application/json'}));
-    a.download='unterlassung-manifest-jak4.json'; a.click();
+  document.querySelectorAll('[data-boost]').forEach(b=>b.addEventListener('click',()=>{
+    const map={wissen:'s1',lohn:'s2',ulme:'s3',arme:'s4',grenze:'s5'};
+    nudge(map[b.getAttribute('data-boost')],6);
+  }));
+  if($('btn-reset')) $('btn-reset').addEventListener('click',()=>{['s1','s2','s3','s4','s5'].forEach((id,i)=>{$(id).value=[80,75,72,70,68][i];});calc();});
+  if($('btn-use-hosts')) $('btn-use-hosts').addEventListener('click',()=>{$('nagt').value=Math.max(1000,Math.round(val('visitors')*val('conv')/100));calc();});
+  if($('btn-100k')) $('btn-100k').addEventListener('click',()=>{$('nagt').value=100000;calc();});
+  if($('btn-eur-add')) $('btn-eur-add').addEventListener('click',()=>{
+    const n=($('eur-name').value||'').trim();
+    if(!n){setTxt('dl-status','Bitte eine Bezeichnung eintragen.');return;}
+    const kosten=+($('eur-kosten').value||0), nutzen=+($('eur-nutzen').value||0);
+    const seite=(document.querySelector('input[name="eur-seite"]:checked')||{}).value||'in';
+    extra.push({n,kosten,nutzen,seite});
+    $('eur-name').value=''; $('eur-kosten').value=0; $('eur-nutzen').value=0;
+    calc();
   });
-  const execSteps=['1. Jak 4,17 laut.','2. Jak 5,4: den Lohn nennen.','3. Eine Gabe ohne Werbung.','4. Rechner auf die eigenen Tarife.','5. Rosenkranz: Wer weiß, Gutes zu tun…'];
-  function drawExec(n){$('exec-list').innerHTML=execSteps.map((s,i)=>'<div class="exec-step'+(i===n?' on':'')+'">'+s+'</div>').join('');}
+  if($('btn-dl-json')) $('btn-dl-json').addEventListener('click',()=>download('eur-ki-agentur-'+stamp()+'.json','application/json;charset=utf-8',JSON.stringify(payload(),null,2)));
+  if($('btn-dl-csv')) $('btn-dl-csv').addEventListener('click',()=>{
+    const p=payload();
+    const rows=[['Seite','Posten','Euro']];
+    p.eur.einnahmen.forEach(r=>rows.push(['Einnahme',r.n,r.v]));
+    p.eur.ausgaben.forEach(r=>rows.push(['Ausgabe',r.n,r.v]));
+    rows.push(['EÜR','Überschuss',p.eur.ueberschuss]);
+    rows.push(['Score','Unterlassungs-Index',p.unterlassungsIndex]);
+    rows.push(['Regler','Wissen',p.regler.wissen]);
+    rows.push(['Regler','Lohn',p.regler.lohn]);
+    rows.push(['Regler','Ulme',p.regler.ulme]);
+    rows.push(['Regler','Arme',p.regler.arme]);
+    rows.push(['Regler','Grenze',p.regler.grenze]);
+    const csv=rows.map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+    download('eur-ki-agentur-'+stamp()+'.csv','text/csv;charset=utf-8','\ufeff'+csv);
+  });
+  if($('btn-dl-html')) $('btn-dl-html').addEventListener('click',()=>{
+    const p=payload();
+    const block=s=>s.map(r=>'<tr><td>'+esc(r.n)+'</td><td>'+de(r.v,0)+' €</td></tr>').join('');
+    const html='<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><title>EÜR KI-Agentur</title></head><body>'+
+      '<h1>EÜR · KI-Agentur / Hausknoten</h1><p>'+esc(p.datum)+'</p>'+
+      '<p>Unterlassungs-Index: <strong>'+p.unterlassungsIndex+'</strong></p>'+
+      '<h2>Einnahmen</h2><table border="1">'+block(p.eur.einnahmen)+'</table>'+
+      '<h2>Ausgaben</h2><table border="1">'+block(p.eur.ausgaben)+'</table>'+
+      '<p>Überschuss: <strong>'+de(p.eur.ueberschuss,0)+' €</strong></p>'+
+      '<p>Quelle: <a href="'+p.blog+'">Paladine-Beitrag</a> · <a href="'+p.blog.replace('paladine.html','').replace('reichtum-unterlassung-gottes-erhoehung-jak-4-','')+'">Teaser</a> · <a href="'+p.pdf+'">Gründer-PDF</a></p>'+
+      '<p><em>Keine Rechts- oder Steuerberatung. Jak 4,17.</em></p></body></html>';
+    download('eur-ki-agentur-'+stamp()+'.html','text/html;charset=utf-8',html);
+  });
+  if($('btn-manifest')) $('btn-manifest').addEventListener('click',()=>download('unterlassung-manifest-jak4.json','application/json;charset=utf-8',JSON.stringify(payload(),null,2)));
+  const execSteps=['1. Jak 4,17 laut.','2. Jak 5,4: den Lohn nennen.','3. Eine Gabe ohne Werbung.','4. Rechner und EÜR auf die eigenen Zahlen.','5. Datei herunterladen. Rosenkranz: Wer weiß, Gutes zu tun…'];
+  function drawExec(n){if($('exec-list')) $('exec-list').innerHTML=execSteps.map((s,i)=>'<div class="exec-step'+(i===n?' on':'')+'">'+s+'</div>').join('');}
   drawExec(-1);
-  $('btn-exec').addEventListener('click',()=>{let i=0;drawExec(0);const t=setInterval(()=>{i++;if(i>=execSteps.length){clearInterval(t);$('exec-out').textContent='Der Herr erhöht die Armen. Der Rost darf nicht zeugen.';nudge('s1',8);return;}drawExec(i);},1400);});
-  const practices=[
-    {n:'Wissen und tun (Jak 4,17)',s:94},
-    {n:'Lohn nicht vorenthalten (Jak 5,4)',s:93},
-    {n:'Ulme trägt Weinstock (Hermas)',s:92},
-    {n:'Armer aufrichtig vor dem betrügerischen Reichen',s:91},
-    {n:'Hausknoten als Verwaltung, nicht als Heil',s:90},
-    {n:'Wärme an den Tisch, nicht nur an den Campus',s:89},
-    {n:'Agentur ehrlich, klein, Deo volente (Jak 4,15)',s:88},
-    {n:'Gott erhöht (Jak 1,9; 2,5)',s:87},
-    {n:'Letzte werden Erste',s:86},
-    {n:'Keine Parteitaufe, kein Konzern-Evangelium',s:85}
-  ];
-  function renderRank(){
-    practices.sort((x,y)=>y.s-x.s);
-    $('rank-list').innerHTML=practices.map((p,i)=>'<li class="rank-item"><span class="rank-num">'+(i+1)+'</span><div><strong>'+p.n+'</strong><br>Score '+p.s+' <button type="button" class="btn" data-ri="'+i+'" style="padding:.25rem .6rem;">+</button></div></li>').join('');
-    document.querySelectorAll('[data-ri]').forEach(btn=>btn.addEventListener('click',()=>{practices[+btn.getAttribute('data-ri')].s=Math.min(99,practices[+btn.getAttribute('data-ri')].s+1);renderRank();}));
-  }
-  renderRank();
-  document.querySelectorAll('#agenda .agenda input').forEach(x=>x.addEventListener('change',()=>{$('ag-status').innerHTML='<strong>Agenda-Stand:</strong> '+[...document.querySelectorAll('#agenda .agenda input')].filter(z=>z.checked).length+' / 7';}));
-  $('btn-contrast').addEventListener('click',()=>{document.body.style.background='#FFF';document.body.style.color='#000';});
-  updateDI();
+  if($('btn-exec')) $('btn-exec').addEventListener('click',()=>{let i=0;drawExec(0);const t=setInterval(()=>{i++;if(i>=execSteps.length){clearInterval(t);setTxt('exec-out','Der Herr erhöht die Armen. Datei mit den eingetragenen Werten sichern.');nudge('s1',8);return;}drawExec(i);},1400);});
+  document.querySelectorAll('#agenda .agenda input').forEach(el=>el.addEventListener('change',()=>{$('ag-status').innerHTML='<strong>Agenda-Stand:</strong> '+[...document.querySelectorAll('#agenda .agenda input')].filter(z=>z.checked).length+' / 7';}));
+  if($('btn-contrast')) $('btn-contrast').addEventListener('click',()=>{document.body.style.background='#FFF';document.body.style.color='#000';});
+  document.querySelectorAll('input[type=range],input[type=number],input[type=checkbox],select').forEach(el=>{
+    if(el.closest && el.closest('#agenda')) return;
+    el.addEventListener('input',calc);
+    el.addEventListener('change',calc);
+  });
+  window.rkCalc=calc;
+  window.rkDownload=()=>$('btn-dl-json')&&$('btn-dl-json').click();
   calc();
 })();
 </script>
+
 </body>
 </html>
