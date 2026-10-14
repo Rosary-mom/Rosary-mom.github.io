@@ -463,6 +463,14 @@ td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
 </div>
 <script>
 (function(){
+  try {
+    if (window.wp && (wp.blocks || wp.data || wp.element)) return;
+    if (document.body && /wp-admin|block-editor/.test(document.body.className||'')) return;
+    if (window.parent && window.parent !== window) {
+      var pd = window.parent.document;
+      if (pd.getElementById('editor') || pd.querySelector('.block-editor, .editor-styles-wrapper')) return;
+    }
+  } catch (e) {}
   const $=id=>document.getElementById(id);
   const de=(n,d=0)=>n.toLocaleString('de-DE',{maximumFractionDigits:d,minimumFractionDigits:d});
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
