@@ -2,7 +2,6 @@
 
 *rosary.health / Blog · Magnifica Humanitas · Pre-Insight von LOGOS MAX*
 *Von Uwe Rosenkranz · Rosary Parish · Lesezeit ca. 7 Minuten*
-*Design: Bordeaux #6B0F1F · Gold #C9A227 · Sand #EAD9B3 · Überschriften Rockwell Extra Bold, Text Palatino/Rosario*
 
 **Teaser:** Europa erlebt Wochen der Unruhe: Hunderttausende demonstrieren friedlich, und am Rand brennen Rathäuser und Geschäfte. Wie leben Christen da ihre Grundwerte, ohne zu hassen und ohne wegzusehen? Ein Brief an verfolgte Haussklaven aus dem ersten Jahrhundert gibt eine überraschend freie Antwort.
 
@@ -15,9 +14,20 @@
 - **18.10. Gottes Verheißung: Gerechtigkeit:** Josua 21,44–45, „Alles traf ein“.
 
 ## Was gerade geschieht
-Seit dem 17. September haben Proteste in Frankreich begonnen, zuerst wegen der Zustände an Schulen, dann wegen Lebenshaltungskosten und öffentlicher Dienste. Am 17. Oktober gingen laut BBC rund 550.000 Menschen auf die Straße, größtenteils friedlich. Am Rand kam es zu Plünderungen, Brandstiftungen und Angriffen auf Polizisten. Landesweit gab es rund 2.400 Festnahmen [4][5]. Auch in Spanien, Portugal, Belgien, Italien und Albanien protestieren Menschen, vor allem wegen Wohnkosten, Bildung und Preisen [6].
+Seit dem 17. September haben Proteste in Frankreich begonnen, zuerst wegen der Zustände an Schulen, dann wegen Lebenshaltungskosten und öffentlicher Dienste. Am 17. Oktober zählte das Innenministerium rund 550.000 Teilnehmende, die Veranstalter sprachen von 800.000. Die große Mehrheit demonstrierte friedlich [4][11]. Am Rand wurde geplündert und Feuer gelegt. Das Rathaus von Limoges, erbaut 1883 und denkmalgeschützt, brannte weitgehend aus [12]. In Lyon wurde der Pavillon des Fremdenverkehrsamts auf der Place Bellecour in Brand gesetzt [13]. In Bordeaux drangen Randalierer in die Präfektenresidenz ein [14]. In Paris wurde die Synagoge Ohalei Yaakov verwüstet; der jüdische Gemeindeschutz sah keinen Beleg für gezieltes Vorgehen gegen jüdische Einrichtungen [15]. In Marseille wurden laut Kardinal Aveline Kirchen aufgebrochen; er rief zum Frieden auf [16]. Laut Regierung gab es mehr als 2.400 Festnahmen und fast 1.000 verletzte Polizisten und Gendarmen [11].
 
-Wer die Täter sind, ist umstritten. Die Regierung spricht von organisierten Gruppen der Ultralinken und von Gelegenheitsplünderern. Die Pariser Staatsanwältin Laure Beccuau sagt dagegen, sie könne eine Politisierung der Mehrheit „absolument pas confirmer“ [7]. Auf X kursieren prozentuale Aufteilungen nach Herkunft oder Religion. Keine davon ist von Behörden oder seriösen Medien bestätigt, deshalb übernehmen wir sie nicht. Laut Fox News (09.10.2026) verbreiteten auch Medien aus dem Umfeld des Unternehmers Neville Roy Singham die Proteste; ein US-Kongressausschuss untersucht dessen Finanzierungsnetz, Anklagen gibt es nicht, die Betroffenen weisen die Vorwürfe zurück [8]. Für den Christen ist ohnehin eine andere Frage entscheidend: Wie handle ich selbst?
+Auch in Italien (Mailand), Belgien (Brüssel, Lüttich), Spanien, Portugal, Griechenland und Albanien (Tirana, „Flamingo“-Bewegung) gingen Menschen auf die Straße, meist wegen Wohnkosten, Bildung und Preisen [6][11][17].
+
+## Wie die Unruhen gedeutet werden
+Wer die Gewalt verübt hat, ist umstritten, und Politiker deuten es sehr verschieden. Wir geben die Positionen wieder, ohne sie uns zu eigen zu machen:
+- **Französische Regierung:** organisierte Gruppen der Ultralinken und Kriminelle, die plünderten. Das Justizministerium beschreibt zwei Profile: Black Blocs und unpolitische Gelegenheitsplünderer [7][18].
+- **Pariser Staatsanwältin Laure Beccuau:** Sie könne eine politische Prägung der Mehrheit „absolument pas confirmer“; die meisten schwiegen in Gewahrsam [7].
+- **US-Präsident Donald Trump** auf Truth Social: „The migrants have taken over France“ (laut The Hill, 19./20.10.2026) [19].
+- **US-Vizepräsident JD Vance** auf X, 18.10.2026: „Western liberals imported the third world into France and other countries in the name of diversity and compassion.“ [19][20]
+- **Österreichs Bundeskanzler Christian Stocker** führt die Unruhen auf Zuwanderung von außerhalb Europas zurück; **Polens Ministerpräsident Donald Tusk** sagte laut Brussels Signal, die Rechtsbrüche gingen vor allem auf Menschen mit Migrationshintergrund zurück. **Kanzler Friedrich Merz** nannte Migration und gescheiterte Integration als wahrscheinlichste Ursachen (alle sinngemäß nach Brussels Signal, 20.10.2026) [21].
+- **Der slowakische Europaabgeordnete Milan Mazurek** sagte am 8.10. im Europaparlament: „We did not follow your insane migration policies.“ [22]
+
+Ob und wie Migration und Kriminalität zusammenhängen, ist eine umstrittene These, keine festgestellte Tatsache; dazu gibt es keine gesicherten Zahlen für diese Unruhen. Prozentzahlen nach Herkunft, wie sie auf X kursieren, sind von keiner Behörde bestätigt. Laut Fox News (09.10.2026) verbreiteten auch Medien aus dem Umfeld des Unternehmers Neville Roy Singham die Proteste; ein US-Kongressausschuss untersucht dessen Finanzierungsnetz, Anklagen gibt es nicht, die Betroffenen weisen die Vorwürfe zurück [8]. Für den Christen ist ohnehin eine andere Frage entscheidend: Wie handle ich selbst?
 
 ## Der Text
 > „Ihr Haussklaven, ordnet euch in aller Furcht den Herren unter, nicht allein den guten und milden, sondern auch den verkehrten! … der, geschmäht, nicht wieder schmähte, leidend, nicht drohte, sondern sich dem übergab, der gerecht richtet … durch dessen Striemen ihr geheilt worden seid.“
@@ -32,6 +42,14 @@ Ein Punkt wird leicht überlesen: Der christliche Sklave konnte bestimmten Befeh
 Heute sollten wir diese Anweisungen auf uns als Arbeitnehmer und Arbeitgeber anwenden [3]. Der Unterschied ist erheblich. Der Text ermutigt nicht dazu, Leid passiv zu erdulden, das man ändern könnte. Jesu Leiden war kein zweckloses Ausharren, sondern ein bewusster Opfertod. Christen müssen sich fragen, ob ihr Leiden anderen nutzt oder ob es bloße Duldung ist, die andere ausbeuten lässt [3].
 
 Hinzu kommt eine Umkehrung: Petrus blickte aus der Religion des Auferstandenen in eine fremde Gesellschaft. Heute blicken viele aus einer vertrauten Gesellschaft in eine weitgehend fremd gewordene Religion [2]. Wir können seine Worte darum nicht einfach übernehmen. Wir müssen sie im Licht unserer eigenen Freiheitsverantwortung neu lesen, als Ermutigung zu würdevollem Handeln unter Druck.
+
+## Was daraus folgt: eine Synthese
+- **Würde aller:** Jeder Mensch ist Gottes Ebenbild (Gen 1,27), auch der „Verkehrte“, von dem Petrus spricht, auch der Plünderer, auch der Polizist, auch der Ladenbesitzer. Keine Gruppe wird darum pauschal verurteilt.
+- **Sünde verweigern:** Gehorsam endet, wo Unrecht befohlen wird (Apg 5,29). Wer Unrecht mitmacht oder es ermöglicht, ist nicht frei.
+- **Nicht vergelten, sondern übergeben:** Christus „übergab sich dem, der gerecht richtet“ (2,23). Das heißt nicht schweigen. Unrecht darf und soll beim Namen genannt werden.
+- **Rechtsstaat stärken:** Das Gewaltmonopol des Staates schützt die Schwachen (vgl. unseren Beitrag zu [Jes 54](https://rosary-mom.github.io/blog/gewaltmonopol-rechtsschutz-jes-54/)).
+- **Erbe bewahren:** Kirchen, Rathäuser, Synagogen sind gemeinsames Gedächtnis. Wer sie schützt, schützt den Nächsten.
+- **Beten:** Der Rosenkranz ist ein Gebet um Frieden. Er ersetzt das Handeln nicht, aber er ordnet es.
 
 ## Fünf Haltungen für unruhige Tage
 1. **Nicht zurückschmähen (1 Petr 2,23).** Wut ist verständlich, Vergeltung nicht christlich. Wer in Kommentarspalten und Gesprächen Gruppen pauschal verurteilt, schmäht zurück.
@@ -79,6 +97,9 @@ Am Morgen nach der Nacht steht Marie vor ihrer Bäckerei. Die Scheibe ist zerspl
 - [ ] Vor dem 31.10. (angekündigter Protesttag in Deutschland): Gemeinderäume als ruhigen Ort für Gespräch und Gebet anbieten.
 - [ ] Jeden Abend: 1 Petr 2,23 beten.
 
+### Agenda · 7 Tage unter Druck
+Mo: 1 Petr 2,18–25 laut lesen. · Di: Eine Nachricht prüfen, bevor ich sie teile ([Jak 1](https://rosary-mom.github.io/blog/hoeren-im-multimediazeitalter-jak-1/)). · Mi: Einem Geschädigten helfen ([Hebr 13](https://rosary-mom.github.io/blog/gastfreundschaft-gestern-heute-morgen/)). · Do: Für Polizei, Feuerwehr und Richter beten ([Jes 54](https://rosary-mom.github.io/blog/gewaltmonopol-rechtsschutz-jes-54/)). · Fr: Eigene Wut vor Gott bringen ([Ps 51](https://rosary-mom.github.io/blog/suehne-und-reinigung-psalm-51/)). · Sa: Ein Gutes nicht unterlassen ([Jak 4–5](https://rosary-mom.github.io/blog/reichtum-unterlassung-gottes-erhoehung-jak-4/)). · So: Rosenkranz um Frieden in Europa.
+
 ### Ranking · die fünf Haltungen (Score-Tabelle)
 Kriterien und Gewichte: **Schriftnähe** zu 1 Petr 2 (0,35) · **Friedenswirkung** im Umfeld (0,25) · **Umsetzbarkeit** für Einzelne und Gemeinden (0,20) · **Würde aller Beteiligten** (0,20). Scores 0–100 sind Startwerte, keine Messung.
 
@@ -91,6 +112,14 @@ Kriterien und Gewichte: **Schriftnähe** zu 1 Petr 2 (0,35) · **Friedenswirkung
 | 5 | Mut zur Wahrheit | 85 | 80 | 88 | 84 | **84,2** | 1 Petr 2,22; 1 Thess 5,21 |
 
 Rechenweg Rang 1: 0,35×98 + 0,25×92 + 0,20×85 + 0,20×95 = 93,3. **Gesamt-Index: 87,8** (Mittel der fünf). Schärfung: Nicht zurückschmähen steht vorn, weil Petrus es direkt an Christus bindet (2,21–23); alle anderen Haltungen leben von dieser Wurzel.
+
+## Weiterlesen im Archiv
+- [Gewaltmonopol und Rechtsschutz (Jes 54)](https://rosary-mom.github.io/blog/gewaltmonopol-rechtsschutz-jes-54/)
+- [Hören im Multimediazeitalter (Jak 1)](https://rosary-mom.github.io/blog/hoeren-im-multimediazeitalter-jak-1/)
+- [Gastfreundschaft gestern, heute, morgen (Hebr 13)](https://rosary-mom.github.io/blog/gastfreundschaft-gestern-heute-morgen/)
+- [Reichtum, Unterlassung und Gottes Erhöhung (Jak 4–5)](https://rosary-mom.github.io/blog/reichtum-unterlassung-gottes-erhoehung-jak-4/)
+- [Sühne und Reinigung (Ps 51)](https://rosary-mom.github.io/blog/suehne-und-reinigung-psalm-51/)
+- [Arbeit und Beruf (Mt 6)](https://rosary-mom.github.io/blog/arbeit-und-beruf-mt-6/)
 
 ## Gebet
 Herr Jesus Christus, du hast nicht wieder geschmäht, als man dich schmähte. Gib uns in unruhigen Tagen ein waches Gewissen, ein klares Wort und ein ruhiges Herz. Schütze die Verletzten, die Helfer und die Ordnungskräfte, und führe die Verirrten zurück zum Hirten und Aufseher ihrer Seelen. Amen.
@@ -113,6 +142,19 @@ Ergänzend: franceinfo, 20.10.2026 (Justizministerium: zwei Profile, 70 % Vollj�
 
 [9] Middle East Eye, „Trump says Nato 'weren't there to help' during war on Iran“, 20.10.2026 (Rede in Park City, Kansas, 19.10.2026). https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-nato-werent-there-help-during-war-iran · ergänzend Newsweek, 20.10.2026. https://www.newsweek.com/trump-skips-details-as-he-issues-threat-to-leave-europe-12592966
 [10] Reuters, Gram Slattery und Steve Holland, „Trump weighs pulling some US troops from Europe amid NATO strains, official says“, 09.04.2026. https://www.reuters.com/world/trump-weighs-pulling-some-us-troops-europe-amid-nato-strains-official-says-2026-04-09/
+
+[11] The Independent, Live-Bericht zu Protesten in Frankreich, Italien, Portugal, Spanien, Albanien, Okt. 2026. https://www.independent.co.uk/news/world/europe/protests-france-italy-portugal-spain-albania-serbia-students-latest-b3069862.html
+[12] Newsweek, 19.10.2026 (Rathaus Limoges, erbaut 1883). https://www.newsweek.com/jd-vance-condemns-france-disorder-with-warning-to-americans-12584958 · Wikipedia, „2026 European unrest“ (Monument historique). https://en.wikipedia.org/wiki/2026_European_unrest
+[13] Ville de Lyon, „Violences du 17 octobre : la Ville de Lyon mobilisée“, 19.10.2026. https://www.lyon.fr/actualite/action-municipale/violences-du-17-octobre-la-ville-mobilisee
+[14] France 3 Nouvelle-Aquitaine, 18.10.2026. https://france3-regions.franceinfo.fr/nouvelle-aquitaine/gironde/bordeaux/a-bordeaux-les-images-de-la-residence-de-la-prefete-saccagee-63-policiers-blesses-et-jusqu-a-100-commerces-degrades-au-lendemain-du-17-octobre-3435351.html
+[15] Times of Israel (JTA), Okt. 2026. https://www.timesofisrael.com/french-rioters-vandalize-paris-synagogue-set-jewish-shops-ablaze-in-marseille/ · Sud Ouest/AFP, 20.10.2026 (Präfektur: „pillés sans distinction religieuse“). https://www.sudouest.fr/societe/greves-et-manifestations/mobilisation-du-17-octobre-a-marseille-les-commerces-ont-ete-pilles-sans-distinction-religieuse-affirment-le-crif-et-la-prefecture-31159080.php
+[16] Communiqué von Kardinal Jean-Marc Aveline, 18.10.2026, zitiert nach Fdesouche, 21.10.2026 (Sekundärquelle; Originalcommuniqué nicht eingesehen). https://www.fdesouche.com/2026/10/21/marseille-13-le-diocese-confirme-que-des-eglises-ont-ete-forcees-pendant-les-emeutes-du-17-octobre/
+[17] bne IntelliNews, „Protests, chaos across Europe…“, Okt. 2026. https://www.intellinews.com/protests-chaos-across-europe-and-the-kremlin-is-loving-it-477466/
+[18] franceinfo, 20.10.2026. https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/apres-les-violences-du-17-octobre-700-personnes-ont-ete-presentees-a-un-magistrat-a-l-issue-de-la-garde-a-vue-annonce-le-porte-parole-du-ministere-de-la-justice_8245135.html
+[19] The Hill, „Donald Trump, JD Vance blame immigration for French riots“, Okt. 2026. https://thehill.com/homenews/administration/6157897-trump-vance-france-riots/
+[20] India Today, 18.10.2026 (Vance-Post auf X vom 18.10.2026). https://www.indiatoday.in/world/story/france-protests-jd-vance-blames-immigration-diversity-policies-riots-3020011-2026-10-18
+[21] Brussels Signal, „Austria blames migration for riots in France and Italy“, 20.10.2026. https://brusselssignal.eu/2026/10/austria-blames-migration-for-riots-in-france-and-italy/
+[22] Remix News, 08.10.2026 (Rede Mazurek im EP). https://rmx.news/article/we-did-not-follow-your-insane-migration-policies-slovak-mep-mazurek-says-slovakia-and-poland-avoided-mass-crime-student-riots-and-sexual-attacks-by-rejecting-western-european-immig/
 
 ## Bildvorschlag (PNG/JPG, 1600×900)
 Abendliche Altstadtgasse, im Hintergrund nur ein schwacher Rauchschleier, im Vordergrund eine offene Kirchentür mit warmem Licht und eine Hand mit Rosenkranz. Bordeauxrote Tönung, goldenes Licht, sandbeiger Stein. Keine erkennbaren Personen, keine Symbole von Gruppen oder Religionen. Bildzeile: „der, geschmäht, nicht wieder schmähte“ (1 Petr 2,23).
