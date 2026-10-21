@@ -29,6 +29,8 @@ Wer die Gewalt verübt hat, ist umstritten, und Politiker deuten es sehr verschi
 
 Ob und wie Migration und Kriminalität zusammenhängen, ist eine umstrittene These, keine festgestellte Tatsache; dazu gibt es keine gesicherten Zahlen für diese Unruhen. Prozentzahlen nach Herkunft, wie sie auf X kursieren, sind von keiner Behörde bestätigt. Laut Fox News (09.10.2026) verbreiteten auch Medien aus dem Umfeld des Unternehmers Neville Roy Singham die Proteste; ein US-Kongressausschuss untersucht dessen Finanzierungsnetz, Anklagen gibt es nicht, die Betroffenen weisen die Vorwürfe zurück [8]. Für den Christen ist ohnehin eine andere Frage entscheidend: Wie handle ich selbst?
 
+*Zum Vergleich, mit Vorsicht zu lesen: Der Numbeo-Kriminalitätsindex 2026 (Stand der Länderwerte Oktober 2026) nennt für Polen 28,7, Deutschland 38,4, Großbritannien 48,3 und Frankreich 55,8 [23]. Das sind Wahrnehmungsindizes aus Nutzerumfragen, keine amtliche Kriminalstatistik. Laut Eurostat waren am 1. Januar 2025 in Polen 2,6 % der Einwohner im Ausland geboren, in Deutschland 20,5 % [24]. Ob zwischen beidem ein ursächlicher Zusammenhang besteht, ist umstritten; Wohlstand, Stadtstruktur, Erhebungsmethode und Integration spielen ebenso hinein.*
+
 ## Der Text
 > „Ihr Haussklaven, ordnet euch in aller Furcht den Herren unter, nicht allein den guten und milden, sondern auch den verkehrten! … der, geschmäht, nicht wieder schmähte, leidend, nicht drohte, sondern sich dem übergab, der gerecht richtet … durch dessen Striemen ihr geheilt worden seid.“
 > (1 Petr 2,18–25, Elberfelder Bibel 2016)
@@ -51,6 +53,22 @@ Hinzu kommt eine Umkehrung: Petrus blickte aus der Religion des Auferstandenen i
 - **Erbe bewahren:** Kirchen, Rathäuser, Synagogen sind gemeinsames Gedächtnis. Wer sie schützt, schützt den Nächsten.
 - **Beten:** Der Rosenkranz ist ein Gebet um Frieden. Er ersetzt das Handeln nicht, aber er ordnet es.
 
+## Wenn Plünderer vor der Tür stehen – reicht Haltung?
+Uwe fragte: Was ist mit dem Familienvater in Paris, bei dem Plünderer ins Haus kamen, bis vor die Wohnungstür? Das ist keine Theorie. Europe 1 berichtete am 20.10.2026, dass in Paris Gruppen in Hauseingänge eindrangen, „parfois jusqu'aux appartements“; Bewohner riefen die Polizei, die wegen Überlastung teils nicht kam [25]. Le Parisien schilderte eine Frau, die sich mit ihrer 80-jährigen Nachbarin in ihrer Wohnung verschanzte: „Avec ces casseurs dans le hall, on pensait qu'on allait y passer“ [26]. Einen konkreten Bericht über einen Familienvater haben wir nicht gefunden; wir nehmen ihn daher als Szenario.
+
+**Theologisch** ist die Antwort klar: Haltung heißt nicht Wehrlosigkeit. Wer für die Seinen nicht sorgt, „hat den Glauben verleugnet“ (1 Tim 5,8). Nehemia ruft: „Kämpft für eure Brüder, eure Söhne und eure Töchter, eure Frauen und eure Häuser!“ (Neh 4,8). Jesus spricht in Lk 22,36–38 vom Schwert, nicht als Auftrag zur Gewalt, sondern als Zeichen der bedrohten Lage, und weist kurz darauf den Schwertstreich zurück (Lk 22,51). Der Staat trägt das Schwert, um das Böse abzuwehren (Röm 13,4). Das „nicht wieder schmähen“ in 1 Petr 2,23 betrifft persönliche Rache und Kränkung, nicht den Schutz anderer. Wer seine Kinder schützt, vergilt nicht, er liebt.
+
+**Praktisch und rechtmäßig:**
+1. Sofort Notruf: 112 (EU), in Frankreich auch 17 (Polizei). Adresse, Stockwerk, Zahl der Personen nennen.
+2. Wohnungstür verriegeln, Fenster schließen, Licht im Flur löschen, sich nicht zeigen.
+3. Einen Schutzraum festlegen: innenliegendes Zimmer, Handy geladen, Kinder dort.
+4. Nachbarschaftsnetz: Telefonkette oder Chatgruppe im Haus, ältere Nachbarn einbeziehen, wie es die Pariserin mit ihrer Nachbarin tat.
+5. Dokumentieren: Fotos und Videos nur aus sicherer Position, Zeiten notieren, Anzeige erstatten.
+6. Versicherung: Schäden sofort melden, Belege sichern.
+7. Notwehr nur im Rahmen des Rechts: in Deutschland § 32 StGB, in Frankreich légitime défense nach Art. 122-5 Code pénal. Sie muss gegenwärtig, notwendig und verhältnismäßig sein. Keine Bürgerwehr, keine Selbstjustiz, keine Verfolgung, keine Waffenratschläge.
+
+**Danach und drumherum** tragen die fünf Haltungen: nicht zurückschmähen, wenn Wut kommt; Recht statt Rache, also Anzeige statt Vergeltung; verantwortete Freiheit, also besonnen handeln; den Nächsten sehen, auch den verängstigten Nachbarn; und Mut zur Wahrheit, also berichten, was war, ohne zu übertreiben.
+
 ## Fünf Haltungen für unruhige Tage
 1. **Nicht zurückschmähen (1 Petr 2,23).** Wut ist verständlich, Vergeltung nicht christlich. Wer in Kommentarspalten und Gesprächen Gruppen pauschal verurteilt, schmäht zurück.
 2. **Recht statt Rache.** „Sich dem übergeben, der gerecht richtet“ heißt auch: Polizei und Gerichte ihre Arbeit tun lassen und keine Selbstjustiz üben.
@@ -66,6 +84,9 @@ Hinzu kommt eine Umkehrung: Petrus blickte aus der Religion des Auferstandenen i
 **Nachricht.** Bei einer Wahlkampfveranstaltung in Park City (Kansas) sagte US-Präsident Donald Trump am 19. Oktober 2026 mit Blick auf Europa: „We stand with Europe despite its flaws, its weaknesses … But if they don't soon find their way, and they have to find their way, we will have no choice but to leave.“ [9] Was „leave“ konkret bedeutet, ließ er offen, auch ob Truppen oder die NATO gemeint sind. Bereits im April 2026 berichtete Reuters, Trump erwäge den Abzug eines Teils der US-Truppen aus Europa; eine Entscheidung sei nicht gefallen (sinngemäß, kein Zitat) [10]. Wir bewerten das nicht politisch. Für uns ist es eine Frage an das Gewissen: Worauf ruht unsere Sicherheit?
 
 ### SIMULATOR · drei Szenarien (Modell)
+
+[[SLIDER]]
+
 | Szenario | Europa | Gemeinden |
 |---|---|---|
 | S1 · Weiter so | Debatte bleibt Rhetorik, Präsenz bleibt | Gefahr der Lauheit: Sicherheit gilt als selbstverständlich |
@@ -155,6 +176,11 @@ Ergänzend: franceinfo, 20.10.2026 (Justizministerium: zwei Profile, 70 % Vollj�
 [20] India Today, 18.10.2026 (Vance-Post auf X vom 18.10.2026). https://www.indiatoday.in/world/story/france-protests-jd-vance-blames-immigration-diversity-policies-riots-3020011-2026-10-18
 [21] Brussels Signal, „Austria blames migration for riots in France and Italy“, 20.10.2026. https://brusselssignal.eu/2026/10/austria-blames-migration-for-riots-in-france-and-italy/
 [22] Remix News, 08.10.2026 (Rede Mazurek im EP). https://rmx.news/article/we-did-not-follow-your-insane-migration-policies-slovak-mep-mazurek-says-slovakia-and-poland-avoided-mass-crime-student-riots-and-sexual-attacks-by-rejecting-western-european-immig/
+
+[23] Numbeo, „Europe: Crime Index by Country 2026“ (nutzerbasierte Wahrnehmungsumfrage), abgerufen 21.10.2026. https://www.numbeo.com/crime/rankings_by_country.jsp?region=150&title=2026
+[24] Eurostat, „EU population diversity by citizenship and country of birth“, Stand 1.1.2025. https://ec.europa.eu/eurostat/statistics-explained/index.php?title=EU_population_diversity_by_citizenship_and_country_of_birth
+[25] Europe 1, „«La porte de l'immeuble était grande ouverte» : les pillards s'introduisent jusque dans les immeubles d'habitation“, 20.10.2026. https://www.europe1.fr/societe/la-porte-de-limmeuble-etait-grande-ouverte-les-pillards-sintroduisent-jusque-dans-les-immeubles-dhabitation-1165716
+[26] Le Parisien, 20.10.2026. https://www.leparisien.fr/faits-divers/avec-ces-casseurs-dans-le-hall-on-pensait-quon-allait-y-passer-elle-se-refugie-chez-elle-avec-sa-voisine-de-80-ans-20-10-2026-DYBTYC43GZCJNJOR3VD47SUGEM.php
 
 ## Bildvorschlag (PNG/JPG, 1600×900)
 Abendliche Altstadtgasse, im Hintergrund nur ein schwacher Rauchschleier, im Vordergrund eine offene Kirchentür mit warmem Licht und eine Hand mit Rosenkranz. Bordeauxrote Tönung, goldenes Licht, sandbeiger Stein. Keine erkennbaren Personen, keine Symbole von Gruppen oder Religionen. Bildzeile: „der, geschmäht, nicht wieder schmähte“ (1 Petr 2,23).
