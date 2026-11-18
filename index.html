@@ -332,19 +332,46 @@
         
         input[type=range] { width: 100%; cursor: pointer; accent-color: var(--primary); }
 
-        .preset-buttons { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .preset-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
         .btn {
             background: #2a2a2a; color: #fff; border: 1px solid #444; padding: 10px;
             border-radius: 6px; cursor: pointer; transition: all 0.2s;
             font-family: 'Share Tech Mono', monospace; text-transform: uppercase;
         }
         .btn:hover, .btn.active { background: var(--primary); color: #000; border-color: var(--primary); }
+        .habitat-btn { text-transform: none; font-size: 0.78em; line-height: 1.3; padding: 8px 6px; }
 
         .tech-specs {
             margin-top: 30px; padding: 15px; background: #000; border-radius: 6px;
             font-family: 'Share Tech Mono', monospace; font-size: 0.9em; color: #aaa;
         }
         .tech-specs span { color: #fff; }
+
+        .scale-hint { margin: 8px 0 0; color: var(--text-muted); font-size: 0.8em; line-height: 1.4; }
+
+        .env-panel {
+            margin-top: 18px; padding: 14px; background: #111;
+            border: 1px solid #333; border-radius: 8px; font-size: 0.92em; line-height: 1.45;
+        }
+        .env-panel h3 {
+            margin: 0 0 10px; font-family: 'Share Tech Mono', monospace;
+            font-size: 0.95em; letter-spacing: 0.06em; color: var(--primary); font-weight: 400;
+        }
+        .env-row { display: grid; grid-template-columns: 108px 1fr; gap: 4px 8px; margin: 0 0 6px; }
+        .env-row dt { margin: 0; color: var(--text-muted); font-family: 'Share Tech Mono', monospace; font-size: 0.78em; }
+        .env-row dd { margin: 0; }
+        .env-hypothesis {
+            display: none; margin: 10px 0 0; padding: 8px 10px;
+            border-left: 3px solid var(--primary); background: rgba(212, 175, 55, 0.08); font-size: 0.9em;
+        }
+        .env-hypothesis.is-visible { display: block; }
+        .env-source { margin: 8px 0 0; color: #8d8d8d; font-size: 0.75em; line-height: 1.4; word-break: break-word; }
+        .habitat-toggle { display: none; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+        .habitat-toggle.is-visible { display: grid; }
+
+        .spray-box { grid-column: 1 / -1; }
+        #sprayCanvas { background: #070b10; width: 100%; height: auto; }
+        .spray-caption { margin: 10px 0 0; color: #bbb; font-size: 0.9em; }
 
         /* Canvas Displays */
         .visualizer {
@@ -388,33 +415,52 @@
     <div class="subtitle">SYS.LOG: Adaptive Drip Irrigation GenCAD Matrix</div>
 </header>
 
-<div class="dashboard">
+<div class="dashboard" id="gravity-engine">
     
     <div class="controls">
         <h2>🌍 Gravity Engine</h2>
         <p style="color: var(--text-muted); font-size: 0.95em;">
-            Passe die Umweltbedingungen an. Geringere Gravitation reduziert den hydrostatischen Druck und zwingt das GenCAD-System, die Tropfenauslässe zu vergrößern.
+            Passe die Umweltbedingungen an. Geringere Gravitation reduziert den hydrostatischen Druck und zwingt das GenCAD-System, die Tropfenauslässe zu vergrößern. Ceres (0,28 m/s²) liegt im Regler.
         </p>
 
         <div class="slider-container">
             <div class="slider-label">
                 <span>Ziel-Gravitation:</span>
-                <span class="data-readout" id="gravityValue">9.81 m/s²</span>
+                <span class="data-readout" id="gravityValue">9,81 m/s²</span>
             </div>
-            <input type="range" id="gravitySlider" min="1.0" max="15.0" step="0.01" value="9.81">
+            <input type="range" id="gravitySlider" min="0.1" max="15.0" step="0.01" value="9.81" aria-label="Ziel-Gravitation in Meter pro Sekunde zum Quadrat">
+            <p class="scale-hint">Bereich 0,10–15,00 m/s². Der Rohfaktor bleibt linear. Unter etwa 1,4 m/s² wird nur die gezeichnete Auslassbreite logarithmisch begrenzt, damit das Rohr lesbar bleibt.</p>
         </div>
 
         <div class="preset-buttons">
-            <button class="btn active" onclick="setGravity(9.81, this)">Earth</button>
-            <button class="btn" onclick="setGravity(3.72, this)">Mars</button>
-            <button class="btn" onclick="setGravity(1.62, this)">Moon</button>
+            <button type="button" class="btn preset-btn active" data-env="earth">Erde</button>
+            <button type="button" class="btn preset-btn" data-env="mars">Mars</button>
+            <button type="button" class="btn preset-btn" data-env="moon">Mond</button>
+            <button type="button" class="btn preset-btn" data-env="ceres">Ceres</button>
         </div>
 
         <div class="tech-specs">
-            > DYNAMIC_SCALE_FACTOR: <span id="scaleFactorValue">1.00</span><br>
-            > EMITTER_WIDTH (px): <span id="emitterValue">10</span><br>
-            > SYSTEM_STATUS: <span style="color: #0f0;">NOMINAL</span>
+            > DYNAMIC_SCALE_FACTOR: <span id="scaleFactorValue">1,00</span><br>
+            > EMITTER_WIDTH (px): <span id="emitterValue">20</span><br>
+            > DRAW_LIMIT: <span id="drawLimitValue">aus</span><br>
+            > SYSTEM_STATUS: <span id="systemStatus" style="color: #0f0;">NOMINAL</span>
         </div>
+
+        <section class="env-panel" id="envPanel" aria-live="polite">
+            <h3>Umgebung · <span id="envName">Erde</span></h3>
+            <dl>
+                <div class="env-row"><dt>Schwere</dt><dd id="envGravity">9,81 m/s²</dd></div>
+                <div class="env-row"><dt>Druck</dt><dd id="envPressure">1014 mbar auf Meereshöhe</dd></div>
+                <div class="env-row"><dt>Temperatur</dt><dd id="envTemperature">Mittel 288 K, typisch 283–293 K</dd></div>
+                <div class="env-row"><dt>Wasser</dt><dd id="envWater">Flüssiges Wasser ist an der Oberfläche stabil.</dd></div>
+            </dl>
+            <div class="habitat-toggle" id="habitatToggle">
+                <button type="button" class="btn habitat-btn active" id="habitatBtn" aria-pressed="true">im Druck-Habitat</button>
+                <button type="button" class="btn habitat-btn" id="vacuumBtn" aria-pressed="false">offene Oberfläche</button>
+            </div>
+            <p class="env-hypothesis" id="envHypothesis"></p>
+            <p class="env-source" id="envSource"></p>
+        </section>
     </div>
 
     <div class="visualizer">
@@ -425,6 +471,12 @@
         <div class="canvas-box">
             <h3>Flexible Bio-Scaffold</h3>
             <canvas id="scaffoldCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <div class="canvas-box spray-box">
+            <h3>Düsenstrahl</h3>
+            <canvas id="sprayCanvas" width="720" height="300"></canvas>
+            <p class="spray-caption" id="sprayCaption">Flüssiger Düsenstrahl. Die Fallzeit folgt der eingestellten Schwere.</p>
         </div>
         
         <div class="investor-note">
@@ -481,125 +533,7 @@
     </div>
 </div>
 
-<script>
-    // --- Setup Canvas ---
-    const pipeCanvas = document.getElementById('pipeCanvas');
-    const pipeCtx = pipeCanvas.getContext('2d');
-    
-    const scaffoldCanvas = document.getElementById('scaffoldCanvas');
-    const scaffoldCtx = scaffoldCanvas.getContext('2d');
-
-    const canvasSize = 400;
-    const center = canvasSize / 2;
-
-    // --- Physics Parameters ---
-    const gravityEarth = 9.81;
-    let targetGravity = 9.81;
-    const baseEmitterWidth = 10; // Base half-width at Earth gravity
-
-    // Geometry
-    const outerRadius = 160;
-    const innerRadius = 120; // 40px pipe wall
-
-    // --- Elements ---
-    const slider = document.getElementById('gravitySlider');
-    const gravDisplay = document.getElementById('gravityValue');
-    const scaleDisplay = document.getElementById('scaleFactorValue');
-    const emitterDisplay = document.getElementById('emitterValue');
-    const buttons = document.querySelectorAll('.btn');
-
-    // --- Drawing Functions ---
-    function drawGenCAD() {
-        // Calculate physics
-        const scaleFactor = gravityEarth / targetGravity;
-        const dynamicEmitterWidth = baseEmitterWidth * scaleFactor;
-
-        // Update UI Text
-        gravDisplay.innerText = targetGravity.toFixed(2) + " m/s²";
-        scaleDisplay.innerText = scaleFactor.toFixed(2);
-        emitterDisplay.innerText = Math.round(dynamicEmitterWidth * 2); // Show total width
-
-        // 1. Draw Pipe
-        pipeCtx.clearRect(0, 0, canvasSize, canvasSize);
-        
-        // Background white 
-        pipeCtx.fillStyle = '#ffffff';
-        pipeCtx.fillRect(0, 0, canvasSize, canvasSize);
-
-        // Draw solid pipe (Black)
-        pipeCtx.fillStyle = '#111';
-        pipeCtx.beginPath();
-        pipeCtx.arc(center, center, outerRadius, 0, Math.PI * 2);
-        pipeCtx.fill();
-
-        // Use composite operation to "cut out" holes
-        pipeCtx.globalCompositeOperation = 'destination-out';
-
-        // Cut inner hole
-        pipeCtx.beginPath();
-        pipeCtx.arc(center, center, innerRadius, 0, Math.PI * 2);
-        pipeCtx.fill();
-
-        // Cut 4 Emitters (Cross shape)
-        pipeCtx.fillRect(center - dynamicEmitterWidth, 0, dynamicEmitterWidth * 2, canvasSize);
-        pipeCtx.fillRect(0, center - dynamicEmitterWidth, canvasSize, dynamicEmitterWidth * 2);
-
-        // Reset composite
-        pipeCtx.globalCompositeOperation = 'source-over';
-
-        // 2. Draw Bio-Scaffold Matrix
-        scaffoldCtx.clearRect(0, 0, canvasSize, canvasSize);
-        
-        // Background white
-        scaffoldCtx.fillStyle = '#ffffff';
-        scaffoldCtx.fillRect(0, 0, canvasSize, canvasSize);
-
-        // Draw grid
-        scaffoldCtx.strokeStyle = '#333';
-        scaffoldCtx.lineWidth = 6;
-        const gridSpacing = 40;
-
-        scaffoldCtx.beginPath();
-        for (let x = 0; x <= canvasSize; x += gridSpacing) {
-            scaffoldCtx.moveTo(x, 0);
-            scaffoldCtx.lineTo(x, canvasSize);
-        }
-        for (let y = 0; y <= canvasSize; y += gridSpacing) {
-            scaffoldCtx.moveTo(0, y);
-            scaffoldCtx.lineTo(canvasSize, y);
-        }
-        scaffoldCtx.stroke();
-
-        // Cut central hole for pipe
-        scaffoldCtx.globalCompositeOperation = 'destination-out';
-        scaffoldCtx.beginPath();
-        scaffoldCtx.arc(center, center, outerRadius + 8, 0, Math.PI * 2);
-        scaffoldCtx.fill();
-        
-        scaffoldCtx.globalCompositeOperation = 'source-over';
-    }
-
-    // --- Interactions ---
-    slider.addEventListener('input', function() {
-        targetGravity = parseFloat(this.value);
-        buttons.forEach(b => b.classList.remove('active'));
-        drawGenCAD();
-    });
-
-    function setGravity(value, btnElement) {
-        targetGravity = value;
-        slider.value = value;
-        
-        buttons.forEach(b => b.classList.remove('active'));
-        btnElement.classList.add('active');
-        
-        drawGenCAD();
-    }
-
-    // Initial Draw
-    drawGenCAD();
-
-</script>
+<script src="gravity-engine.js"></script>
 
 </body>
 </html>
