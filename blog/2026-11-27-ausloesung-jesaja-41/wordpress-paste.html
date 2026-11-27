@@ -1,0 +1,241 @@
+<!-- wp:html -->
+<!-- rosary.health · WP-Block "Individuelles HTML" · Jes 41,8–16 · 2026-11-27 -->
+<link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+#mh-ausloese{--sand:#efe6d6;--sand2:#e6d9c2;--bord:#6b1028;--gold:#b8902f;--ink:#2b211c;background:var(--sand);color:var(--ink);font-family:'Rosario','Palatino','Palatino Linotype','Book Antiqua',serif;font-size:18px;line-height:1.75;max-width:900px;margin:0 auto;padding:28px 22px;border-top:6px solid var(--bord);border-bottom:6px solid var(--gold)}
+#mh-ausloese h1,#mh-ausloese h2,#mh-ausloese h3{font-family:'Rockwell Extra Bold',Rockwell,'Roboto Slab',serif;font-weight:800;color:var(--bord);line-height:1.25;margin:1.4em 0 .5em}
+#mh-ausloese h1{font-size:2.1em;text-align:center;margin-top:.2em}
+#mh-ausloese h2{font-size:1.45em;border-bottom:2px solid var(--gold);padding-bottom:.2em}
+#mh-ausloese .kicker{text-align:center;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-size:.8em;font-weight:700}
+#mh-ausloese .lead{text-align:center;font-style:italic;font-size:1.08em}
+#mh-ausloese .by{text-align:center;font-size:.92em;color:#6a5a4c;margin:.2em 0 1em}
+#mh-ausloese .bibel{font-family:'Palatino','Palatino Linotype','Book Antiqua',serif;background:#f6efe2;border-left:6px solid var(--bord);padding:16px 20px;border-radius:0 10px 10px 0}
+#mh-ausloese .bibel sup{color:var(--bord);font-weight:700}
+#mh-ausloese .quelle{font-size:.82em;color:#6a5a4c;margin-top:.6em}
+#mh-ausloese .kern{font-family:'Palatino','Palatino Linotype','Book Antiqua',serif;font-size:1.25em;text-align:center;color:var(--bord);border:2px solid var(--gold);border-radius:12px;padding:18px;background:#f6efe2}
+#mh-ausloese figure{margin:1.4em 0;text-align:center}
+#mh-ausloese figure img{max-width:100%;height:auto;border-radius:12px;border:3px solid var(--gold)}
+#mh-ausloese figcaption{font-size:.85em;font-style:italic;color:#6a5a4c}
+#mh-ausloese .card{background:var(--sand2);border:1px solid #d3c19f;border-radius:12px;padding:16px 20px;margin:1em 0}
+#mh-ausloese .kette{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:1em 0}
+#mh-ausloese .kette div{background:#f6efe2;border-top:4px solid var(--bord);border-radius:8px;padding:12px 14px;text-align:center;font-weight:700;color:var(--bord)}
+#mh-ausloese .kette span{display:block;font-weight:400;color:var(--ink);font-size:.9em;margin-top:.35em}
+#mh-ausloese table{width:100%;border-collapse:collapse;font-size:.95em}
+#mh-ausloese th{background:var(--bord);color:#fff;text-align:left;padding:8px}
+#mh-ausloese td{padding:8px;border-bottom:1px solid #d3c19f;vertical-align:top}
+#mh-ausloese .map{width:100%;height:380px;border:2px solid var(--gold);border-radius:12px}
+#mh-ausloese .sim label{display:block;font-weight:700;margin-top:10px}
+#mh-ausloese .sim input[type=range]{width:100%;accent-color:var(--bord)}
+#mh-ausloese .sim .val{float:right;color:var(--bord)}
+#mh-ausloese .pole{display:flex;justify-content:space-between;font-size:.85em;font-weight:700;color:var(--bord);margin-top:12px}
+#mh-ausloese .score{font-family:'Rockwell Extra Bold',Rockwell,'Roboto Slab',serif;font-size:2.6em;color:var(--bord);text-align:center}
+#mh-ausloese .estscore{font-family:'Rockwell Extra Bold',Rockwell,'Roboto Slab',serif;font-size:2em;color:var(--bord);text-align:center}
+#mh-ausloese .bar{height:14px;background:#d3c19f;border-radius:7px;overflow:hidden}
+#mh-ausloese .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--bord),var(--gold));transition:width .3s}
+#mh-ausloese button{font-family:inherit;background:var(--bord);color:#fff;border:0;border-radius:8px;padding:8px 16px;cursor:pointer;margin:6px 6px 0 0}
+#mh-ausloese button.alt{background:var(--gold)}
+#mh-ausloese input[type=text]{font-family:inherit;padding:7px;border:1px solid var(--gold);border-radius:6px;width:60%}
+#mh-ausloese ol.rank li{padding:3px 0}
+#mh-ausloese a{color:var(--bord)}
+#mh-ausloese .gebet{font-style:italic;text-align:center}
+#mh-ausloese .video{position:relative;padding-bottom:56.25%;height:0;border:2px solid var(--gold);border-radius:12px;overflow:hidden}
+#mh-ausloese .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#mh-ausloese svg{max-width:100%;height:auto}
+#mh-ausloese .prac{list-style:none;padding:0;margin:0}
+#mh-ausloese .prac li{padding:8px 0;border-bottom:1px solid #d3c19f;display:flex;gap:10px;align-items:flex-start}
+#mh-ausloese .prac input{accent-color:var(--bord);margin-top:.45em;flex:0 0 auto}
+#mh-ausloese .prac span{flex:1 1 auto}
+#mh-ausloese .worf{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1em 0}
+#mh-ausloese .worf .lab{font-size:.85em;font-weight:700;color:var(--bord);margin-bottom:.35em}
+#mh-ausloese .track{height:18px;background:#d3c19f;border-radius:9px;overflow:hidden}
+#mh-ausloese .track i{display:block;height:100%;border-radius:9px;transition:width .3s}
+#mh-ausloese .track .gr{background:linear-gradient(90deg,var(--gold),var(--bord));width:50%}
+#mh-ausloese .track .ch{background:linear-gradient(90deg,#c4b89a,#7a5a32);width:50%}
+#mh-ausloese .schematic{width:100%;height:auto;border:2px solid var(--gold);border-radius:12px;background:#f6efe2}
+</style>
+<div id="mh-ausloese">
+<figure><img src="https://rosary-mom.github.io/blog/2026-11-27-ausloesung-jesaja-41/erloeser-advent-daemmerung.webp" width="1280" height="720" alt="Dämmerung über einem sandfarbenen Hügelweg: die Nacht weicht einem goldenen Morgen" loading="eager"><figcaption>„Die Nacht ist weit vorgerückt, und der Tag ist nahe.“ Römer 13,12 (Elberfelder 1905). Weg ins Morgenlicht – Adventsanfang.</figcaption></figure>
+<p class="kicker">Magnifica Humanitas · Blog</p>
+<h1>Auslösung: Dein Erlöser ist der Heilige Israels</h1>
+<p class="by">Archbishop Dr. (h.c. mult.) Uwe A. E. Rosenkranz</p>
+<p class="lead">Am Freitag vor dem 1. Advent (Sonntag, 29. November 2026) und am sogenannten Black Friday: Römer 13,11–12 und Jesaja 2,4–5 als Rahmen, Jesaja 41,8–16 als Kern. Auslösung heißt hier nicht der bessere Preis, sondern dass der Heilige Israels die Rechte ergreift.</p>
+<h2>Adventsrahmen: Die Nacht ist vorgerückt</h2>
+<p>Übermorgen beginnt die Adventszeit. Die Kirche liest an dieser Schwelle oft Worte vom Aufwachen und vom Licht. Sie passen zu einem Tag, der kommerziell „Black Friday“ heißt und geistlich bereits auf den kommenden Tag blickt.</p>
+<div class="bibel">
+<p><sup>11</sup> Und dieses noch, da wir die Zeit erkennen, daß die Stunde schon da ist, daß wir aus dem Schlaf aufwachen sollen; denn jetzt ist unsere Errettung näher, als da wir geglaubt haben: <sup>12</sup> Die Nacht ist weit vorgerückt, und der Tag ist nahe. Laßt uns nun die Werke der Finsternis ablegen und die Waffen des Lichts anziehen.</p>
+<p class="quelle">Römer 13,11–12 nach der Elberfelder Bibel 1905 (gemeinfrei).</p>
+</div>
+<div class="bibel">
+<p><sup>4</sup> und er wird richten zwischen den Nationen und Recht sprechen vielen Völkern. Und sie werden ihre Schwerter zu Pflugmessern schmieden, und ihre Speere zu Winzermessern; nicht wird Nation wider Nation das Schwert erheben, und sie werden den Krieg nicht mehr lernen. <sup>5</sup> Kommt, Haus Jakob, und lasset uns wandeln im Lichte Jehovas!</p>
+<p class="quelle">Jesaja 2,4–5 nach der Elberfelder Bibel 1905 (gemeinfrei).</p>
+</div>
+<p>Römer 13 ruft nicht zu einer neuen Technik des Selbstmanagements, sondern zum Aufwachen, weil die Errettung näher ist. Jesaja 2 lädt das Haus Jakob ein, schon jetzt im Licht des HERRN zu gehen – noch bevor die Schwerter vollständig umgeschmiedet sind. Beide Stellen bilden den Rahmen: Der Tag ist nahe. Im Licht dieses Tages lesen wir Jesaja 41,14: „dein Erlöser ist der Heilige Israels.“</p>
+<h2>Der Bibeltext: Jesaja 41,8–16</h2>
+<div class="bibel">
+<p><sup>8</sup> Du aber, Israel, mein Knecht, Jakob, den ich erwählt habe, Same Abrahams, meines Freundes; <sup>9</sup> du, den ich ergriffen von den Enden der Erde und von ihren fernsten Gegenden her gerufen habe, und zu welchem ich sprach: Du bist mein Knecht, ich habe dich erwählt und nicht verschmäht – <sup>10</sup> fürchte dich nicht, denn ich bin mit dir; schaue nicht ängstlich umher, denn ich bin dein Gott; ich stärke dich, ja, ich helfe dir, ja, ich stütze dich mit der Rechten meiner Gerechtigkeit. <sup>11</sup> Siehe, es sollen beschämt und zu Schanden werden alle, die wider dich entbrannt sind; es sollen wie nichts werden und umkommen deine Widersacher. <sup>12</sup> Du wirst sie suchen und nicht finden, die Männer, die mit dir hadern; wie nichts und wie Nichtigkeit sollen die Männer werden, die dich bekriegen. <sup>13</sup> Denn ich, Jehova, dein Gott, ergreife deine Rechte, der ich zu dir spreche: Fürchte dich nicht, ich helfe dir! <sup>14</sup> Fürchte dich nicht, du Wurm Jakob, du Häuflein Israel; ich helfe dir, spricht Jehova, und dein Erlöser ist der Heilige Israels. <sup>15</sup> Siehe, ich habe dich zu einem scharfen, neuen Dreschschlitten gemacht, mit Doppelschneiden versehen: du wirst Berge dreschen und zermalmen, und Hügel der Spreu gleich machen; <sup>16</sup> du wirst sie worfeln, daß der Wind sie entführt und der Sturm sie zerstreut. Du aber, du wirst in Jehova frohlocken und in dem Heiligen Israels dich rühmen.</p>
+<p class="quelle">Jesaja 41,8–16 nach der Elberfelder Bibel 1905 (gemeinfrei). Zum Vergleich die Elberfelder Bibel 2016 (SCM R. Brockhaus; Christliche Verlagsgesellschaft, Witten; Dillenburg 2016): „Nachkomme Abrahams, meines Freundes“; „ich habe dich erwählt und nicht verworfen“; „ich halte dich mit der Rechten meiner Gerechtigkeit“; „Ich, ich helfe dir, spricht der HERR, und dein Erlöser ist der Heilige Israels“ (<a href="https://ref.ly/logosref/bible$2Belber2016.23.41.8-23.41.16">ref.ly</a>).</p>
+</div>
+<p class="kern">„Fürchte dich nicht, du Wurm Jakob, du Häuflein Israel; ich helfe dir, spricht Jehova, und dein Erlöser ist der Heilige Israels.“<br><span style="font-size:.7em">Jesaja 41,14 (Elberfelder 1905)</span></p>
+<div class="kette">
+<div>Erwählt<span>nicht aus Stärke</span></div>
+<div>Gehalten<span>die Rechte ergriffen</span></div>
+<div>Erlöst<span>der Heilige Israels</span></div>
+<div>Gebraucht<span>trotz des Häufleins</span></div>
+<div>Jubel<span>im HERRN, nicht im Werkzeug</span></div>
+</div>
+<h2>Zuerst an Israel</h2>
+<p>Der Text richtet sich zunächst nicht unmittelbar an einzelne Christen, sondern an Israel, an Jakob als erwähltes Volk Gottes. Das ist für jede heutige Anwendung entscheidend. Die Zusage darf nicht aus ihrem geschichtlichen Zusammenhang gelöst und als allgemeines Versprechen persönlicher Erfolgsgarantie verwendet werden.</p>
+<p>Jesaja 41 steht im Zusammenhang mit Gottes Herrschaft über die Völker und mit der Rettung Israels. Im Hintergrund stehen die Bedrohung und das babylonische Exil. Die Kommentarliteratur verbindet den Abschnitt außerdem mit dem Auftreten des Perserkönigs Kyrus, durch den Gott Israel befreien würde.[1][2]</p>
+<p>In den Versen 8–9 wird Israel mit mehreren Namen angesprochen: Israel, Jakob, Knecht, Erwählter und Same Abrahams, des Freundes Gottes. Dadurch wird Israels Identität nicht aus seiner gegenwärtigen Stärke begründet, sondern aus Gottes Geschichte mit ihm. Gott hat Israel erwählt, gerufen und nicht verschmäht. Die Erwählung gründet nach Franz Delitzsch nicht in besonderen Verdiensten Israels, sondern in Gottes freier Gnade und Berufung.[3]</p>
+<p>Darauf folgt die wiederholte Zusage der Hilfe: Gott ist mit Israel, er ist Israels Gott, er stärkt, hilft und stützt. Die „rechte Hand“ steht dabei für Gottes wirksame und seinem Bund treue Macht.[4] Vers 13 verdichtet das Bild: Der HERR ergreift Israels Rechte und spricht: „Fürchte dich nicht, ich helfe dir!“</p>
+<h2>Auslösung: Der Erlöser (go'el)</h2>
+<p>Im Hebräischen steht hinter „dein Erlöser“ das Wort <em>go'el</em>. In Israel war der Löser der nächste Verwandte, der Familienland zurückkaufte, einen in Schuld geratenen Angehörigen auslöste oder die Familienehre wahrte (vergleiche 3. Mose 25 und das Buch Ruth). Jesaja 41,14 sagt nun: Israels Löser ist nicht zuerst ein menschlicher Verwandter, sondern der Heilige Israels selbst. Auslösung meint hier diese treue, verwandtschaftliche Rettung – dass Gott die Rechte ergreift und das Häuflein nicht verwirft.</p>
+<p>Darum ist „Auslösung“ mehr als eine Auslegungstechnik und mehr als ein Preisnachlass. Sie ist die Tat des Erlösers an dem Volk, das sich wie ein Wurm und wie ein Häuflein vorkommt. Schwachheit disqualifiziert nicht. Die Hoffnung liegt nicht darin, dass jeder Einzelne zu einer unbesiegbaren Persönlichkeit wird, sondern darin, dass der Heilige Israels seine Schwachen erhält und zu seinem Dienst gebrauchen kann.</p>
+<figure><img src="https://rosary-mom.github.io/blog/2026-11-27-ausloesung-jesaja-41/dreschschlitten-worfeln.webp" width="1280" height="720" alt="Antike Tenne im Morgenlicht: ein steingespickter Dreschschlitten, Kornhaufen, Spreu im Wind" loading="lazy"><figcaption>Dreschschlitten und Worfeln (Jes 41,15–16): Der Wind trägt die Spreu, das Korn bleibt – und der Jubel gilt dem Heiligen Israels.</figcaption></figure>
+<h2>Dreschschlitten und Worfeln – ohne Aggression</h2>
+<p>Die Verse 15–16 zeichnen Israel als scharfen, neuen Dreschschlitten: Berge werden gedroschen, Hügel der Spreu gleichgemacht, der Wind trägt sie fort. In der Auslegungsliteratur werden solche Berge oft als widerständige Mächte und Hindernisse in Gottes Heilsplan gelesen.[1] Eine verantwortbare Anwendung lautet: Gott kann durch sein Volk scheinbar unüberwindbare Hindernisse überwinden und seine Absichten trotz menschlicher Machtstrukturen verwirklichen.</p>
+<p>Heute darf man daraus nicht ableiten: „Gott wird alle Menschen vernichten, die mir widersprechen.“ Das Bild des Dreschschlittens legitimiert keine aggressive Haltung gegenüber Andersdenkenden. Die Aussage bezieht sich zunächst auf Gottes Gericht über feindliche Mächte und auf seine geschichtliche Rettung Israels.</p>
+<p>Der Erfolg gehört Gott. Der Abschnitt endet nicht mit Israels Selbstbewunderung, sondern mit Freude im HERRN und Ruhm im Heiligen Israels. Selbst dort, wo Gott sein Volk wirksam gebraucht, soll die Anerkennung nicht beim Werkzeug, sondern beim Erlöser bleiben.[1]</p>
+<h2>Was der Text heute nicht bedeutet</h2>
+<p>Jesaja 41,8–16 ist keine pauschale Zusage, dass jeder Gläubige vor Krankheit, Verlust, politischer Bedrohung oder jedem persönlichen Konflikt bewahrt wird. Der Text sagt nicht: „Du wirst jedes Problem besiegen.“ Er sagt: Gottes Volk darf seine Identität nicht aus seiner Schwäche, seinen Gegnern oder seinen Umständen ableiten. Es ist von Gott gerufen, von ihm gehalten und darf darauf vertrauen, dass Gott trotz geringer Mittel seine Ziele durchsetzt.</p>
+<p>Für Christen kann der Abschnitt als Teil der Schrift Trost und Orientierung geben. Spätere christliche Ausleger beziehen die endgültige Überwindung feindlicher Mächte auf Gottes Heilshandeln in Christus; dabei bleibt zu beachten, dass Jesaja 41 zunächst Israel als Volk Gottes anspricht.[2] Im Advent hören wir denselben Erlöser: Die Nacht ist vorgerückt, der Tag ist nahe – nicht weil wir uns selbst erlösen, sondern weil der Heilige Israels treu bleibt.</p>
+<h2>Für die Gemeinde heute</h2>
+<p>Eine heutige Gemeinde darf sich in diesem Licht wiederfinden, ohne Israel zu ersetzen und ohne den Text in eine Erfolgsformel zu drehen. Konkret heißt das:</p>
+<ul>
+<li><strong>Identität vor Leistung.</strong> Wir sind gerufen und gehalten, bevor wir etwas vorweisen. Verdienste begründen die Erwählung nicht.[3]</li>
+<li><strong>Schwachheit disqualifiziert nicht.</strong> Ein „Häuflein“ ist kein Gegenbeweis gegen Gottes Beistand.</li>
+<li><strong>Die Rechte werden ergriffen.</strong> Seelsorge beginnt oft nicht beim Kraftakt, sondern bei der Zusage: Fürchte dich nicht, ich helfe dir.</li>
+<li><strong>Hindernisse dürfen geworfelt werden</strong> – als Bitte an Gott, nicht als Lizenz, Menschen zu zermalmen.</li>
+<li><strong>Der Jubel bleibt im HERRN.</strong> Wo etwas gelingt, gehört der Ruhm dem Erlöser.</li>
+</ul>
+<h2>Black Friday, FinTech und die Frage der Auslösung</h2>
+<p>Dieser Freitag trägt im Handel den Namen „Black Friday“. Angebote, Erinnerungen und Zahlungstechniken verdichten den Konsumdruck in wenige Stunden. FinTech – digitale Bezahlung, gespeicherte Karten, das unmittelbare Bezahlen oder spätere Verrechnen – macht Zahlen, Schulden und Pfänder schneller und oft unsichtbarer. Das ist eine Beschreibung, keine Verurteilung der Technik und keine Kaufanweisung.</p>
+<p>Im Licht von Jesaja 41,14 liegt die geistliche Frage nicht zuerst bei der Höhe eines Rabatts. Ein Preisnachlass ist noch keine Auslösung. Auslösung im Sinn des <em>go'el</em> bedeutet, dass jemand die Rechte ergreift und aus einer Bindung herausholt. Konsum kann binden, wo Vergleich, Raten und das Gefühl, ohne den Kauf nicht genug zu sein, die Identität ersetzen. Dann wirkt der Markt wie ein Pfand: Man bleibt in der Schuld, sich selbst beweisen zu müssen.</p>
+<p>Für die Gemeinde heißt das am heutigen Tag: Wache auf (Röm 13,11), wandle im Licht (Jes 2,5), und leite deine Würde nicht aus dem ab, was du leistest, besitzt oder heute günstig erwirbst. Der Erlöser ist der Heilige Israels. Er hält das Häuflein. Er verspricht damit nicht automatisch einen schuldenfreien Haushalt oder den Sieg über jedes Angebot. Er verspricht sich selbst.</p>
+<table>
+<tr><th>Konsumdruck</th><th>Auslösung im Sinn von Jesaja 41</th></tr>
+<tr><td>Identität aus Kauf, Vergleich und Leistung</td><td>Identität aus Ruf, Erwählung und Halten</td></tr>
+<tr><td>Der bessere Preis soll befreien</td><td>Der Erlöser ergreift die Rechte</td></tr>
+<tr><td>Pfand und Rate bleiben oft unsichtbar</td><td>Die Bindung wird vor Gott genannt und ihm übergeben</td></tr>
+<tr><td>Schwäche gilt als Makel</td><td>„Wurm Jakob“ wird nicht verworfen</td></tr>
+<tr><td>Erfolg wird dem eigenen Geschick zugerechnet</td><td>Der Jubel bleibt im Heiligen Israels</td></tr>
+</table>
+<p class="quelle">Die Gegenüberstellung ist ein geistlicher Denkanstoß, keine Finanzberatung, kein Urteil über einzelne Käufe und keine Aufforderung, etwas zu erwerben oder zu unterlassen.</p>
+<h2>Seelsorgerlich gefragt</h2>
+<div class="card">
+<p><strong>Woraus leitest du heute deine Identität ab?</strong> Aus dem, was du leisten, kaufen oder vorweisen kannst – oder aus dem Ruf dessen, der nicht verwirft?</p>
+<p><strong>Wo fühlst du dich wie ein Häuflein?</strong> Der Text erlaubt, diese Schwachheit zu nennen, ohne sie wegzuretuschieren.</p>
+<p><strong>Was wäre heute Auslösung?</strong> Nicht der nächste Preisvorteil, sondern dass der Erlöser deine Rechte ergreift.</p>
+<p><strong>Wem gehört der Ruhm?</strong> Wo dir etwas gelingt, bleibt der Jubel im HERRN.</p>
+</div>
+<h2>Video, Ort und Leseplan</h2>
+<h3>Video: Jesaja, Kapitel 40–66</h3>
+<div class="video"><iframe src="https://www.youtube.com/embed/dgJvi3DopD0" title="BibleProject – Deutsch: Buchvideo Jesaja, Kap. 40–66" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<p class="quelle">„Buchvideo: Jesaja Kap. 40–66“ von BibleProject – Deutsch (YouTube). Das Video ordnet die Kapitel nach dem Exil ein: Trost, Gerichtsszene, der Knecht Gottes und die Hoffnung auf Wiederherstellung.</p>
+<h3>Jerusalem und Babylon: der Weg des Exils</h3>
+<p>Jesaja 41 spricht in die Lage eines Volkes, das aus dem Land geführt wurde und sich klein vorkommt. Die folgende Zeichnung zeigt sachlich-historisch den typischen Weg des fruchtbaren Halbmonds: nicht die Luftlinie durch die Wüste, sondern die nördliche Route von Jerusalem über Syrien an den Euphrat und stromabwärts nach Babylon. Es ist eine historische Orientierungsskizze, keine politische Karte der Gegenwart.</p>
+<svg class="schematic" viewBox="0 0 820 460" role="img" aria-labelledby="mha-map-title mha-map-desc">
+<title id="mha-map-title">Schematische Karte des Exilswegs von Jerusalem nach Babylon</title>
+<desc id="mha-map-desc">Historische Orientierungsskizze: Mittelmeer im Westen, Jerusalem im Südwesten, Route nach Norden und dann den Euphrat abwärts nach Babylon.</desc>
+<rect x="0" y="0" width="820" height="460" fill="#f6efe2"/>
+<path d="M0 0 L210 0 L250 70 L200 160 L170 250 L150 340 L80 460 L0 460 Z" fill="#d9cbb3"/>
+<text x="70" y="80" fill="#6a5a4c" font-size="14" font-family="Palatino, Georgia, serif">Mittelmeer</text>
+<path d="M430 40 C500 90, 540 150, 590 230 C630 290, 680 350, 760 430" fill="none" stroke="#7a8fa0" stroke-width="7" stroke-linecap="round"/>
+<text x="640" y="200" fill="#6a5a4c" font-size="13" font-family="Palatino, Georgia, serif">Euphrat</text>
+<path d="M200 340 C230 260, 250 200, 290 150 C330 110, 390 100, 470 130 C530 155, 570 210, 600 270" fill="none" stroke="#6b1028" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 7"/>
+<circle cx="200" cy="340" r="8" fill="#6b1028"/>
+<text x="214" y="336" fill="#2b211c" font-size="16" font-weight="700" font-family="Palatino, Georgia, serif">Jerusalem</text>
+<circle cx="600" cy="270" r="8" fill="#b8902f"/>
+<text x="614" y="266" fill="#2b211c" font-size="16" font-weight="700" font-family="Palatino, Georgia, serif">Babylon</text>
+<text x="614" y="286" fill="#6a5a4c" font-size="11" font-family="Palatino, Georgia, serif">(historisch, bei Hillah)</text>
+<text x="250" y="200" fill="#6a5a4c" font-size="12" font-family="Palatino, Georgia, serif">nördliche Route</text>
+<text x="40" y="430" fill="#6a5a4c" font-size="12" font-family="Palatino, Georgia, serif">Schematisch, ohne heutige Grenzen · nicht maßstabsgetreu</text>
+</svg>
+<p class="quelle">Eigene schematische Zeichnung zum historischen Exilsweg im fruchtbaren Halbmond. Die Markierung auf der folgenden Karte zeigt Jerusalem als Ausgangspunkt.</p>
+<iframe class="map" title="Karte: historische Region zwischen Jerusalem und Babylon (OpenStreetMap)" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=33.8%2C30.4%2C46.2%2C37.6&amp;layer=mapnik&amp;marker=31.778%2C35.236"></iframe>
+<p class="quelle">Karte © OpenStreetMap-Mitwirkende. Blick auf die Levante und Mesopotamien. Die Markierung liegt bei Jerusalem; Babylon lag historisch am Euphrat nahe dem heutigen Hillah.</p>
+<h2>Leseplan: 7 Tage auf den Erlöser hin</h2>
+<table>
+<tr><th>Tag</th><th>Text</th><th>Impuls</th></tr>
+<tr><td>1</td><td>Röm 13,11–14</td><td>Aufwachen: Die Nacht ist vorgerückt, der Tag ist nahe.</td></tr>
+<tr><td>2</td><td>Jes 2,1–5</td><td>Kommt, lasset uns wandeln im Lichte des HERRN.</td></tr>
+<tr><td>3</td><td>Jes 41,8–16</td><td>Fürchte dich nicht: dein Erlöser ist der Heilige Israels.</td></tr>
+<tr><td>4</td><td>Jes 40,27–31</td><td>Der Müde gewinnt neue Kraft – nicht aus eigener Reserve.</td></tr>
+<tr><td>5</td><td>Jes 43,1–7</td><td>Ich habe dich bei deinem Namen gerufen, du bist mein.</td></tr>
+<tr><td>6</td><td>Ruth 4,1–10; 3. Mo 25,23–28</td><td>Der Löser (go'el) löst aus und kauft zurück.</td></tr>
+<tr><td>7</td><td>Lk 1,68–79</td><td>Gepriesen sei der Herr, der sein Volk besucht und erlöst hat.</td></tr>
+</table>
+<h2>Werkzeuge: Auslöse und Worfeln</h2>
+<p>Vier kleine Werkzeuge für den Alltag: ein Simulator mit Score und Worfeln-Bild, ein Schätzer, ein Vorschlagsgeber und ein Umsetzer mit Wochenpraxis. Score und Rangliste bleiben nur in deinem Browser (localStorage). Es werden keine Daten an einen Server gesendet und keine personenbezogenen Profile angelegt. Der Wert ist ein geistlicher Denkanstoß, kein Urteil über dich, keine Finanzberatung und keine Bewertung anderer Menschen.</p>
+<div class="card sim">
+<h3>Simulator: Spreu und Korn</h3>
+<p>Schiebe die Regler ehrlich vor Gott. Links lastet, was bindet (Konsumdruck, Pfandgefühl, Leistungsidentität, Angst). Rechts trägt, was bleibt (Vertrauen auf den Erlöser, Gemeinschaft, Ruhm im HERRN). Der Score steigt, wenn das Korn zunimmt und die Spreu geringer wird.</p>
+<label>Konsum- und Kaufdruck heute <span class="val" id="mha-v-k">50</span></label><input type="range" min="0" max="100" value="50" id="mha-k">
+<label>Gefühl, verpfändet oder gebunden zu sein <span class="val" id="mha-v-l">50</span></label><input type="range" min="0" max="100" value="50" id="mha-l">
+<label>Meine Identität hängt an Leistung, Besitz oder Vergleich <span class="val" id="mha-v-i">50</span></label><input type="range" min="0" max="100" value="50" id="mha-i">
+<label>Angst, wegen Schwachheit nicht zu genügen <span class="val" id="mha-v-a">50</span></label><input type="range" min="0" max="100" value="50" id="mha-a">
+<label>Ich vertraue dem Erlöser, der meine Rechte ergreift <span class="val" id="mha-v-v">50</span></label><input type="range" min="0" max="100" value="50" id="mha-v">
+<label>In meiner Gemeinschaft werden Schwache gehalten, nicht übersehen <span class="val" id="mha-v-g">50</span></label><input type="range" min="0" max="100" value="50" id="mha-g">
+<label>Wo etwas gelingt, gehört der Ruhm dem HERRN, nicht mir <span class="val" id="mha-v-r">50</span></label><input type="range" min="0" max="100" value="50" id="mha-r">
+<div class="pole"><span>gebunden und getrieben</span><span>gehalten vom Erlöser</span></div>
+<div class="worf">
+<div><div class="lab">Korn – was bleibt (<span id="mha-grain-v">50</span>)</div><div class="track"><i class="gr" id="mha-grain"></i></div></div>
+<div><div class="lab">Spreu – was der Wind trägt (<span id="mha-chaff-v">50</span>)</div><div class="track"><i class="ch" id="mha-chaff"></i></div></div>
+</div>
+<div class="bar"><i id="mha-bar" style="width:50%"></i></div>
+<div class="score" id="mha-score">50</div>
+<p id="mha-text" style="text-align:center;font-style:italic"></p>
+<h3>Schätzer</h3>
+<p>Der Schätzer gewichtet vor allem das Vertrauen auf den Erlöser und berücksichtigt deine abgehakten Schritte der Wochenpraxis. Liegt dieses Vertrauen niedrig, bleibt die Schätzung begrenzt: Ohne den, der die Rechte ergreift, trägt auch eifrige Gegenwehr nicht lange.</p>
+<div class="estscore" id="mha-est">50</div>
+<p id="mha-est-text" style="text-align:center;font-style:italic"></p>
+<h3>Vorschlagsgeber</h3>
+<p>Ein konkreter Schritt, ausgehend von deinem derzeit stärksten Druck oder deinem schwächsten Halt. Du kannst einen neuen Vorschlag holen.</p>
+<p id="mha-sug-out" style="font-style:italic"></p>
+<p><button type="button" id="mha-sug">Neuen Vorschlag holen</button></p>
+<h3>Umsetzer: Wochenpraxis zum Adventsanfang</h3>
+<p>Hake ab, was du in dieser Woche wirklich tust. Stand: <strong id="mha-week">0 von 7</strong>. Die Häkchen bleiben lokal in deinem Browser gespeichert.</p>
+<ul class="prac">
+<li><input type="checkbox" id="mha-p-0"><span>Lies Jesaja 41,10–14 langsam und bleib bei einem Satz.</span></li>
+<li><input type="checkbox" id="mha-p-1"><span>Nenne vor Gott eine konkrete Last, ohne sie sofort lösen zu müssen.</span></li>
+<li><input type="checkbox" id="mha-p-2"><span>Lege eine Kaufentscheidung 24 Stunden still und prüfe, ob sie Identität ersetzen soll.</span></li>
+<li><input type="checkbox" id="mha-p-3"><span>Tritt einem Menschen zur Seite, der sich wie ein Häuflein fühlt – ohne ihn zu beherrschen.</span></li>
+<li><input type="checkbox" id="mha-p-4"><span>Dank für etwas, das du schon hast, bevor du nach dem nächsten Angebot suchst.</span></li>
+<li><input type="checkbox" id="mha-p-5"><span>Wo dir etwas gelingt, sprich den Ruhm dem Erlöser zu, nicht dir selbst.</span></li>
+<li><input type="checkbox" id="mha-p-6"><span>Ziehe am Abend „die Waffen des Lichts“ an: ein kurzes Gebet, ein versöhnliches Wort, ein Verzicht auf Werke der Finsternis.</span></li>
+</ul>
+<h3>Score und Rangliste</h3>
+<p>Speichere deinen aktuellen Score zusammen mit dem Stand der Wochenpraxis. Die Liste bleibt nur auf diesem Gerät, höchstens zehn Einträge, ohne Weitergabe.</p>
+<p><input type="text" id="mha-name" placeholder="Dein Name oder Kürzel (optional)" maxlength="30"> <button type="button" id="mha-save">In Rangliste speichern</button><button type="button" class="alt" id="mha-clear">Rangliste leeren</button></p>
+<ol class="rank" id="mha-rank"></ol>
+<p class="quelle">Die Rangliste wird nur lokal in deinem Browser gespeichert. Simulator, Schätzer, Vorschlagsgeber und Umsetzer sind geistliche Denkanstöße, keine Bewertung von Menschen und keine Finanzberatung.</p>
+</div>
+<script>(function(){function start(){try{var ids=['k','l','i','a','v','g','r'],chaffIds=['k','l','i','a'],grainIds=['v','g','r'],$=function(i){return document.getElementById(i)},KR='mhAusloeseJes41Rank',KW='mhAusloeseJes41Week',six=0;function val(k){var el=$('mha-'+k);return el?+el.value:0;}function below(a,b){return Math.min(a,b)===a?a!==b:false;}function atLeast(a,b){return below(a,b)?false:true;}function avg(arr){var t=0;arr.forEach(function(k){t+=val(k);});return t/arr.length;}function grain(){return avg(grainIds);}function chaff(){return avg(chaffIds);}function score(){var t=Math.round(grain()*0.7+(100-chaff())*0.3);return Math.round(Math.min(100,Math.max(0,t)));}function weekn(){var n=0;['0','1','2','3','4','5','6'].forEach(function(k){var el=$('mha-p-'+k);if(el){if(el.checked)n=n+1;}});return n;}function text(s){var v=val('v'),i=val('i'),k=val('k'),a=val('a'),r=val('r'),c=chaff();if(below(v,35)){if(atLeast(c,60))return'Der Kaufdruck und die Angst sind laut. Die Auslösung beginnt nicht beim besseren Angebot, sondern dort, wo der Heilige Israels deine Rechte ergreift.';}if(atLeast(i,70)){if(below(v,50))return'Deine Identität hängt gerade stark an Leistung und Besitz. Der Text begründet sie zuerst in Gottes Ruf, nicht in deinen Mitteln.';}if(atLeast(k,70)){if(below(v,50))return'Der Konsumdruck ist hoch. Ein Preisnachlass ist noch keine Auslösung. Frag: Was bindet mich, und wer hält mich?';}if(atLeast(a,70)){if(below(r,40))return'Schwachheit disqualifiziert nicht. „Wurm Jakob“ und „Häuflein Israel“ werden gehalten, nicht verworfen.';}if(below(r,35)){if(atLeast(s,50))return'Wo etwas gelingt, gehört der Ruhm nicht dem Werkzeug. Jubeln im HERRN bewahrt vor Selbstbewunderung.';}if(below(s,25))return'Vielleicht fühlst du dich klein und gebunden. Die Zusage gilt dem Häuflein: Fürchte dich nicht, ich helfe dir.';if(below(s,50))return'Ein kleiner Schritt genügt: Leite deine Identität heute nicht aus dem Kaufdruck ab, sondern aus dem Ruf dessen, der nicht verwirft.';if(below(s,75))return'Du hältst schon vieles fest. Wähle in dieser Woche eine Bindung, die du dem Erlöser überlässt, und eine Hilfe, die du einem Schwachen schenkst.';if(below(s,90))return'Vertrauen, Gemeinschaft und Ruhm im HERRN finden bei dir zusammen. Bleib demütig: Der Erfolg gehört dem Erlöser.';return'Die Nacht ist vorgerückt, der Tag ist nahe. Wandle im Licht des HERRN und lass den Erlöser deine Rechte halten.';}function lowestGrain(){var m=grainIds[0],mv=val(m);grainIds.forEach(function(k){var n=val(k);if(below(n,mv)){m=k;mv=n;}});return m;}function highestChaff(){var m=chaffIds[0],mv=val(m);chaffIds.forEach(function(k){var n=val(k);if(below(mv,n)){m=k;mv=n;}});return m;}var tips={k:['Lege heute eine Kaufentscheidung 24 Stunden still, und prüfe, ob sie Identität ersetzen soll.','Dank für etwas, das du schon hast, bevor du nach dem nächsten Angebot suchst.','Sag bei einem Werbeversprechen laut: Das ist ein Preis, keine Auslösung.'],l:['Nenne vor Gott eine konkrete Last, ohne sie sofort lösen zu müssen.','Unterscheide eine echte Verpflichtung von dem Gefühl, verpfändet zu sein.','Bitte den Erlöser, deine Rechte zu ergreifen – nicht um Erfolg zu erzwingen, sondern um gehalten zu werden.'],i:['Schreib einen Satz: Ich bin gerufen, nicht weil ich genug geleistet habe.','Tue heute etwas Gutes, das niemand sieht und das nichts einbringt.','Wo Vergleich dich klein macht, erinnere: Die Erwählung gründet nicht in Verdiensten.'],a:['Sprich Jesaja 41,14 langsam: Fürchte dich nicht, du Wurm Jakob.','Teile einer vertrauten Person, wo du dich als Häuflein fühlst.','Verzichte darauf, Stärke vorzutäuschen. Schwachheit disqualifiziert nicht.'],v:['Lies Jesaja 41,10–14 und bleib bei einem Satz.','Bevor du handelst, sprich: Ich bin mit dir, ich bin dein Gott.','Vertraue dem Erlöser eine Entscheidung an, die du nicht allein tragen kannst.'],g:['Tritt einem Schwachen zur Seite, ohne ihn zu beherrschen.','Frage in deiner Gemeinschaft: Wer wird gerade übersehen?','Erweise Hilfe als Antwort auf empfangene Auslösung, nicht als Leistungsschau.'],r:['Danke dem HERRN ausdrücklich für etwas, das nicht dein Verdienst war.','Wo dir etwas gelingt, gib den Ruhm weiter: nicht das Werkzeug, der Erlöser.','Juble nicht über Besiegte. Juble im Heiligen Israels.']};function sug(){var useChaff=atLeast(val(highestChaff()),60);var k=useChaff?highestChaff():lowestGrain();var arr=tips[k];six=six%arr.length;var t=arr[six];six=six+1;return t;}function estimate(){var raw=score();var cap=val('v')+25;var e=Math.min(raw,cap);var wp=Math.round((weekn()*100)/7);e=Math.round((e*85+wp*15)/100);return e;}function estText(e){var v=val('v');if(below(v,35))return'Die Schätzung liegt bei '+e+'. Ohne Vertrauen auf den Erlöser bleibt auch eifrige Gegenwehr begrenzt.';if(below(e,40))return'Die Schätzung liegt bei '+e+'. Fang klein an: eine Last nennen, eine Zusage hören, einen Kaufdruck stehen lassen.';if(below(e,70))return'Die Schätzung liegt bei '+e+'. Es wächst schon etwas Korn. Gib dem Worfeln Zeit und dem Erlöser die Ehre.';return'Die Schätzung liegt bei '+e+'. Bleibend ist nicht der Deal, sondern dass der Heilige Israels hält und gebraucht.';}function upd(){ids.forEach(function(k){var lab=$('mha-v-'+k);if(lab)lab.textContent=''+val(k);});var g=Math.round(grain()),c=Math.round(chaff()),s=score(),sc=$('mha-score'),bar=$('mha-bar'),tx=$('mha-text'),es=$('mha-est'),et=$('mha-est-text'),wn=$('mha-week'),gb=$('mha-grain'),cb=$('mha-chaff'),gv=$('mha-grain-v'),cv=$('mha-chaff-v');if(gb)gb.style.width=g+'%';if(cb)cb.style.width=c+'%';if(gv)gv.textContent=''+g;if(cv)cv.textContent=''+c;if(sc)sc.textContent=''+s;if(bar)bar.style.width=s+'%';if(tx)tx.textContent=text(s);var e=estimate();if(es)es.textContent=''+e;if(et)et.textContent=estText(e);if(wn)wn.textContent=''+weekn()+' von 7';return s;}function load(){try{var raw=localStorage.getItem(KR);if(!raw)return[];var p=JSON.parse(raw);return p?p:[];}catch(e){return[];}}function show(){var l=load(),o=$('mha-rank');if(!o)return;while(o.firstChild){o.removeChild(o.firstChild);}if(!l.length){var li0=document.createElement('li'),em=document.createElement('em');em.textContent='Noch keine Versuche gespeichert.';li0.appendChild(em);o.appendChild(li0);return;}l.forEach(function(e){var li=document.createElement('li');li.textContent=e.n+' \u2013 '+e.s+' Punkte, Praxis '+e.w+' von 7 ('+e.d+')';o.appendChild(li);});}function loadW(){try{var raw=localStorage.getItem(KW);if(!raw)return[0,0,0,0,0,0,0];var p=JSON.parse(raw);return p?p:[0,0,0,0,0,0,0];}catch(e){return[0,0,0,0,0,0,0];}}function saveW(){var a=[];['0','1','2','3','4','5','6'].forEach(function(k){var el=$('mha-p-'+k);a.push(el?(el.checked?1:0):0);});try{localStorage.setItem(KW,JSON.stringify(a));}catch(e){}}function applyW(){var a=loadW();['0','1','2','3','4','5','6'].forEach(function(k){var el=$('mha-p-'+k);if(el)el.checked=!!a[+k];});}ids.forEach(function(k){var el=$('mha-'+k);if(el)el.addEventListener('input',upd);});['0','1','2','3','4','5','6'].forEach(function(k){var el=$('mha-p-'+k);if(el)el.addEventListener('change',function(){saveW();upd();});});applyW();var save=$('mha-save'),clr=$('mha-clear'),nam=$('mha-name'),sg=$('mha-sug'),so=$('mha-sug-out');if(save)save.addEventListener('click',function(){var l=load(),n=nam?nam.value:'';n=n?n.slice(0,30):'Ich';l.push({n:n,s:upd(),w:weekn(),d:new Date().toLocaleDateString('de-DE')});l.sort(function(a,b){return b.s-a.s});l=l.slice(0,10);try{localStorage.setItem(KR,JSON.stringify(l))}catch(e){}show();});if(clr)clr.addEventListener('click',function(){try{localStorage.removeItem(KR)}catch(e){}show();});if(sg)sg.addEventListener('click',function(){if(so)so.textContent=sug();});upd();show();if(so)so.textContent=sug();}catch(err){}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',start);}else{start();}})();</script>
+<h2>Rosenkranz-Impuls</h2>
+<div class="card">
+<p>Bete heute ein Gesätz der <strong>Freudreichen Geheimnisse</strong>: „Jesus, der zu uns gekommen ist.“ Der 1. Advent rückt nahe, und Jesaja 41 nennt den Erlöser beim Namen: der Heilige Israels. Verbinde die zehn Ave mit drei Gedanken: Bei den ersten vier danke, dass du gerufen und nicht verworfen bist. Bei den nächsten drei nenne eine Last oder einen Kaufdruck, den du dem Erlöser übergibst. Bei den letzten drei bitte um ein demütiges Herz, das den Ruhm nicht beim Werkzeug lässt. Sprich danach still: „Fürchte dich nicht. Ich, ich helfe dir.“</p>
+</div>
+<h2>Gebet</h2>
+<p class="gebet">Heiliger Israels, du hast Jakob erwählt und nicht verworfen. Ergreife heute unsere Rechte. Lehre uns aufwachen, weil die Nacht vorgerückt und der Tag nahe ist. Bewahre uns davor, unsere Identität aus Leistung, Vergleich oder Konsum abzuleiten. Halte das Häuflein, worfle, was uns bindet, und lass uns in dir frohlocken, nicht in uns selbst. Amen.</p>
+<h2>Querverweise</h2>
+<ul>
+<li><strong>Jes 43,1–3</strong> – Fürchte dich nicht, denn ich habe dich erlöst; ich habe dich bei deinem Namen gerufen.</li>
+<li><strong>Jes 40,27–31</strong> – Der Müde, der auf den HERRN harrt, gewinnt neue Kraft.</li>
+<li><strong>3. Mo 25,23–28</strong> und <strong>Ruth 4,1–10</strong> – der Löser (go'el) kauft zurück und löst aus.</li>
+<li><strong>Lk 1,68–79</strong> – der Lobgesang des Zacharias: Gott hat sein Volk besucht und erlöst.</li>
+<li><strong>Röm 8,31–39</strong> – Ist Gott für uns, wer gegen uns? Nichts kann uns scheiden von der Liebe Gottes.</li>
+<li><strong>Joh 8,12</strong> – Ich bin das Licht der Welt; wer mir nachfolgt, wird nicht in der Finsternis wandeln.</li>
+</ul>
+<h2>Quellen (Logos)</h2>
+<ul>
+<li>Bibeltexte: Elberfelder Bibel 1905 (gemeinfrei); Kurzzitate und Vergleich nach Elberfelder Bibel, SCM R. Brockhaus; Christliche Verlagsgesellschaft, Witten; Dillenburg 2016, Jes 41,8–16: <a href="https://ref.ly/logosref/bible$2Belber2016.23.41.8-23.41.16">ref.ly</a>.</li>
+<li>[1] Geoffrey W. Grogan, „Isaiah“, in <em>The Expositor’s Bible Commentary: Isaiah, Jeremiah, Lamentations, Ezekiel</em>, hg. von Frank E. Gaebelein, Bd. 6 (Grand Rapids, MI: Zondervan Publishing House, 1986), 250–251 (<a href="https://ref.ly/res/LLS%3AEBC06/2019-03-16T01%3A51%3A53Z/703909?len=3359">ref.ly</a>).</li>
+<li>[2] Matthew Henry, <em>Jesaja–Maleachi</em>, übers. von Wilhelm Schneider, Der Neue Matthew Henry Kommentar (Waldems: 3L Verlag, 2018), 4:119–122 (<a href="https://ref.ly/res/LLS%3AMTHENRY23ISGER/2020-09-25T22%3A29%3A06Z/580077?len=13124">ref.ly</a>).</li>
+<li>[3] Franz Delitzsch, <em>Commentar über das Buch Jesaia</em>, hg. von Carl Friedrich Keil und Franz Delitzsch, Biblischer Commentar über das Alte Testament (Leipzig: Dörffling und Franke, 1889), 424 (<a href="https://ref.ly/res/LLS%3AKLDLTZKMMIS/2016-04-04T21%3A09%3A43Z/1367774?len=2052">ref.ly</a>).</li>
+<li>[4] Robert Jamieson, A. R. Fausset und David Brown, <em>Commentary Critical and Explanatory on the Whole Bible</em> (Oak Harbor, WA: Logos Research Systems, 1997), 1:475–476 (<a href="https://ref.ly/res/LLS%3A29.1.27/2020-04-23T23%3A29%3A39Z/3848364?len=220">ref.ly</a>).</li>
+<li>[5] William MacDonald, <em>Kommentar zum Alten Testament</em>, übers. von Christiane Eichler u. a. (Bielefeld: Christliche Literatur-Verbreitung, 2010), 960 (<a href="https://ref.ly/res/LLS%3AMACDONALDOT/2022-05-13T15%3A24%3A19Z/3167170?len=795">ref.ly</a>).</li>
+</ul>
+<p class="quelle">Die Abschnitte zum Adventsrahmen, zur Bedeutung von go'el, zur Gemeinde heute, zu Black Friday und FinTech, der Rosenkranz-Impuls, der Leseplan und die interaktiven Werkzeuge sind eine eigene geistliche Weiterführung; Aussagen der Kommentare sind mit [1]–[5] gekennzeichnet. MacDonald ist in der zugrunde liegenden Pre-Insight als Quelle genannt; im sichtbaren Wortlaut der Übergabe lag kein wörtlich zuordenbares Zitat vor, daher wird er hier bibliographisch geführt, ohne ihm einzelne Sätze zuzuschreiben.</p>
+<p class="quelle">rosary.health · Magnifica Humanitas · 27. November 2026</p>
+</div>
+<!-- /wp:html -->
